@@ -1,0 +1,235 @@
+$$$$1 Fehler
+$$$$3 Datei nicht gefunden
+$$$$4 Öffnen nicht möglich: Zugriff auf Datei verweigert
+$$$$5 Fehler beim Schreiben der Datei
+$$$$6 Zu öffnende Datei nicht gefunden
+$$$$7 Datei nicht gefunden
+$$$$8 Datei konnte nicht gelesen werden
+$$$$9 Equate-Wert fehlt
+$$$$10 Ein Equate-Name darf nicht mit einem Doppelpunkt enden
+
+$$$$11 Fehlendes ">" Zeichen am Ende des Text-Equate
+$$$$12 Falsche Parameteranzahl beim Makroaufruf
+$$$$13 Ungültige # Konstruktion
+$$$$14 Immer ">" für multiple Makroparameter verwenden, niemals "<"
+$$$$15 Maximum für #x ist 9
+$$$$16 Zu viele Parameter beim Expandieren gefunden
+$$$$17 Beim Expandieren dieses Makros würde eine Endloschleife erzeugt.
+$$$$19 Beim Expandieren dieses Makros würden mehr als 4000 Bytes auf einmal erzeugt !!!
+$$$$19 Unbekannter Datentyp
+$$$$20 Unbekannter Größenkennzeichner
+
+$$$$21 64 Bits (Q$...) Speichergröße benötigt für alle 3D Now Instruktionen
+$$$$22 "H$" ist für zukünftige Entwicklungen reserviert. Verwenden Sie stattdessen "R$" oder "F$"
+$$$$23 Prefetch/w/0/1/2/NTA Syntax: > PrefetchXXX B$Address
+$$$$24 D$ benötigt für Data-Label.
+$$$$25 Unbekannte Textstruktur. Möglicherweise interner Fehler
+$$$$26 Unerwarteter Separator
+$$$$27 Ungültige Binärzahl
+$$$$28 Ungültige Hex-Zahl
+$$$$29 Ungültiger Dezimalwert
+$$$$30 Bereichsüberschreitung
+
+$$$$31 Dieses Equate oder Makrosymbol wird bereits verwendet
+$$$$32 Dieses Equate-Symbol ist nicht im Gebrauch
+$$$$33 Mehr als 2 Labels im Ausdruck
+$$$$34 Ungültiges Zeichen im Labelnamen
+$$$$35 Labeldefinition doppelt
+$$$$36 Doppelte Symboldefinition
+$$$$37 Verwaister Doppelpunkt
+$$$$38 Lokales Label in Datendefinition nicht erlaubt
+$$$$39 Kein Call auf ein lokales Label
+$$$$40 Unbekannte Mnemonik
+
+$$$$41 Wert außerhalb des Byte-Bereiches
+$$$$42 Wert außerhalb des Word-Bereiches
+$$$$43 Wert außerhalb des DWord-Bereiches
+$$$$44 Führendes LEN kann nur Word oder DWord sein
+$$$$45 Ungültige Realzahl-Deklaration' 0
+$$$$46 Ein Befehlspräfix kann nicht allein stehen.
+$$$$47 Doppelte Segmentüberschreibung nicht erlaubt
+$$$$48 Nicht aufgelöste Segmentüberschreibung
+$$$$49 Ungültiger Parameter
+$$$$50 Falsche Parameteranzahl beim Makroaufruf
+
+$$$$51 Nur ein "&0" für automatisches Label pro Makro
+$$$$52 Benötige Gleichheitszeichen oder Doppelpunkt
+$$$$53 Fehlendes Leerzeichen am Ende der Daten-String Deklaration
+$$$$54 Falsche Platzierung der LOOP-Instruktion in Makro
+$$$$55 Zu viele Operanden gefunden
+$$$$56 Hex. Byte-Werte zur Codierung benötigt
+$$$$57 Kein LOCK Präfix bei dieser Instruktion
+$$$$58 LOCK: Ziel muss Speicher (Memory) sein
+$$$$59 Operand fehlt
+$$$$60 Operand fehlt
+
+$$$$61 Ausdrücke sind nur für einen Speicheradressierungsparameter erlaubt
+$$$$62 Nicht ausbalancierte Klammerebene
+$$$$64 Falscher ParaMakro
+$$$$64 Makrovariablen laufen von "&1" bis "&100" (Dezimal)
+$$$$65 Doppelte Deklaration der Makrovariable
+$$$$66 Größenkennzeichner ($ize Marker) vor Realausdruck erwünscht
+$$$$67 Größenkennzeichner ($ize Marker) nach Realausdruck erwünscht
+$$$$68 Unmittelbar (Immediate) nur in Ausdrücken zulässig
+$$$$69 Keine lokalen Labels in Daten: Diese sind für Code reserviert
+$$$$70 Keine verschachtelten Klammern in Real-Ausdrücken, nur +-*/ Operatoren.
+
+$$$$71 Falscher Operator im Ausdruck
+$$$$72 Zur Deklaration von sehr großen Daten (Huge Data) verwenden Sie virtuelle Datendeklarationen (?) oder den Aufruf von 'VirtualAlloc'
+$$$$73 Was meinst Du mit "Wiederhole weniger als 2-mal ???..."
+$$$$74 Schleife ohne vorhergehende Daten-Deklaration
+$$$$75 Für sehr große virtuelle Tabellen (Huge Tables): Call VirtualAlloc oder [Configuration]/[Bad Habits]
+$$$$76 Ausdruckswert im Ergebnis oder vor Multiplikation zu groß
+$$$$77 NOT darf nur am Anfang eines Ausdruckteils erscheinen
+$$$$78 SHR / SHL Parameter im Ausdruck größer als Byte
+$$$$79 Textbegrenzerpaare (Delimiter) nicht ausgeglichen
+$$$$80 Eckige Klammernpaare nicht ausgeglichen
+
+$$$$81 Unerwartetes Zeilenende (CR LF) nach Klammer
+$$$$82 Separator vor Textbegrenzer fehlt
+$$$$83 Separator nach Textbegrenzer fehlt
+$$$$84 Unbalancierte {verschachtelte} Klammern
+$$$$85 Geschweifte Klammern '{}' sind für verschachtelte Deklarationen reserviert
+$$$$86 Lokales Pseudo-'@Label' ohne vorherige (normale) Label-Deklaration
+$$$$87 In SIB ist nur ein Index und eine Basis erlaubt
+$$$$88 ESP kann nicht als Index in SIB verwendet werden
+$$$$89 Effektiver Addressparameter ungültig
+$$$$90 Erlaubte Werte bei Skalierung sind 2, 4, 8 und Erweiterungen zu 3, 5, 9
+
+$$$$91 ESP kann nicht als Indexregister verwendet werden.
+$$$$92 Nur ein Index im Ausdruck erlaubt
+$$$$93 Doppeltes Label oder unbekannter Fehler
+$$$$94 Kann diesen Parameter nicht auflösen
+$$$$95 Stackgröße für ENTER bis 0FFFC und ausgerichtet auf 4 Bytes
+$$$$96 Level für ENTER geht von 0 bis 31
+$$$$97 Um Label+imm-Adresse zu erhalten, verwenden Sie LEA. Beispiel: " > Lea EBX D$Label+8"
+$$$$98 Diese beiden Parametertypen sind zusammen nicht erlaubt
+$$$$99 Operandengröße unpassend
+$$$$100 Analyse der Operandentypen für diese Mnemonik fehlgeschlagen
+
+$$$$101 Ausrichtung (Alignment) muss eine Potenz von 2 sein, zwischen 4 und 0100
+$$$$102 Falsche Operandengröße
+$$$$103 Kann Register für diese FP Instruktion nicht bestimmen
+$$$$104 Nur "Lea reg, mem" . Für "Lea EAX imm", verwenden Sie "Mov EAX imm"
+$$$$105 Für Lea gibt es keine Byteform.
+$$$$106 Dritter imm-Parameter fehlt
+$$$$107 X$Memory Parameter fehlt
+$$$$108 Wertüberlauf
+$$$$109 Dieser symbolische Name entspricht keinem Label.
+$$$$110 Was'n das ?
+
+$$$$111 RosAsm ist nicht in der Lage diese Instruktion zu assemblieren.
+$$$$112 Hie sind nur  '+' - Zeichen erlaubt, siehe [Expressions] in der Hilfe
+$$$$113 Sorry, diese Mnemonik ist zur Zeit nicht implementiert. Information benötigt
+$$$$114 Lange Distanz benötigt: >> oder << (niemals bei LOOP)
+#1  #1 #2 außerhalb des Bereiches
+
+$$$$116 Benötige lokales Rückwärtslabel für LOOP
+$$$$117 Benötige lokales Rückwärtslabel für LOOP
+$$$$118 Lokales Label (aufwärts oder abwärts) erforderlich für JCXZ / JECXZ
+$$$$119 Mit dieser Mnemonik sind nur kurze Displacements erlaubt
+$$$$120 N-Symbol ist hier nicht erlaubt. Nehmen Sie L.
+
+$$$$121 Nur ein 'LEN' pro Deklaration, entweder am Anfang oder frei, Kombination nicht möglich.
+$$$$122 Datendeklaration des Schleifenzählers benötigt Dezimalwert
+$$$$123 Ungültige Virtuelle Daten
+$$$$124 Sorry, Datendeklaration kann nicht verschachtelt werden
+$$$$125 Wert als Byte benötigt
+$$$$126 Diese Instruktion ist nur mit dem Akkumulator verwendbar
+$$$$127 Textparameter mit mehr als 4 Bytes
+$$$$128 Ein Register muss generell allgemein sein
+$$$$129 VERR/VERW / LTR Parameter muss 16 Bit-Register oder Speicher sein
+
+$$$$130 Komplettes 32 Bit Allgemeinregister zur Speicheradressierung benötigt.
+$$$$131 Syntax für API-Aufrufe: Call 'Module.Function'
+$$$$132 Kein API-Aufruf im Quelltext gefunden
+$$$$133 Interner Fehler: Vom Anwender aufgerufene DLL nicht gefunden beim Kompilieren
+$$$$134 Interner Fehler: Vom Anwender aufgerufene API nicht gefunden beim Kompilieren
+$$$$135 Lokales Label an dieser Stelle nicht erlaubt
+$$$$136 Entrittspunkt nicht gefunden (sollte "Main:" sein, falls nicht modifiziert)
+$$$$137 Verfügbare Bedingungen für FPU: B, E, BE, NA, U, NB, AE, NE, NZ, NBE, A, NU
+$$$$138 Eines dieser beiden Register muss ST0 sein
+$$$$139 Mit dieser Mnemonik nur Register ST0, ST1, ...., ST7
+
+$$$$140 FADDP zweites Register muss ST0 sein !
+$$$$141 FSUBP zweites Register muss ST0 sein !
+$$$$142 Unerwartetes Zeichen im Fließkommausdruck !
+$$$$143 Internes Problem: Unbekannte Adresse !
+$$$$144 Internes Problem: Fehler bei Freigabe von Speicher !
+$$$$145 Kein Sourcetext in dieser PE gefunden. Disassemblieren ?
+$$$$146 Dies ist kein PE-File !
+$$$$147 Unbekannter WIN Equates Name.
+$$$$148 ID Basiswert muss zwischen 1 und 65535 liegen.
+$$$$149 ID Basiswert muss zwischen 1 und 65535 liegen.
+$$$$150 Falscher Modulname
+  
+$$$$151 Gleiche Funktion in 2 DLLs ist unmöglich !
+$$$$152 Falscher API-Name.
+$$$$153 Falsche API-Ordinalzahl.
+$$$$154 Abschließendes "A" fehlt hier.
+$$$$155 Daten zu lang (oder Endlosschleife) bei Makro "&x="
+$$$$156 Wert für eine Makro-Variable zu hoch.
+$$$$157 Abschließendes "A" (oder "W") benötigt.
+$$$$158 PREPARSE ist reserviert für: Alternates, Equal
+$$$$159 Klassenname fehlt !
+$$$$160 Übergeordnete Elternklasse nicht gefunden beim Expandieren der Vererbung.
+$$$$161 Zu große Ressourcen. Große Images oder Soundfiles sollten in Dateien verbleiben.
+
+$$$$3000 Fortsetzen
+$$$$3001 Einzelschritt
+$$$$3002 Überspringen
+$$$$3003 Einzelschritt
+$$$$3004 Rückkehr zum Aufrufer
+$$$$3005 Zurückkehren
+$$$$3006 Abbrechen
+$$$$3007 Unterbrechen
+$$$$3008 Haltepunkte aktivieren
+$$$$3009 Einzelschritt auf Befehlsebene
+$$$$3010 Einzelschritt auf Anweisungsebene
+$$$$3011 Zeige Segment/Debug Register
+$$$$3012 Schrift wählen ...
+$$$$3013 CPU Informationen
+$$$$3014 FPU Status
+$$$$3015 Zeige Befehl an Adresse ...
+$$$$3016 Über Debugger
+$$$$3017 Hilfe zum Debugger
+$$$$3040 Darstellungsformat:
+$$$$3050 Ausführen
+$$$$3051 Unterbrechen
+$$$$3052 Einstellungen
+$$$$3053 Extras
+$$$$3054 Hilfe
+$$$$3060 Im Memory Inspector anzeigen
+$$$$3061 Referenzierten Speicher anzeigen
+$$$$3062 Springe zu Deklaration
+$$$$3063 Unterbreche bei Schreibzugriff
+$$$$3064 Unterbreche bei Lese- oder Schreibzugriff
+$$$$3065 Nach Namen sortieren
+$$$$3066 Nach Adresse sortieren
+$$$$3080 Springe zu Aufruf
+$$$$3081 Alle Zeigen
+$$$$3082 Externe Modulaufrufe verbergen
+$$$$3083 Modulinterne Aufrufe verbergen
+$$$$3084 Lokale Daten anzeigen
+$$$$3100 Hexadezimal
+$$$$3101 Vorzeichenlose Dezimalzahl
+$$$$3102 Vorzeichenbehaftete Dezimalzahl
+$$$$3103 Binär
+$$$$3104 Fließkommazahl
+$$$$3105 Gepackte Byte (vorzeichenlos)
+$$$$3106 Gepackte Byte (vorzeichenbehaftet)
+$$$$3107 Gepackte Word (vorzeichenlos)
+$$$$3108 Gepackte Word (vorzeichenbehaftet)
+$$$$3109 Gepackte Dword (vorzeichenlos)
+$$$$3110 Gepackte Dword (vorzeichenbehaftet)
+$$$$3111 Gepackte Qword (vorzeichenlos)
+$$$$3112 Gepackte Qword (vorzeichenbehaftet)
+$$$$3113 Gepackte Fließkommazahl (32bit)
+$$$$3114 Gepackte Fließkommazahl (64bit)
+$$$$3115 Hexadezimal / ANSI
+$$$$3116 Hexadezimale Dwords
+$$$$3117 Hexadezimale Words
+$$$$3118 Fließkommazahl (32bit)
+$$$$3119 Fließkommazahl (64bit)
+$$$$3120 ASCII Zeichen
+$$$$3121 Hexadezimal / Cooked Ascii (RosAsm Development)

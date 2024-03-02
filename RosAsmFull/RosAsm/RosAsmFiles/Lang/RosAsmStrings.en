@@ -1,0 +1,178 @@
+$$$$1 Error
+$$$$3 File not found
+$$$$4 Unable to open: System mangling Destination File
+$$$$5 Error when trying to write File
+$$$$6 File to open not found
+$$$$7 File not found
+$$$$8 Unable to read File
+$$$$9 Missing Equate Value
+$$$$10 An Equate Name can not be followed by a Colon Char
+
+$$$$11 Missing ">" Char at the End of Text Equate
+$$$$12 Bad Parameter Number in Macro evocation
+$$$$13 Bad # Construction
+$$$$14 Always ">", for Macros Multiple Parameters. Never "<"
+$$$$15 #x Limit is 9
+$$$$16 Too many Parameters found when unfolding
+$$$$17 An infinite Loop has been generated when unfolding this Macro
+$$$$19 More than 4000 Bytes outputed at once, when unfolding this Macro!!!
+$$$$19 Unknown Data Type
+$$$$20 Unknown Size Marker
+
+$$$$21 64 Bits (Q$...) Mem Size expected for all 3D Now Instructions
+$$$$22 "H$" now reserved for futher Developement. Use "R$" or "F$" instead
+$$$$23 Prefetch/w/0/1/2/NTA Syntax: > PrefetchXXX B$Address
+$$$$24 D$ needed for Label Data
+$$$$25 Unknown Text Structure. Maybe internal Error
+$$$$26 Unexpected Separator
+$$$$27 Invalid Binary
+$$$$28 Invalid Hexadecimal
+$$$$29 Invalid Decimal
+$$$$30 Out of Range Value
+
+$$$$31 This Equate or Macro Symbol is already used
+$$$$32 This Equate Symbol is not in use
+$$$$33 More than 2 Labels in this Expression
+$$$$34 Bad Character in Labelname
+$$$$35 Duplicate Label Definition
+$$$$36 Duplicate Symbol Definition
+$$$$37 Orphan Colon encountered
+$$$$38 Local Label not allowed in Data Definition
+$$$$39 You cannot call for a local Label
+$$$$40 Unknown Mnemonic
+
+$$$$41 Value out of Byte Range
+$$$$42 Value out of Word Range
+$$$$43 Value out of Dword Range
+$$$$44 Leading Len can only be DWord or Word
+$$$$45 Bad real Number Declaration' 0
+$$$$46 An Instructionprefix cannot stand alone
+$$$$47 Double Segment override not allowed
+$$$$48 Unresolved Segment override
+$$$$49 Unvalid Parameter
+$$$$50 Bad Parameter Number in Macro evocation
+
+$$$$51 Only one "&0" automatic Label per Macro
+$$$$52 Need of Equal or Colon Sign
+$$$$53 Missing Space at the End of a Datastring Declaration
+$$$$54 Bad Placement of a Loop Instruction inside Macro
+$$$$55 Too much Operands found
+$$$$56 Hexa Octets Values expected for Codebytes
+$$$$57 No Lock Prefix with this Instruction
+$$$$58 Lock: Destination must be Memory
+$$$$59 Missing Operand
+$$$$60 Missing Operand
+
+$$$$61 Expressions are allowed for only one Memory adressing Parameter
+$$$$62 Unpaired Parenthesis
+$$$$64 Bad ParaMacro
+$$$$64 Macros Variables are from "&1" to "&100" (Decimal)
+$$$$65 Imbricated declaration of Macro Variable
+$$$$66 $ize Marker wanted before Real Expression
+$$$$67 $ize Marker wanted after Real Expression
+$$$$68 Immediate only in Expressions
+$$$$69 No local Labels in Data: They are reserved for Code
+$$$$70 Real Expression: only +-*/ Operators, no nested Parenthesis
+
+$$$$71 Bad operator in Expression
+$$$$72 For huge Data Declarations, use Virtual (?) Data or call for VirtualAlloc
+$$$$73 What do you mean with "repeat less than 2 times???..."
+$$$$74 Loop with no previous Data Declaration
+$$$$75 For huge Virtual Tables: VirtualAlloc or [Configuration]/[Bad Habits]
+$$$$76 Expression Number too big in Result or before Multiplication
+$$$$77 NOT must be at leading Pos of an Expressionmember
+$$$$78 SHR / SHL Parameter over Byte size in Expression
+$$$$79 Unpaired Textdelimiter
+$$$$80 Unpaired Squarebracket
+
+$$$$81 Unexpected CR LF after Bracket
+$$$$82 Missing Separator before Text Delimiter
+$$$$83 Missing Separator after Text Delimiter
+$$$$84 Unpaired {Nested} Brackets
+$$$$85 '{}' chars are reserved for nested Declarations
+$$$$86 Pseudo local '@Label' before any plain Label Declaration
+$$$$87 Only one Index and one Base allowed in SIB
+$$$$88 ESP cannot be used as an Index in SIB
+$$$$89 Impossible effective Address Parameter
+$$$$90 Scale possible Values are 2, 4, 8 and Extensions to 3, 5, 9
+
+$$$$91 ESP cannot be used as Indexregister
+$$$$92 Only one Index allowed in Expression
+$$$$93 Double Label or unknown Error
+$$$$94 Unable to resolve this Parameter
+$$$$95 Entrystacksize goes up to 0FFFC and must be 4 Bytes aligned
+$$$$96 Entrylevel goes from 0 to 31
+$$$$97 To retrieve Label+imm Adress, use LEA. Example: " > lea ebx D$Label+8" 
+$$$$98 These two Parametertypes are not allowed together
+$$$$99 Unfitting Size of Operands
+$$$$100 Failure of Analyse in Operandtypes for this Mnemonic
+
+$$$$101 The Alignment must be a Power of Two between 4 and 0100
+$$$$102 Bad Operandsize
+$$$$103 Can't guess Registers for this FP Instruction
+$$$$104 "lea reg, mem" only. For "lea eax imm", use "mov eax imm"
+$$$$105 There is no Byteform for lea
+$$$$106 Third imm Parameter wanted
+$$$$107 X$Memory Parameter wanted
+$$$$108 Overflow of immediate Number
+$$$$109 This symolic Name does not match with any Label
+$$$$110 What is this?
+
+$$$$111 RosAsm has been unable to assemble this Instruction
+$$$$112 Only + - Signs allowed here, or see [Expressions] in Help
+$$$$113 Sorry, this Mnemonic is not yet implemented. Information needed
+$$$$114 Need of long Dis., >> or << (never on LOOP)
+#1 #2 Out of Range
+
+$$$$116 Local up short Label is required for LOOP
+$$$$117 Local up short Label is required for LOOP
+$$$$118 Short local Label (up or down) is required for JCXZ / JECXZ
+$$$$119 Only short Displacement allowed with this Mnemonic
+$$$$120 N Symbol not allowed here. Use L
+
+$$$$121 You can't mix 'Head LEN' and 'Free LEN'
+$$$$122 Decimal Value expected for Datadeclaration Loopnumber
+$$$$123 Bad Virtual Data
+$$$$124 Sorry, Dataloop cannot be nested
+$$$$125 Bytesize required
+$$$$126 Only Accumulator with this Instruction
+$$$$127 Textparameter exceeding 4 Bytes
+$$$$128 A Register must be general Purpose
+$$$$129 VERR/VERW / LTR Parameter must be 16Bit Register or Memory
+
+$$$$130 Memoryadressing expects full 32Bit general purpose Registers
+$$$$131 API-Call Format is: call 'Module.Function'
+$$$$132 No API-Call found in Source
+$$$$133 Internal Error: User called DLL not found at Compiletime
+$$$$134 Internal Error: User called API not found at Compiletime
+$$$$135 Local Label not allowed here
+$$$$136 Entrypoint not found (should be "Main:" if not modified)
+$$$$137 FPU available Conditions: B, E, BE, NA, U, NB, AE, NE, NZ, NBE, A, NU
+$$$$138 One of these two Reg must be ST0
+$$$$139 Only ST0, ST1, ...., ST7  Regs with this Mnemonic
+
+$$$$140 FADDP second Reg must be ST0
+$$$$141 FSUBP second Reg must be ST0
+$$$$142 Unexpected Char inside Floatexpression
+$$$$143 Internal: Unknown Adress
+$$$$144 Internal: Memory release failed
+$$$$145 No Source in this PE. Disassemble it?
+$$$$146 This is not a PE File
+$$$$147 Unknown Win Equates Name
+$$$$148 ID Basenumber must be between 1 and 65535
+$$$$149 ID Basenumber must be between 1 and 65535
+$$$$150 Wrong Module Name
+
+$$$$151 Impossible: Same Function in 2 DLLs       
+$$$$152 Wrong API-Name
+$$$$153 Wrong API-Ordinal
+$$$$154 No ending "A" here
+$$$$155 Too long Data (or infinite Storageloop) for Macro "&x="
+$$$$156 Too high Number for a Macro Variable
+$$$$157 Ending "A" (or "W") wanted
+$$$$158 PREPARSE is for: Alternates, Equal
+$$$$159 Missing Classname
+$$$$160 Parentclass not found when unfolding Inheritance
+$$$$161 Too Big Resources. Big Images or Sounds should be left in Files
+
+

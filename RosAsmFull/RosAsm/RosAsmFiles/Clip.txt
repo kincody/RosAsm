@@ -1,0 +1,1401 @@
+
+
+                                RosAsm CLIPS FILE.
+
+
+(Always let, at least, one no use line at top of this file).
+
+
+
+Rename this file in order to preserve it from overwriting when downloading a new
+version of SpAsm (if you modify it). Then run:
+
+    [Configuration] / [Files Locations] / [Clip]
+
+to define your own Path/Name for it.
+
+
+
+This file is used by SpAsm Assembler. You can modify it by hand. The conventions
+are that any line starting with '//' is a title for a new Clips Section and that 
+any line starting with '/' is a title for a new Clip.
+
+SpAsm does not perform any sort of these data. Write the new Clip, with its:
+
+'/Clip Title'
+
+inside the according:
+
+'//Section Title'. 
+
+
+
+Any symbol beginning with a '@' will allow adding a generic name (in order to save 
+from rename typings). Example, if you write here a variable name as '@Lenght' and,
+say, in the [Clip] feature, the user enter 'My' in the Generic Name EditBox, the 
+ClipBoard will replace '@Lenght' by 'MyLenght'.
+
+For sharing Clips, avoid using '§' and use the Dollar Char ($), instead. (This
+last one works on any KeyBoard/CharSet).
+
+Of course, the logical of '@' working rules may be defeated in some cases, as it
+may serve two purposes (real Local symbols // Generic Names Flags), but, in most
+case you will find it a friendly feature. Just write your Clips, close enough to
+what you finally hope to retrieve.
+
+When the Clip is a Procedure (and so forth need no customisations at all), a '@' 
+Char may be given at Second Line, first Row, in order tells the Clip Dialog to
+load the Clip unmofified. In such case, the Radio Buttons selections, in the Clip
+Dialog, are ignored. (See, for example, the downward "/qWord To Ascii")
+
+___________________________________________________________________________________
+___________________________________________________________________________________
+
+This is a Section Title:
+
+
+//Iczelion Tuts Macros
+
+
+/Macros Set
+
+
+@
+
+[push | push #1 | #+1]  [pop | pop #1 | #+1]
+
+[mov | mov #1 #2 | #+2]
+[inc | inc #1 | #+1]    [dec | dec #1 | #+1]
+
+[On | cmp #1 #3 | jn#2 o1> | #4>L | o1:]
+
+[call | push #L>2 | call #1]
+
+[move | push #2 | pop #1 | #+2]
+
+[If | cmp #1 #3 | jn#2 I0>]
+[.If | cmp #1 #3 | jn#2 I1>>]
+[..If | cmp #1 #3 | jn#2 I2>>]
+[...If | cmp #1 #3 | jn#2 I3>>]
+
+[Else_if | jmp I5> | I0: | cmp #1 #3 | jn#2 I0>]
+[.Else_if | jmp I6>> | I1: | cmp #1 #3 | jn#2 I1>>]
+[..Else_if | jmp I7>> | I2: | cmp #1 #3 | jn#2 I2>>]
+[...Else_if | jmp I8>> | I3: | cmp #1 #3 | jn#2 I3>>]
+
+[Else | Jmp I5> | I0:]
+[.Else | Jmp I6>> | I1:]
+[..Else | Jmp I7>> | I2:]
+[...Else | Jmp I8>> | I3:]
+
+[End_if | I0: | I5:]
+[.End_if | I1: | I6:]
+[..End_if | I2: | I7:]
+[...End_if | I3: | I8:]
+
+
+; If_Or eax = 1, eax = 5, eax =122
+
+[If_Or    | cmp #1 #3 | j#2 O0> | #+3 | jmp I0> | O0:]
+[.If_Or   | cmp #1 #3 | j#2 O1> | #+3 | jmp I1> | O1:]
+[..If_Or  | cmp #1 #3 | j#2 O2> | #+3 | jmp I2> | O2:]
+[...If_Or | cmp #1 #3 | j#2 O3> | #+3 | jmp I3> | O3:]
+
+; If_And eax = 1, ebx = 5, ecx =122
+
+[If_And    | cmp #1 #3 | jn#2 I0> | #+3]
+[.If_And   | cmp #1 #3 | jn#2 I1> | #+3]
+[..If_And  | cmp #1 #3 | jn#2 I2> | #+3]
+[...If_And | cmp #1 #3 | jn#2 I3> | #+3]
+
+
+
+[While | W0: | cmp #1 #3 | jn#2 W9>]
+[End_While | jmp W0< | W9:]
+
+[.While | X0: | cmp #1 #3 | jn#2 X9>>]
+[.End_While | jmp X0<< | X9:]
+
+[Do | D0:]
+[Loop_Until | cmp #1 #3 | jn#2 D0<]
+[Do_Loop | Loop D0<]
+
+[.Do | E0:]
+[.Loop_Until | cmp #1 #3 | jn#2 E0<<]                   ; long
+[.Do_Loop | Loop E0<]
+
+_________________________________________________________________________________________
+; Added Equates for more HLL-style in comparison Macros:
+
+[= e   < b    > a    =< be    <= be    => ae    >= ae    <> ne]
+_________________________________________________________________________________________
+_________________________________________________________________________________________
+; Proc Macros and Equates. Internal storages are:
+;
+; &1 <<< Size of Argument(s) (for ending Ret n, in EndP). Set by Argument(s)
+; &2 <<< Size of Local (for Stack Management). Set by Local
+; &3 <<< What to pop before ret. Set by Uses.
+
+[Proc | &1=0 | &2=0 | &3= | #1 | push ebp | mov ebp esp]
+
+[ExitP | jmp P9>>]
+                                                     
+[Arguments | {#1 Arg#x} | #+1 | &1=SizeOf#x]
+[Argument  | {#1 Arg#x} | #+1 | &1=SizeOf#x]
+                                                     
+[Local | {#1 Local#x} | #+1 | sub esp SizeOf#x | &2=SizeOf#x]
+ 
+[StrucPtrs | {#3 ebp+#2+#F} | #+2]
+
+[Structure | {#1 ebp-&2-4} | sub esp #2+4 | mov D$#1 esp | StrucPtrs 0-&2-#2-4 #L>3]
+
+[Uses | push #1>L | &3=pop #L>1]
+
+[EndP | P9: | &3 | mov esp ebp | pop ebp | ret &1]
+
+; For pointing to transmitted parameters (upper "Arg#x" fall here):
+
+[Arg1 ebp+8    Arg2 ebp+12    Arg3 ebp+16    Arg4 ebp+20   Arg5 ebp+24   
+ Arg6 ebp+28   Arg7 ebp+32    Arg8 ebp+36    Arg9 ebp+40   Arg10 ebp+44]
+
+; For pointing Local Stack declared data (upper "Local#x" fall here):
+
+[Local1 ebp-4     Local2 ebp-8     Local3 ebp-12    Local4 ebp-16    Local5 ebp-20
+ Local6 ebp-24    Local7 ebp-28    Local8 ebp-32    Local9 ebp-36    Local10 ebp-40]
+
+; To help preventing from stack sizes' mistakes (upper "SizeOf#x" fall here):
+
+[SizeOf1 4     SizeOf2 8     SizeOf3 12    SizeOf4 16    SizeOf5 20    
+ SizeOf6 24    SizeOf7 28    SizeOf8 32    SizeOf9 36    SizeOf10 40]
+
+
+//Asm Snippets
+
+
+This is a Clip Title:
+
+
+/Multiply
+
+
+  ; eax = value to multiply (by 10 here).
+    mov ecx 10 | mul ecx
+  ; Result in edx:eax
+
+
+/Divide
+
+
+  ; eax = value to divide (by 10 here).
+    mov edx 0, ecx 10 | div ecx
+  ; result in eax, remainder in edx
+
+
+/Decimal To Binary
+
+
+    ; The source String pointed by esi, is converted in binary into eax:
+    ; You have to define your 'ENDING_CHAR', and to manage the error case.
+
+    mov ecx 0
+L0: lodsb
+    cmp al '9' | ja L8>
+    cmp al '0' | jb L8>
+    cmp al ENDING_CHAR | je L9>
+        sub al '0'                  ; convert Decimal to binary:
+        lea ecx D$ecx+ecx*4         ;     ecx = ecx * 5
+        lea ecx D$eax+ecx*2         ;     ecx = eax + old ecx * 10        
+    jmp L0<
+L8: ; Error case
+L9: mov eax ecx                     ; Result usually prefered in eax
+
+
+/Binary To Decimal
+
+
+    ; The destination String pointed by edi. eax holds the value to be translated in Ascii Decimal.
+
+    mov dl 0FF | push edx                       ; Push stack end mark
+    mov ecx 10
+L0: mov edx 0
+    div ecx | push edx | cmp eax 0 | ja L0<     ; Push remainders
+L2: pop eax                                     ; Retrieve Backward
+    cmp al 0FF | je L9>                         ; Over?
+       add al '0' | stosb | jmp L2<             ; Write
+L9:
+
+
+/qWord To Ascii
+
+
+@
+
+Proc qWordToAscii:
+    Arguments @qWordPointer, @StringPointer
+    local @Divisor
+    
+        call FpuRounding FpModeTroncated
+        
+        push 0-1 ; End mark on the Stack.
+
+        mov D@Divisor 10 | fild D§Divisor
+        mov ebx D@qWordPointer
+        fild Q§ebx
+L0:     fprem | fistp D§Remainder | push D§Remainder 
+        fild Q§ebx | fdiv
+        fld ST0 | fistp Q§ebx
+        mov eax D§ebx | or eax D§ebx+4 | cmp eax 0 | jne L0<
+    
+        mov edi D@StringPointer
+L0:     pop eax | cmp eax 0-1 | je L7>
+            add al '0' | stosb | jmp L0<
+L7:     mov al 0 | stosb
+EndP
+
+
+/Cpu Speed
+
+
+@
+
+Proc GetCpuSpeed: 
+    Local @Process, @Thread, @Class, @Priority, @Timer, @Delay, @Constant, @CpuSpeed
+
+        mov D@Delay 500, D@Constant 500_000 | finit
+        
+        pushad 
+            call 'KERNEL32.GetCurrentProcess' | mov D@Process eax
+            call 'KERNEL32.GetCurrentThread' | mov D@Thread eax
+            call 'KERNEL32.GetPriorityClass' D@Process | mov D@Class eax 
+            call 'KERNEL32.GetThreadPriority' D@Thread | mov D@Priority eax 
+            
+            call 'KERNEL32.SetPriorityClass' D@Process &REALTIME_PRIORITY_CLASS
+            call 'KERNEL32.SetThreadPriority' D@Thread &THREAD_PRIORITY_TIME_CRITICAL 
+  
+                call 'KERNEL32.GetTickCount' | add D@Delay eax
+                rdtsc | mov D@Timer eax
+L1:             call 'KERNEL32.GetTickCount' | cmp eax D@Delay | jb L1< 
+                rdtsc | sub eax D@Timer | mov D@Timer eax, D@Delay 500 
+ 
+            call 'KERNEL32.SetThreadPriority' D@Thread D@Priority 
+            call 'KERNEL32.SetPriorityClass' D@Process D@Class
+ 
+            fild F@Timer | fild F@Constant | fdivp ST1 ST0 | frndint | fistp F@CpuSpeed
+            wait 
+        popad
+    mov eax D@CpuSpeed
+EndP
+
+
+//Strings
+
+
+/String Lenght
+
+
+mov edi StringPointer, ecx 0-1, al 0
+repne scasb
+mov eax 0-2 | sub eax ecx      ; Lenght in eax.
+
+
+/FindString
+
+
+@
+
+____________________________________________________________________________________________
+____________________________________________________________________________________________
+
+;;
+  Syntax: call StringSearch PointerToBuffer, PointerToSearchedString, FindFirstFlag
+  
+  Returns:  * Found from eax to ebx Pos.
+            * Not found eax = 0-1.
+            
+  Using:
+  
+    .If ax = IDB_FIND
+        call StringSearch SourceString, FindString, &TRUE
+        If eax = 0-1
+            call 'USER32.MessageBoxA' 0 StringNotFound 0 0
+        Else
+            call 'USER32.SendMessageA' D$hEditSource &EM_SETSEL eax ebx
+        End_If
+                    
+    ..Else_If ax = IDB_FINDNEXT
+        call StringSearch SourceString, FindString, &FALSE
+        If eax = 0-1
+            call 'USER32.MessageBoxA' 0 StringNotFound 0 0
+        Else
+            call 'USER32.SendMessageA' D$hEditSource &EM_SETSEL eax ebx
+        End_If
+    ..End_if
+;;
+____________________________________________________________________________________________
+    
+Proc StringSearch:
+    Arguments @Buffer, @Find, @First
+    Uses ecx, edx, esi, edi
+    [@NextBytePos: ?]
+    
+        On B@First = &TRUE, mov D@NextBytePos 0-1
+        mov esi D@Buffer, edi D@Find, eax 0, edx 0-1, ecx D@NextBytePos
+
+L0:     inc ecx
+        mov al B$esi+ecx | cmp al 0 | je L9>
+        mov bl B$edi | cmp bl 0 | je L9>
+
+            If al = bl
+                On edx = 0-1, mov edx ecx
+                inc edi | jmp L0<
+            Else_If edx <> 0-1
+                mov ecx edx, edx 0-1
+            End_If
+            mov edi D@Find | jmp L0<
+
+L9:     .If bl = 0
+            If al <> 0
+                mov eax edx, ebx ecx
+            Else
+                mov eax 0-1
+            End_If
+        .Else
+            mov eax 0-1
+        .End_If
+
+        mov D@NextBytePos ecx
+EndP
+____________________________________________________________________________________________
+____________________________________________________________________________________________
+
+
+/Upper Case
+
+
+@
+
+Proc UpperCase:
+    Argument @Pointer
+    Uses esi
+    
+        mov esi D@pointer
+        While B$esi > 0
+            If B$esi < 'a'
+                ; nop
+            Else_If B$esi <= 'z'
+                xor B$esi 32
+            End_If
+            inc esi
+        End_While
+EndP
+
+
+/Lower Case
+
+
+@
+
+Proc LowerCase:
+    Argument @Pointer
+    Uses esi
+   
+        mov esi D@pointer
+        While B$esi > 0
+            If B$esi < 'A'
+                ; nop
+            Else_If B$esi <= 'Z'
+                xor B$esi 32
+            End_If
+            inc esi
+        End_While
+EndP
+
+
+/Reverse String
+
+
+@
+
+; Reversing Bytes order in a zero ended String: > call ReverseString MyString
+; (Doesn't hang in case of null String -push 0- because of restauration of esp
+; by EndP).
+
+Proc ReverseString:
+    Argument @Pointer
+    Uses esi, edi
+    
+        mov esi D@Pointer, edi esi | push 0
+        
+        While B§esi > 0
+            lodsb | push eax
+        End_While
+
+        While eax > 0
+            pop eax | stosb
+        End_While
+        
+        stosb
+EndP
+
+
+/String Concatenation
+
+
+@
+
+Proc Concatenation:
+    Arguments @Source1, @Source2, @Destination
+    Uses esi, edi
+    
+        mov esi D@Source1, edi D@Destination
+        While B$esi <> 0 | movsb | End_While
+        
+        mov esi D@Source2
+        While B$esi <> 0 | movsb | End_While
+        
+        movsb
+EndP
+
+
+//Sorting
+
+
+/Sort Strings
+
+
+@
+
+; Source and Destination are Pointers to 2 Tables (same lenght). Source holds a set
+; of zero ended strings to be sorted and stored in Destination. Source is overwritten
+; with 0FF Bytes when finished.
+
+Proc SortStrings:
+    Arguments @Source, @Destination, @StringNumber
+
+    mov ecx D@StringNumber, edi D@Destination
+    
+L0: push ecx
+
+        mov esi D@Source, ecx D@StringNumber, edx 0, bl 0FF
+
+L1:     lodsb 
+        .If al = 0FF
+            ; nop
+        .Else_If al < bl
+            mov bl al | lea edx D$esi-1
+        .Else_If al = bl
+            push ebx
+                push edx, esi
+                    While al = bl
+                        lodsb | inc edx | mov bl B$edx  
+                        cmp al 0 | je L2>
+                    End_While
+L2:             pop esi, edx
+                On al < bl, lea edx D$esi-1
+            pop ebx
+        .End_If
+    
+        While B$esi > 0
+            inc esi
+        End_While
+        inc esi | loop L1<
+    
+        If edx > 0
+            mov esi edx
+            While B$esi > 0 
+                movsb | mov B$esi-1 0FF
+            End_While
+            mov al 0 | stosb
+        End_If
+    
+    pop ecx | dec ecx | cmp ecx 0 | ja L0<<
+EndP
+
+
+/Bubble Sort
+
+
+@
+
+;;
+ Bubble-Sort of a Table of signed dWords. Author: Andrew Howe.
+
+ For modifications, see:
+ 
+ > jle L2>   ; >>> Signed ( > jbe >>> unsigned)
+
+ dWords: 
+
+ > shr ecx 2
+ > D$edi+ecx*4
+ > sub ebx 4
+
+ Words:
+
+ > shr ecx 1
+ > D$edi+ecx*2
+ > sub ebx 2
+
+ Bytes:
+
+ > D$edi+ecx
+ > dec ebx
+
+ 
+ To be called with:
+ 
+ > call BubbleSort dWordsDataSet, D$dWordsDatasetLen
+;;
+
+Proc BubbleSort:
+    Arguments @Array, @Size
+    Uses eax, ebx, ecx, edi
+    
+        mov edi D@Array, ecx D@Size | shr ecx 2
+        
+L0:     lea ebx D$edi+ecx*4 | mov eax D$edi
+
+L1:     sub ebx 4 | cmp eax D$ebx | jle L2>
+            xchg eax D$ebx
+        
+L2:         cmp ebx edi | jne L1<
+
+        stosd | loop L0<
+EndP
+
+
+//CallBacks
+
+
+/Dialog CallBack
+
+
+@
+
+____________________________________________________________________________________________
+
+Proc DialogProc:
+    Arguments @Adressee, @Message, @wParam, @lParam
+
+    pushad
+    
+    ...If D@Message = &WM_COMMAND                  ; User action
+         If D@wParam = &IDCANCEL                   ; User clicks on upper right [X]
+            call 'User32.EndDialog' D@Adressee 0
+          ; call 'User32.DestroyWindow' D@Adressee ; Comments...
+         End_If
+       
+    ...Else_If D@Message = &WM_INITDIALOG          ; Win ready to build the Dialog
+        ; Initialisation.
+        
+    ...Else_If D@Message = &WM_CTLCOLOREDIT        ; Win ready to paint the Dialog
+        ; Control of output
+        
+    ...Else
+        popad | mov eax &FALSE | return             ; Non processed
+        
+    ...End_If
+    
+    popad | mov eax &TRUE | return                  ; Processed
+
+
+; Comments: Two families of Dialogs:
+;
+; - Modeless: CreateDialog / CreateDialogindirect
+;             CreateDialogParam / CreateDialogindirectParam
+;                 * Returns immediately after runing the Dialog.
+;                 * Shut down with 'User32.DestroyWindow'.
+;
+; - Modal:    DialogBox / DialogBoxindirect
+;             DialogBoxParam / DialogBoxindirectParam
+;                 * Shut down with 'User32.EndDialog'.
+;                 * Returns after closing the Dialog.
+____________________________________________________________________________________________
+
+
+//Api
+
+
+/MessageBox
+
+
+[@Title: ' ', 0
+ @Message: ' ', 0]
+
+api 'USER32.MessageBoxA'  &NULL  @Message  @Title  &MB_SYSTEMMODAL
+
+
+//Macros
+
+
+/Proc
+
+
+_________________________________________________________________________________________
+; Added Equates for more HLL-style in comparison Macros:
+
+[= e   < b    > a    =< be    <= be    => ae    >= ae    <> ne]
+_________________________________________________________________________________________
+_________________________________________________________________________________________
+; Proc Macros and Equates. Internal storages are:
+;
+; &1 <<< Size of Argument(s) (for ending Ret n, in EndP). Set by Argument(s)
+; &2 <<< Size of Local (for Stack Management). Set by Local
+; &3 <<< What to pop before ret. Set by Uses.
+
+[Proc | &1=0 | &2=0 | &3= | #1 | push ebp | mov ebp esp]
+
+[ExitP | jmp P9>>]
+                                                     
+[Arguments | {#1 Arg#x} | #+1 | &1=SizeOf#x]
+[Argument  | {#1 Arg#x} | #+1 | &1=SizeOf#x]
+                                                     
+[Local | {#1 Local#x} | #+1 | sub esp SizeOf#x | &2=SizeOf#x]
+ 
+[StrucPtrs | {#3 ebp+#2+#F} | #+2]
+
+[Structure | {#1 ebp-&2-4} | sub esp #2+4 | mov D$#1 esp | StrucPtrs 0-&2-#2-4 #L>3];;
+
+[Uses | push #1>L | &3=pop #L>1]
+
+[EndP | P9: | &3 | mov esp ebp | pop ebp | ret &1];
+
+; For pointing to transmitted parameters (upper 'Arg#x' fall here):
+
+[Arg1 ebp+8    Arg2 ebp+12    Arg3 ebp+16    Arg4 ebp+20   Arg5 ebp+24   
+ Arg6 ebp+28   Arg7 ebp+32    Arg8 ebp+36    Arg9 ebp+40   Arg10 ebp+44]
+
+; For pointing Local Stack declared data (upper 'Local#x' fall here):
+
+[Local1 ebp-4     Local2 ebp-8     Local3 ebp-12    Local4 ebp-16    Local5 ebp-20
+ Local6 ebp-24    Local7 ebp-28    Local8 ebp-32    Local9 ebp-36    Local10 ebp-40]
+
+; To help preventing from stack sizes' mistakes (upper 'SizeOf#x' fall here):
+
+[SizeOf1 4     SizeOf2 8     SizeOf3 12    SizeOf4 16    SizeOf5 20    
+ SizeOf6 24    SizeOf7 28    SizeOf8 32    SizeOf9 36    SizeOf10 40]
+_________________________________________________________________________________________
+
+
+/If
+
+
+____________________________________________________________________________________________
+
+[If | cmp #1 #3 | jn#2 I0>]
+[.If | cmp #1 #3 | jn#2 I1>>]
+[..If | cmp #1 #3 | jn#2 I2>>]
+[...If | cmp #1 #3 | jn#2 I3>>];
+
+[Else_if | jmp I5> | I0: | cmp #1 #3 | jn#2 I0>]
+[.Else_if | jmp I6>> | I1: | cmp #1 #3 | jn#2 I1>>]
+[..Else_if | jmp I7>> | I2: | cmp #1 #3 | jn#2 I2>>]
+[...Else_if | jmp I8>> | I3: | cmp #1 #3 | jn#2 I3>>]
+
+[Else | Jmp I5> | I0:]
+[.Else | Jmp I6>> | I1:]
+[..Else | Jmp I7>> | I2:]
+[...Else | Jmp I8>> | I3:]
+
+[End_if | I0: | I5:]
+[.End_if | I1: | I6:]
+[..End_if | I2: | I7:]
+[...End_if | I3: | I8:]
+
+
+; If_Or eax = 1, eax = 5, eax =122
+
+[If_Or    | cmp #1 #3 | j#2 O0> | #+3 | jmp I0> | O0:]
+[.If_Or   | cmp #1 #3 | j#2 O1> | #+3 | jmp I1> | O1:]
+[..If_Or  | cmp #1 #3 | j#2 O2> | #+3 | jmp I2> | O2:]
+[...If_Or | cmp #1 #3 | j#2 O3> | #+3 | jmp I3> | O3:]
+
+; If_And eax = 1, ebx = 5, ecx =122
+
+[If_And    | cmp #1 #3 | jn#2 I0> | #3]
+[.If_And   | cmp #1 #3 | jn#2 I1> | #3]
+[..If_And  | cmp #1 #3 | jn#2 I2> | #3]
+[...If_And | cmp #1 #3 | jn#2 I3> | #3]
+____________________________________________________________________________________________
+
+
+/Multi If
+
+
+[.If | cmp #1 #3 | jn#2 I0>>]
+[..If | cmp #1 #3 | jn#2 I1>>]
+[...If | cmp #1 #3 | jn#2 I2>>]
+[....If | cmp #1 #3 | jn#2 I3>]
+[.....If | cmp #1 #3 | jn#2 I4>>]
+[......If | cmp #1 #3 | jn#2 J0>>]
+[.......If | cmp #1 #3 | jn#2 J1>>]
+[........If | cmp #1 #3 | jn#2 J2>>]
+[.........If | cmp #1 #3 | jn#2 J3>>]
+[..........If | cmp #1 #3 | jn#2 J4>>]
+
+[.Else_If | jmp I5>> | I0: | cmp #1 #3 | jn#2 I0>>]
+[..Else_If | jmp I6>> | I1: | cmp #1 #3 | jn#2 I1>>]
+[...Else_If | jmp I7>> | I2: | cmp #1 #3 | jn#2 I2>>]
+[....Else_If | jmp I8>> | I3: | cmp #1 #3 | jn#2 I3>>]
+[.....Else_If | jmp I9>> | I4: | cmp #1 #3 | jn#2 I4>>]
+[......Else_If | jmp J5>> | J0: | cmp #1 #3 | jn#2 J0>>]
+[.......Else_If | jmp J6>> | J1: | cmp #1 #3 | jn#2 J1>>]
+[........Else_If | jmp J7>> | J2: | cmp #1 #3 | jn#2 J2>>]
+[.........Else_If | jmp J8>> | J3: | cmp #1 #3 | jn#2 J3>>]
+[..........Else_If | jmp J9>> | J4: | cmp #1 #3 | jn#2 J4>>]
+
+[.Else | Jmp I5>> | I0:]
+[..Else | Jmp I6>> | I1:]
+[...Else | Jmp I7>> | I2:]
+[....Else | Jmp I8>> | I3:]
+[.....Else | Jmp I9>> | I4:]
+[......Else | Jmp J5>> | J0:]
+[.......Else | Jmp J6>> | J1:]
+[........Else | Jmp J7>> | J2:]
+[.........Else | Jmp J8>> | J3:]
+[..........Else | Jmp J9>> | J4:]
+
+[.End_If | I0: | I5:]
+[..End_If | I1: | I6:]
+[...End_If | I2: | I7:]
+[....End_If | I3: | I8:]
+[.....End_If | I4: | I9:]
+[......End_If | j0: | j5:]
+[.......End_If | j1: | j6:]
+[........End_If | j2: | j7:]
+[.........End_If | j3: | j8:]
+[..........End_If | j4: | j9:]
+
+[If | &6=&6. | &6If #1>L]
+[Else_If | &6Else_If #1>L]
+[Else | &6Else]
+[End_If | &6End_If | &6=&6!]
+
+
+; To Be used as:
+
+mov eax 1, ebx 2, ecx 33
+
+If eax = 1
+    hexprint 01
+    If ebx = 1
+        Hexprint 0101
+    Else_If ebx = 2
+        Hexprint 0102
+        If ecx = 3
+            hexprint 010203
+        Else
+            hexprint 07777
+        End_If
+    End_If
+End_If
+
+
+; I do not recommand this version of 'If' Macros. It is less readable than
+; the one with points (and so forth, you will make more errors with it), it
+; is a bit longer to compile and all jumps are long. Having the possibility
+; of more than 3 or 4 nested conditions is out of reason too. If you fall in
+; need of so much levels, re-organise with calls to other Routines.
+
+
+/Fpu If
+
+
+[rIf> | fld #1 | fcom #2 | fstsw AX | Test AX 17664 | fstp st0 | jnz R0>] 
+[rIf< | fld #1 | fcom #2 | fstsw AX | Test AX 256 | fstp st0 | jz R0>] 
+[rIf= | fld #1 | fcom #2 | fstsw AX | Test AX 16384 | fstp st0 | jz R0>] 
+[.rIf> | fld #1 | fcom #2 | fstsw AX | Test AX 17664 | fstp st0 | jnz R1>>] 
+[.rIf< | fld #1 | fcom #2 | fstsw AX | Test AX 256 | fstp st0 | jz R1>>] 
+[.rIf= | fld #1 | fcom #2 | fstsw AX | Test AX 16384 | fstp st0 | jz R1>>] 
+
+[rElse_If> | jmp R5> | R0: | fld #1 | fcom #2 | fstsw AX | Test AX 17664 fstp st0 | jnz R0>] 
+[rElse_If< | jmp R5> | R0: | fld #1 | fcom #2 | fstsw AX | Test AX 256 | fstp st0 | jz R0>] 
+[rElse_If= | jmp R5> | R0: | fld #1 | fcom #2 | fstsw AX | Test AX 16384 | fstp st0 | jz R0>] 
+[.rElse_If> | jmp R5> | R0: | fld #1 | fcom #2 | fstsw AX | Test AX 17664 | fstp st0 | jnz R1>>]
+[.rElse_If< | jmp R5> | R0: | fld #1 | fcom #2 | fstsw AX | Test AX 256 | fstp st0 | jz R1>>] 
+[.rElse_If= | jmp R5> | R0: | fld #1 | fcom #2 | fstsw AX | Test AX 16384 | fstp st0 | jz R1>>] 
+
+[rElse | fstp st0 | jmp R5> | R0:] 
+[.rElse | fstp st0 | jmp R6>> | R1:] 
+
+[rEnd_If | R0: fstp st0 | R5:] 
+[.rEnd_If | R1: fstp st0 | R6:]
+
+
+/Moving
+
+
+____________________________________________________________________________________________
+[push | push #1 | #+1]  [pop | pop #1 | #+1];
+
+[mov | mov #1 #2 | #+2]
+
+[Exchange | push #1 | push #2 | pop #1 | pop #2]
+____________________________________________________________________________________________
+
+
+/Looping
+
+
+____________________________________________________________________________________________
+
+[While | W0: | cmp #1 #3 | jn#2 W9>]
+[End_While | jmp W0< | W9:]
+
+[.While | X0: | cmp #1 #3 | jn#2 X9>>]
+[.End_While | jmp X0<< | X9:]
+
+[Do | D0:]
+[Loop_Until | cmp #1 #3 | jn#2 D0<]
+[Do_Loop | Loop D0<]
+
+[.Do | E0:]
+[.Loop_Until | cmp #1 #3 | jn#2 E0<<]
+[.Do_Loop | Loop E0<]
+____________________________________________________________________________________________
+
+
+/ResultFromEAX
+
+
+[. | #3>L | mov #1 eax]
+
+; Allows things like:
+;
+; > . D§StartTime < call 'KERNEL32.GetTickCount'
+; > . ecx = shr eax 2
+;
+; Note that the macro Name is one single Point (must be alone inside Spaces).
+; Same for the dummy second parameter (= or < or whatever you'd like).
+
+
+/Aligning
+
+
+[Align_On | add #2 #1-1 | and #2 0-#1]
+
+; Example: > Align_On 00_100, D§MyPointer
+
+
+/ForNext
+
+
+@
+
+[For | push ecx | &14=#5 | &15=1 | &15=#7>L | mov D§#1 #3 | &16=#1 | &17=0 | &16_&17: | push &14 | push &15]
+
+[Next  | pop ecx | add D§#1 ecx | pop ecx | cmp D§#1 ecx | &16=#1 | &17=0 | jbe &16_&17<< | pop ecx]
+[Negxt | pop ecx | sub D§#1 ecx | pop ecx | cmp D§#1 ecx | &16=#1 | &17=0 | jae &16_&17<< | pop ecx]
+
+; i use a, b, c,... instead of i, j, k, ... because i is usualy for If and friends.
+;
+; Note: Uses ecx and the Stack internally.
+
+[a: 0    b: 0    c: 0    d: 0    e: 0    f: 0]
+
+; To be used, for example as:
+
+    For a = 1 to 5
+        hexprint D§a            ; shows 1 / 2 / 3 / 4 / 5
+    Next a
+
+    For a = 1 to 5, Step 2
+        hexprint D§a            ; Shows 1 / 3 / 5
+
+        For b = 1 to 2
+            hexprint D§b        ; shows 1 / 2 // 1 / 2 // 1 / 2
+
+            For c = 0400 to 0100, Step 0100
+                hexprint D§c    ; shows 0400 / 0300 / 0200 / 0100 // ....
+            Negxt c
+         ; (Negxt is the negative Stepping form).
+        Next b
+    Next a
+
+
+/Absolute Value
+
+
+; (For Integers).
+
+[AbsoluteD | test #1 0_8000_0000 | jz M0> | neg #1 | M0:]
+[AbsoluteW | test #1 0_8000 | jz M0> | neg #1 | M0:]
+[AbsoluteB | test #1 0_80 | jz M0> | neg #1 | M0:]
+
+
+/Enum
+
+
+[Enum1 | {#1 #x} | #+1]
+[Enum0 | {#1 #x-1} | #+1]
+[EnumX | {#2 #F-1+#x} | #+1]
+
+;;
+Saves from serial Equates Sets maintainances. To be used as, for example:
+
+Enum1 One Two three four five   ; Same as Equates: [One 1, Two 2, ...]
+Enum0 Monday tuesday thirsday   ; Same as Equates: [Monday 0, tuesday 1, ...]
+EnumX 5 Robert Yan Margret      ; Same as Equates: [Robert 5, Yan 6, ...]
+;;
+
+
+/C_call
+
+
+[C_call | &9=0 | C_Call2 #1 #L>2]
+[C_Call2 | &9=&9+4 | push #2 | #+1 | call #F | add esp &9]
+
+;;
+ For calling the Api that do not clear the Stack. Example:
+
+ > C_call 'USER32.wsprintfA' Buffer ExitProc D§Total
+
+ Note that i am not sure it is worthy spoiling one of the
+ precious '&x' Storages for calling C Routines from Asm 
+ Code. If you do so reserve &9 for all such temporary tricks.
+;;
+
+
+//FPU
+
+
+/Rounding Mode
+
+
+@
+
+[FpModeTroncated 00_00001100_00000000
+ FpModeNearest   00_00000000_00000000
+ FpModeDown      00_00000100_00000000
+ FpModeUp        00_00001000_00000000]
+
+Proc FpuRounding:
+    Argument @Mode
+    local @ControlWord
+        fstcw W@ControlWord
+        and W@ControlWord 00_11110011_11111111
+        mov eax D$@Mode | or W@ControlWord ax
+        fldcw W$@ControlWord
+EndP
+
+
+/Float to Ascii
+
+
+@
+
+
+;;
+____________________________________________________________________________________________
+
+                              FloatToAscii
+____________________________________________________________________________________________
+
+                             
+  This procedure was written by Raymond Filiatreault, December 2002
+  (Modified Betov December 2002).
+  
+  This FloatToAscii function converts an 80-bit REAL number (Src) to its
+  decimal representation as a zero terminated alphanumeric string which
+  is returned at the specified memory destination unless an invalid
+  operation is reported by the FPU. The format of the string can be 
+  specified as regular, or scientific notation. The number of decimal
+  places returned must also be specified but the total number of digits
+  must not exceed 18.
+  
+  The source can be an 80-bit REAL number from the FPU itself or from
+  memory. If the source is taken from the FPU, its value will be preserved
+  there if no error is reported.
+  
+  The source is not checked for validity. This is the programmer's
+  responsibility.
+  
+  This procedure is based on using an FPU instruction to convert the
+  REAL number into a specific packed decimal format. After unpacking,
+  the decimal point is positioned as required.
+  
+  Only EAX is used to return error or success. All other registers are
+  preserved.
+____________________________________________________________________________________________
+
+  Calling:     > call FloatToAscii Source, Destination, Decimal, FLAG
+  
+  Source: Either a Pointer to a Data [T$Source: ...], or &NULL if you 
+          "fld F$ / R$ / T$ Source"  before calling.
+          
+  Destination: Pointer to a Data Buffer for the Ascii String 
+               (Max Size = 25 Bytes).
+  
+  Decimal: The Number of wanted decimals (Max = 15).
+  
+  FLAG (for notation choice): Either SCIENTIFIC or REGULAR.
+____________________________________________________________________________________________
+;;
+
+; Flags:
+
+[REGULAR 0    SCIENTIFIC 1]
+
+Proc FloatToAscii:
+    Arguments @Source, @Destination, @Decimal, @Flag
+    Local @temporary, @eSize, @oldcw, @truncw, @stword
+    Structure @BCD 12, @bcdstr 0
+
+        fclex                   ;clear exception flags on FPU
+
+      ; Get the specified number of decimals for result (MAX = 15):
+        On D@Decimal > 0F, mov D@Decimal 0F
+
+      ; The FPU will be initialized only if the source parameter is not taken
+      ; from the FPU itself (D@ Source <> &NULL):
+        .If D@Source = &NULL
+            fld st0             ;copy it to preserve the original value
+        .Else
+            mov eax D@Source
+            If eax > 0400_000
+                finit | fld T$eax
+              ; Check first if value on FPU is valid or equal to zero:
+                ftst                    ;test value on FPU
+                fstsw W@stword          ;get result
+                test W@stword 04000     ;check it for zero or NAN
+                jz L0>                  ;continue if valid non-zero
+                test W@stword 0100      ;now check it for NAN
+                jnz L1>                 ;Src is NAN or infinity - cannot convert
+                  ; Here: Value to be converted = 0
+                    mov eax D@Destination | mov W$eax '0' ; Write '0', 0 szstring
+                    mov eax &TRUE | finit | ExitP
+            Else
+L1:             finit | mov eax &FALSE | ExitP
+            End_If
+        .End_If
+
+      ; Get the size of the number:
+L0:     fld st0                 ;copy it
+        fabs                    ;insures a positive value
+        fld1 | fldl2t
+        fdivp ST1 ST0           ;->1/[log2(10)]
+        fxch | fyl2x            ;->[log2(Src)]/[log2(10)] = log10(Src)
+      
+        fstcw W@oldcw           ;get current control word
+        mov ax W@oldcw
+        or ax 0C00              ;code it for truncating
+        mov W@truncw ax
+        fldcw W@truncw          ;change rounding code of FPU to truncate
+      
+        fist D@eSize            ;store characteristic of logarithm
+        fldcw W@oldcw           ;load back the former control word
+
+        ftst                    ;test logarithm for its sign
+        fstsw W@stword          ;get result
+        test W@stword 0100      ;check if negative
+        jz L0>
+            dec D@eSize
+            
+L0:     On D@eSize > 15, mov D@Flag SCIENTIFIC
+
+      ; Multiply the number by a power of 10 to generate a 16-digit integer:
+L0:     fstp st0                ;get rid of the logarithm
+        mov eax 15
+        sub eax D@eSize         ;exponent required to get a 16-digit integer
+        jz L0>                  ;no need if already a 16-digit integer
+            mov D@temporary eax
+            fild D@temporary
+            fldl2t | fmulp ST1 ST0       ;->log2(10)*exponent
+            fld st0 | frndint | fxch
+            fsub st0 st1        ;keeps only the fractional part on the FPU
+            f2xm1               ;->2^(fractional part)-1
+            fld1
+            faddp  ST1 ST0      ;add 1 back
+            fscale              ;re-adjust the exponent part of the REAL number
+            fxch
+            fstp st0
+            fmulp ST1 ST0       ;->16-digit integer
+
+L0:     fbstp T@bcdstr          ;transfer it as a 16-digit packed decimal
+        fstsw W@stword          ;retrieve exception flags from FPU
+        test W@stword 1         ;test for invalid operation
+        jnz L1<<                ;clean-up and return error
+        
+      ; Unpack bcd, the 10 bytes returned by the FPU being in the little-endian style:
+        push ecx, esi, edi
+            lea esi D@bcdstr+9
+            mov edi D@Destination
+            mov al B$esi        ;sign byte
+            dec esi | dec esi
+            If al = 080
+                mov al '-'      ;insert sign if negative number
+            Else
+                mov al ' '      ;insert space if positive number
+            End_If
+            stosb
+
+            ...If D@Flag = REGULAR 
+              ; Verify number of decimals required vs maximum allowed:
+                mov eax 15 | sub eax D@eSize
+                cmp eax D@Decimal | jae L0>
+                    mov D@Decimal eax
+ 
+              ; ;check for integer digits:
+L0:             mov ecx D@eSize
+                or ecx ecx           ;is it negative
+                jns L3>
+                  ; Insert required leading 0 before decimal digits:
+                    mov ax '0.' | stosw
+                    neg ecx
+                    cmp ecx D@Decimal | jbe L0>
+                        jmp L8>>
+                
+L0:                 dec ecx | jz L0>
+                        stosb | jmp L0<
+L0:
+                    mov ecx D@Decimal | inc ecx
+                    add ecx D@eSize | jg L4>
+                        jmp L8>>
+
+              ; Do integer digits:
+L3:             inc ecx
+L0:             movzx eax B$esi | dec esi | ror ax 4 | ror ah 4
+                add ax '00' | stosw | sub ecx 2 | jg L0<
+                jz L0>
+                    dec   edi
+                
+L0:             cmp D@Decimal 0 | jz L8>>
+                    mov al '.' | stosb
+                    If ecx <> 0
+                        mov al ah | stosb
+                        mov ecx D@Decimal | dec ecx | jz L8>>
+                    Else
+                        mov ecx D@Decimal
+                    End_If
+
+              ; Do decimal digits:
+L4:             movzx eax B$esi
+                dec esi
+                ror ax 4 | ror ah 4 | add ax 03030 | stosw
+                sub ecx 2 | jg L4<
+                jz L1>
+                    dec   edi
+L1:             jmp L8>>
+
+          ; scientific notation
+            ...Else
+                mov ecx D@Decimal | inc ecx
+                movzx eax B$esi | dec esi
+                ror ax 4 | ror ah 4 | add ax '00' | stosb
+                mov al '.' | stosb
+                mov al ah | stosb
+                sub ecx 2 | jz L7>
+                jns L0>
+                    dec edi | jmp L7>
+L0:             movzx eax B$esi
+                dec esi
+                ror ax 4 | ror ah 4
+                add ax '00' | stosw | sub ecx 2 | jg L0<
+                jz L7>
+                    dec   edi
+
+L7:             mov al 'E' | stosb
+                mov al '+', ecx D@eSize | or ecx ecx | jns L0>
+                    mov al '-' | neg   ecx
+L0:             stosb
+              ; Note: the absolute value of the size could not exceed 4931
+                mov eax ecx
+                mov cl 100
+                div cl          ;->thousands & hundreds in AL, tens & units in AH
+                push eax
+                    and eax 0FF ;keep only the thousands & hundreds
+                    mov cl 10
+                    div cl      ;->thousands in AL, hundreds in AH
+                    add ax '00' ;convert to characters
+                    stosw       ;insert them
+                pop eax
+                shr eax 8       ;get the tens & units in AL
+                div cl          ;tens in AL, units in AH
+                add ax '00'     ;convert to characters
+                stosw           ;insert them
+            ...End_If
+
+L8:         mov B$edi 0         ;string terminating 0
+        pop edi, esi, ecx
+
+        finit | mov eax &TRUE
+EndP
+
+
+/Ascii to Float
+
+
+@
+
+;;
+____________________________________________________________________________________________
+
+                             AsciitoFloat
+____________________________________________________________________________________________
+
+  This procedure was written by Raymond Filiatreault, December 2002
+  Modified Betov, December 2002
+  
+  This AsciitoFloat function converts a decimal number from a zero terminated
+  alphanumeric string format (Src) to an 80-bit REAL number and returns
+  the result as an 80-bit REAL number at the specified destination (either
+  the FPU top or a memory location), unless an invalid operation is
+  reported by the FPU.
+ 
+  The source can be a string in regular numeric format or in scientific
+  notation. The number of digits (including leading 0's) must not exceed
+  18. If in scientific format, the exponent must be within +/-4931
+ 
+  The source is checked for validity. The procedure returns an error if
+  a character other than those acceptable is detected prior to the
+  terminating zero or the above limits are exceeded.
+ 
+  This procedure is based on converting the digits into a specific packed
+  decimal format which can be used by the FPU and then adjusted for an
+  exponent of 10.
+ 
+  Only EAX is used to return error or success. All other registers are
+  preserved.
+____________________________________________________________________________________________
+
+  Calling:     > call AsciitoFloat Source, Destination
+  
+  Source: Pointer to a Floating Point String (either regular or scientific 
+          notation).
+  
+  Destination: Either a Pointer to a [T$FPValue: ...] or &NULL.
+
+  In case of &NULL Destination, the result is left on the FPU Stack, and
+  you have to you have to pop the result by yourself. Usefull in cases when
+  you want Real8 or Real4, or when you want to go on computing with the result.
+____________________________________________________________________________________________
+;;
+
+Proc AsciitoFloat:
+    Arguments @lpSrc, @lpDest
+    Local @stword, @ten
+    Structure @BCD 12, @bcdstr 0
+    Uses ebx, ecx, edx, esi, edi
+
+        mov eax 0, ebx 0, edx 0, ecx 19, D@ten 10
+        lea edi D@bcdstr | mov D$edi 0, D$edi+4 0, D$edi+8 0 | add edi 8
+
+        mov esi D@lpSrc
+        mov al B$esi
+        If al = Space       ; string empty?
+            jmp E7>>
+        Else_If al = minusSign
+            mov B$edi+1 080
+            inc esi
+        End_If
+
+        ; Strip pointless 0
+        While B$esi = '0'
+            If B$esi+1 = pointSign | inc esi | jmp L2> | End_If
+            On B$esi+1 < '0', jmp L2>
+            On B$esi+1 > '9', jmp L2>
+            inc esi
+        End_While
+
+      ; Convert the digits to packed decimal:
+L2:     lodsb | On al = 'e', mov al 'E'
+
+      ; bh used to set the decimal point flag (one point only):
+        ...If al = pointSign
+            If bh = 0
+                or bh 1 | jmp L2<
+            End_If
+        ...Else_If al = 'E'
+            On cl < 19, jmp L6>>        ;error if no digit before E
+        ...Else_If al = Space
+            If cl < 19                  ;error if no digit before terminating Space
+                xor al al | rol al 4 | ror ax 4 | mov B$edi al | jmp L5>>
+            End_If
+        ...Else
+            ..If al >= '0'
+                .If al <= '9'           ;error if bad Char.
+                    dec ecx
+                    If ecx > 0          ;error if more than 18 digits in number
+                        sub al '0' | On bh = 0, inc bl
+                        test ah 040 | jz L1>
+                            rol al 4 | ror ax 4 | mov B$edi al | dec edi | xor eax eax  | jmp L2<<
+L1:                     mov ah al | or ah 040 | jmp L2<<
+                    End_If
+                .End_If
+            ..End_If
+        ...End_If
+
+        jmp E7>>                        ; Error case if falling here.
+
+      ; Output:
+L5:     fbld T@bcdstr
+        mov eax 18 | sub al bl | sub edx eax | call XexpY edx
+        fmulp ST1 ST0
+        fstsw W@stword                      ;retrieve exception flags from FPU
+        wait | test W@stword 1 | jnz E7>>   ;test for invalid operation
+        mov eax D@lpDest
+        If D@lpDest <> &NULL
+            mov eax D@lpDest |  fstp T$eax      ;store result at specified address
+        End_If
+        jmp E8>>
+
+      ; Scientific notation (exponent in edx):
+L6:     movzx eax B$esi | inc esi
+        cmp al plusSign | je L0>
+            cmp al minusSign | jne L6>
+            stc | rcr eax 1         ;keep sign of exponent in most significant bit of EAX
+L0:     lodsb                               ;get next digit after sign
+
+L6:     push eax |
+            and eax 0FF | jnz L0>           ;continue if 1st byte of exponent is not terminating 0
+L6:             pop eax | jmp E7>>          ;no exponent
+L0:         sub al '0' | jc L6<             ;unacceptable character
+            cmp al 9 | ja L6<               ;unacceptable character
+            push eax
+                mov eax edx | mul D@ten | mov edx eax
+            pop eax
+            add edx eax | cmp edx 4931 | ja L6<     ;exponent too large
+            lodsb
+            cmp al Space | jne L0<
+        pop eax                             ;retrieve exponent sign flag
+        rcl eax 1 | jnc L0>                 ;is most significant bit set?
+            neg edx
+L0:     jmp L5<<
+
+E7:     mov eax &FALSE | finit | jmp E9>
+E8:     mov eax &TRUE
+E9: EndP
+
+
+;put 10 to the proper exponent (value in EDX) on the FPU
+
+Proc XexpY:
+    Argument @Tempdw
+
+        fild D@tempdw           ;load the exponent
+        fldl2t                  ;load log2(10)
+        fmulp ST1 ST0           ;->log2(10)*exponent
+
+;at this point, only the log base 2 of the 10^exponent is on the FPU
+;the FPU can compute the antilog only with the mantissa
+;the characteristic of the logarithm must thus be removed
+      
+        fld ST0                 ;copy the logarithm
+        frndint                 ;keep only the characteristic
+        fsub ST1 ST0            ;keeps only the mantissa
+        fxch                    ;get the mantissa on top
+
+        f2xm1                   ;->2^(mantissa)-1
+        fld1
+        faddp ST1 ST0           ;add 1 back
+
+;the number must now be readjusted for the characteristic of the logarithm
+
+        fscale                  ;scale it with the characteristic
+      
+;the characteristic is still on the FPU and must be removed
+
+        fxch                    ;bring it back on top
+        fstp ST0                ;clean-up the register
+EndP
+

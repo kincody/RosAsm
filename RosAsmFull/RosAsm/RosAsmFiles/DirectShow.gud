@@ -1,0 +1,3125 @@
+
+; SOURCE FILE -> vrm9.h
+
+[&IID_IVMRImagePresenter9: 069188c61 012a3 040f0 08f 0fc 034 02e 07b 043 03f 0d7]
+         
+[.StartPresenting
+ .StopPresenting
+ .PresentImage] 
+ 
+[VMR9Sample_SyncPoint 01,
+ VMR9Sample_Preroll 02,
+ VMR9Sample_Discontinuity 04,
+ VMR9Sample_TimeValid 08,
+ VMR9Sample_SrcDstRectsValid 010]
+
+[&IID_IVMRSurfaceAllocator9: 08d5148ea 03f5d 046cf 09d 0f1 0d1 0b8 096 0ee 0db 01f]
+        
+[.InitializeDevice
+ .TerminateDevice
+ .GetSurface
+ .AdviseNotify]
+
+[VMR9AllocFlag_3DRenderTarget 01
+ VMR9AllocFlag_DXVATarget 02
+ VMR9AllocFlag_TextureSurface 04
+ VMR9AllocFlag_OffscreenSurface 08
+ VMR9AllocFlag_RGBDynamicSwitch 010
+ VMR9AllocFlag_UsageReserved 0e0
+ VMR9AllocFlag_UsageMask 0ff]
+ 
+[&IID_IVMRSurfaceAllocatorEx9: 06de9a68a 0a928 04522 0bf 057 065 05a 0e3 086 064 056]
+ 
+[.InitializeDevice
+ .TerminateDevice
+ .GetSurface
+ .AdviseNotify
+ .GetSurfaceEx]
+
+[&IID_IVMRSurfaceAllocatorNotify9: 0dca3f5df 0bb3a 04d03 0bd 081 084 061 04b 0fb 0fa 0c]
+       
+[.AdviseSurfaceAllocator
+ .SetD3DDevice
+ .ChangeD3DDevice
+ .AllocateSurfaceHelper
+ .NotifyEvent]
+
+[&IID_IVMRWindowlessControl9: 08f537d09 0f85e 04414 0b2 03b 050 02e 054 0c7 099 027]
+        
+[.GetNativeVideoSize
+ .GetMinIdealVideoSize
+ .GetMaxIdealVideoSize
+ .SetVideoPosition
+ .GetVideoPosition
+ .GetAspectRatioMode
+ .SetAspectRatioMode
+ .SetVideoClippingWindow
+ .RepaintVideo
+ .DisplayModeChanged
+ .GetCurrentImage
+ .SetBorderColor
+ .GetBorderColor]
+
+[VMR9ARMode_None 00
+ VMR9ARMode_LetterBox 01]
+
+[&IID_IVMRMixerControl9: 01a777eaa 047c8 04930 0b2 0c9 08f 0ee 01c 01b 0f 03b]
+        
+[.SetAlpha
+ .GetAlpha
+ .SetZOrder
+ .GetZOrder
+ .SetOutputRect
+ .GetOutputRect
+ .SetBackgroundClr
+ .GetBackgroundClr
+ .SetMixingPrefs
+ .GetMixingPrefs
+ .SetProcAmpControl
+ .GetProcAmpControl
+ .GetProcAmpControlRange]
+
+[MixerPref9_NoDecimation 01
+ MixerPref9_DecimateOutput 02
+ MixerPref9_ARAdjustXorY 04
+ MixerPref9_NonSquareMixing 08
+ MixerPref9_DecimateMask 0f
+ MixerPref9_BiLinearFiltering 010
+ MixerPref9_PointFiltering 020
+ MixerPref9_AnisotropicFiltering 040
+ MixerPref9_PyramidalQuadFiltering 080
+ MixerPref9_GaussianQuadFiltering 0100
+ MixerPref9_FilteringReserved 0e00
+ MixerPref9_FilteringMask 0ff0
+ MixerPref9_RenderTargetRGB 01000
+ MixerPref9_RenderTargetYUV 02000
+ MixerPref9_RenderTargetReserved 0fc000
+ MixerPref9_RenderTargetMask 0ff000
+ MixerPref9_DynamicSwitchToBOB 0100000
+ MixerPref9_DynamicDecimateBy2 0200000
+ MixerPref9_DynamicReserved 0c00000
+ MixerPref9_DynamicMask 0f00000]
+
+[ProcAmpControl9_Brightness 01
+ ProcAmpControl9_Contrast 02
+ ProcAmpControl9_Hue 04
+ ProcAmpControl9_Saturation 08
+ ProcAmpControl9_Mask 0f]
+ 
+[&IID_IVMRMixerBitmap9: 0ced175e5 01935 04820 081 0bd 0ff 06a 0d0 0c 091 08]
+
+[.SetAlphaBitmap
+ .UpdateAlphaBitmapParameters
+ .GetAlphaBitmapParameters]
+  
+[VMR9AlphaBitmap_Disable 01
+ VMR9AlphaBitmap_hDC 02
+ VMR9AlphaBitmap_EntireDDS 04
+ VMR9AlphaBitmap_SrcColorKey 08
+ VMR9AlphaBitmap_SrcRect 010
+ VMR9AlphaBitmap_FilterMode 020]
+ 
+[&IID_IVMRSurface9: 0dfc581a1 06e1f 04c3a 08d 0a 05e 097 092 0ea 02a 0fc]
+         
+[.IsSurfaceLocked
+ .LockSurface
+ .UnlockSurface
+ .GetSurface]
+
+[&IID_IVMRImagePresenterConfig9: 045c15cab 06e22 0420a 080 043 0ae 01f 0a 0c0 02c 07d]
+        
+[.SetRenderingPrefs
+ .GetRenderingPrefs] 
+ 
+[RenderPrefs9_DoNotRenderBorder 01
+ RenderPrefs9_Mask 01]
+ 
+[&IID_IVMRVideoStreamControl9: 0d0cfe38b 093e7 04772 089 057 04 00 0c4 09a 044 085]
+        
+[.SetStreamActiveState
+ .GetStreamActiveState]
+
+[&IID_IVMRFilterConfig9: 05a804648 04f66 04867 09c 043 04f 05c 082 02c 0f1 0b8]
+        
+[.SetImageCompositor
+ .SetNumberOfStreams
+ .GetNumberOfStreams
+ .SetRenderingPrefs
+ .GetRenderingPrefs
+ .SetRenderingMode
+ .GetRenderingMode]
+ 
+[VMR9Mode_Windowed 01
+ VMR9Mode_Windowless 02
+ VMR9Mode_Renderless 04
+ VMR9Mode_Mask 07]
+ 
+[&IID_IVMRAspectRatioControl9: 0d96c29 0bbde 04efc 099 01 0bb 050 036 039 021 046]
+ 
+[.GetAspectRatioMode
+ .SetAspectRatioMode]
+
+[&IID_IVMRMonitorConfig9: 046c2e457 08ba0 04eef 0b8 0b 06 080 0f0 097 087 049]
+
+[.SetMonitor
+ .GetMonitor
+ .SetDefaultMonitor
+ .GetDefaultMonitor
+ .GetAvailableMonitors]
+
+[&IID_IVMRDeinterlaceControl9: 0a215fb8d 013c2 04f7f 099 03c 00 03d 062 071 0a4 059]
+
+[.GetNumberOfDeinterlaceModes
+ .GetDeinterlaceModeCaps
+ .GetDeinterlaceMode
+ .SetDeinterlaceMode
+ .GetDeinterlacePrefs
+ .SetDeinterlacePrefs
+ .GetActualDeinterlaceMode]
+        
+[DeinterlacePref9_NextBest 01
+ DeinterlacePref9_BOB 02
+ DeinterlacePref9_Weave 04
+ DeinterlacePref9_Mask 07]
+ 
+[DeinterlaceTech9_Unknown 00,
+ DeinterlaceTech9_BOBLineReplicate 01
+ DeinterlaceTech9_BOBVerticalStretch 02
+ DeinterlaceTech9_MedianFiltering 04
+ DeinterlaceTech9_EdgeFiltering 010
+ DeinterlaceTech9_FieldAdaptive 020
+ DeinterlaceTech9_PixelAdaptive 040
+ DeinterlaceTech9_MotionVectorSteered 080]
+ 
+[VMR9_SampleReserved 01
+ VMR9_SampleProgressiveFrame 02
+ VMR9_SampleFieldInterleavedEvenFirst 03
+ VMR9_SampleFieldInterleavedOddFirst 04
+ VMR9_SampleFieldSingleEven 05
+ VMR9_SampleFieldSingleOdd 06]
+
+[&IID_IVMRImageCompositor9: 04a5c89eb 0df51 04654 0ac 02a 0e4 08e 02 0bb 0ab 0f6]
+
+[.InitCompositionDevice
+ .TermCompositionDevice
+ .SetStreamMediaType
+ .CompositeImage]
+
+; SOURCE FILE -> strmif.h
+
+[&IID_ICreateDevEnum: 029840822 05B84 011D0 0BD 03B 00 0A0 0C9 011 0CE 086]
+
+[.CreateClassEnumerator]
+
+[&IID_IPin: 056a86891 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.Connect
+ .ReceiveConnection
+ .Disconnect
+ .ConnectedTo
+ .ConnectionMediaType
+ .QueryPinInfo
+ .QueryDirection
+ .QueryId
+ .QueryAccept
+ .EnumMediaTypes
+ .QueryInternalConnections
+ .EndOfStream
+ .BeginFlush 
+ .EndFlush
+ .NewSegment]
+
+[&IID_IEnumPins: 056a86892 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.Next 
+ .Skip 
+ .Reset 
+ .Clone]
+
+[&IID_IEnumMediaTypes: 089c31040 0846b 011ce 097 0d3 00 0aa 00 055 059 05a]
+
+[.Next 
+ .Skip 
+ .Reset
+ .Clone]
+
+[&IID_IFilterGraph: 056a8689f 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.AddFilter 
+ .RemoveFilter 
+ .EnumFilters
+ .FindFilterByName 
+ .ConnectDirect 
+ .Reconnect 
+ .Disconnect 
+ .SetDefaultSyncSource]
+
+[&IID_IEnumFilters: 056a86893 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.Next
+ .Skip
+ .Reset
+ .Clone]
+
+[&IID_IMediaFilter: 056a86899 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.GetClassID 
+ .Stop
+ .Pause
+ .Run
+ .GetState
+ .SetSyncSource 
+ .GetSyncSource]
+
+[&IID_IBaseFilter: 056a86895 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.GetClassID 
+ .Stop
+ .Pause
+ .Run 
+ .GetState 
+ .SetSyncSource 
+ .GetSyncSource 
+ .EnumPins 
+ .FindPin 
+ .QueryFilterInfo
+ .JoinFilterGraph
+ .QueryVendorInfo]
+
+[&IID_IReferenceClock: 056a86897 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.GetTime 
+ .AdviseTime 
+ .AdvisePeriodic
+ .Unadvise]
+
+[&IID_IReferenceClock2: 036b73885 0c2c8 011cf 08b 046 00 080 05f 06c 0ef 060]
+
+[.GetTime
+ .AdviseTime
+ .AdvisePeriodic 
+ .Unadvise]
+
+[&IID_IMediaSample: 056a8689a 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.GetPointer 
+ .GetSize 
+ .GetTime 
+ .SetTime 
+ .IsSyncPoint
+ .SetSyncPoint 
+ .IsPreroll 
+ .SetPreroll 
+ .GetActualDataLength
+ .SetActualDataLength
+ .GetMediaType 
+ .SetMediaType 
+ .IsDiscontinuity 
+ .SetDiscontinuity 
+ .GetMediaTime 
+ .SetMediaTime]
+
+[&IID_IMediaSample2: 036b73884 0c2c8 011cf 08b 046 00 080 05f 06c 0ef 060]
+
+[.GetPointer
+ .GetSize
+ .GetTime
+ .SetTime
+ .IsSyncPoint 
+ .SetSyncPoint 
+ .IsPreroll 
+ .SetPreroll
+ .GetActualDataLength
+ .SetActualDataLength
+ .GetMediaType 
+ .SetMediaType 
+ .IsDiscontinuity 
+ .SetDiscontinuity
+ .GetMediaTime 
+ .SetMediaTime 
+ .GetProperties
+ .SetProperties]
+
+[AM_SAMPLE_SPLICEPOINT 01
+ AM_SAMPLE_PREROLL 02
+ AM_SAMPLE_DATADISCONTINUITY 04
+ AM_SAMPLE_TYPECHANGED 08
+ AM_SAMPLE_TIMEVALID 010
+ AM_SAMPLE_TIMEDISCONTINUITY 040
+ AM_SAMPLE_FLUSH_ON_PAUSE 080
+ AM_SAMPLE_STOPVALID 0100
+ AM_SAMPLE_ENDOFSTREAM 0200
+ AM_STREAM_MEDIA 00
+ AM_STREAM_CONTROL 01]
+
+[AM_GBF_PREVFRAMESKIPPED 01
+ AM_GBF_NOTASYNCPOINT 02
+ AM_GBF_NOWAIT 04
+ AM_GBF_NODDSURFACELOCK 08]
+
+[&IID_IMemAllocator: 056a8689c 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.SetProperties
+ .GetProperties
+ .Commit 
+ .Decommit 
+ .GetBuffer 
+ .ReleaseBuffer]
+
+[&IID_IMemAllocatorCallbackTemp: 0379a0cf0 0c1de 011d2 0ab 0f5 00 0a0 0c9 05 0f3 075]
+
+[.SetProperties
+ .GetProperties
+ .Commit
+ .Decommit 
+ .GetBuffer 
+ .TempBuffer
+ .SetNotify 
+ .GetFreeCount]
+
+[&IID_IMemAllocatorNotifyCallbackTemp: 092980b30 0c1de 011d2 0ab 0f5 00 0a0 0c9 05 0f3 075]
+
+[.NotifyRelease]
+
+[&IID_IMemInputPin: 056a8689d 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.GetAllocator 
+ .NotifyAllocator 
+ .GetAllocatorRequirements 
+ .Receive 
+ .ReceiveMultiple 
+ .ReceiveCanBlock]
+
+[&IID_IAMovieSetup: 0a3d8cec0 07e5a 011cf 0bb 0c5 00 080 05f 06c 0ef 020]
+
+[.Register
+ .Unregister]
+
+[&IID_IMediaSeeking: 036b73880 0c2c8 011cf 08b 046 00 080 05f 06c 0ef 060]
+
+[.GetCapabilities 
+ .CheckCapabilities 
+ .IsFormatSupported 
+ .QueryPreferredFormat 
+ .GetTimeFormat
+ .IsUsingTimeFormat 
+ .SetTimeFormat
+ .GetDuration 
+ .GetStopPosition 
+ .GetCurrentPosition
+ .ConvertTimeFormat 
+ .SetPositions 
+ .GetPositions 
+ .GetAvailable 
+ .SetRate
+ .GetRate
+ .GetPreroll]
+
+[AM_SEEKING_NoPositioning 00
+ AM_SEEKING_AbsolutePositioning 01
+ AM_SEEKING_RelativePositioning 02
+ AM_SEEKING_IncrementalPositioning 03
+ AM_SEEKING_PositioningBitsMask 03
+ AM_SEEKING_SeekToKeyFrame 04
+ AM_SEEKING_ReturnTime 08
+ AM_SEEKING_Segment 010
+ AM_SEEKING_NoFlush 020]
+
+[AM_SEEKING_CanSeekAbsolute 01
+ AM_SEEKING_CanSeekForwards 02
+ AM_SEEKING_CanSeekBackwards 04
+ AM_SEEKING_CanGetCurrentPos 08
+ AM_SEEKING_CanGetStopPos 010
+ AM_SEEKING_CanGetDuration 020
+ AM_SEEKING_CanPlayBackwards 040
+ AM_SEEKING_CanDoSegments 080
+ AM_SEEKING_Source 0100]
+
+[AM_MEDIAEVENT_NONOTIFY 01]
+
+[&IID_IEnumRegFilters: 056a868a4 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.Next 
+ .Skip 
+ .Reset
+ .Clone]
+
+[&IID_IFilterMapper: 056a868a3 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.RegisterFilter 
+ .RegisterFilterInstance
+ .RegisterPin 
+ .RegisterPinType 
+ .UnregisterFilter
+ .UnregisterFilterInstance 
+ .UnregisterPin
+ .EnumMatchingFilters]
+
+[MERIT_PREFERRED 0800000
+ MERIT_NORMAL 0600000
+ MERIT_UNLIKELY 0400000
+ MERIT_DO_NOT_USE 0200000
+ MERIT_SW_COMPRESSOR 0100000
+ MERIT_HW_COMPRESSOR 0100050]
+
+[&IID_IFilterMapper2: 0b79bb0b0 033c1 011d1 0ab 0e1 00 0a0 0c9 05 0f3 075]
+
+[.CreateCategory 
+ .UnregisterFilter 
+ .RegisterFilter 
+ .EnumMatchingFilters]
+
+[&IID_IFilterMapper3: 0b79bb0b1 033c1 011d1 0ab 0e1 00 0a0 0c9 05 0f3 075]
+
+[.CreateCategory 
+ .UnregisterFilter 
+ .RegisterFilter 
+ .EnumMatchingFilters 
+ .GetICreateDevEnum]
+
+[&IID_IQualityControl: 056a868a5 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.Notify 
+ .SetSink]
+
+[&IID_IOverlayNotify: 056a868a0 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.OnPaletteChange
+ .OnClipChange
+ .OnColorKeyChange 
+ .OnPositionChange]
+
+[CK_NOCOLORKEY 00
+ CK_INDEX 01
+ CK_RGB 02]
+
+[ADVISE_NONE 00
+ ADVISE_CLIPPING 01
+ ADVISE_PALETTE 02
+ ADVISE_COLORKEY 04
+ ADVISE_POSITION 08
+ ADVISE_DISPLAY_CHANGE 010
+ ADVISE_ALL<((ADVISE_CLIPPING or ADVISE_PALETTE) or (ADVISE_COLORKEY or ADVISE_POSITION))>
+ ADVISE_ALL2<(ADVISE_ALL or ADVISE_DISPLAY_CHANGE)>]
+
+[&IID_IOverlayNotify2: 0680EFA10 0D535 011D1 087 0C8 00 0A0 0C9 022 031 096]
+
+[.OnPaletteChange 
+ .OnClipChange 
+ .OnColorKeyChange
+ .OnPositionChange
+ .OnDisplayChange]
+
+[&IID_IOverlay: 056a868a1 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.GetPalette 
+ .SetPalette 
+ .GetDefaultColorKey
+ .GetColorKey 
+ .SetColorKey 
+ .GetWindowHandle
+ .GetClipList 
+ .GetVideoPosition 
+ .Advise 
+ .Unadvise]
+
+[&IID_IMediaEventSink: 056a868a2 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.Notify]
+
+[&IID_IFileSourceFilter: 056a868a6 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.Load 
+ .GetCurFile]
+
+[&IID_IFileSinkFilter: 0a2104830 07c70 011cf 08b 0ce 00 0aa 00 0a3 0f1 0a6]
+
+[.SetFileName
+ .GetCurFile]
+
+[&IID_IFileSinkFilter2: 0855B90 0CE1B 011d0 0BD 04F 00 0A0 0C9 011 0CE 086]
+
+[.SetFileName 
+ .GetCurFile
+ .SetMode
+ .GetMode]
+
+[AM_FILE_OVERWRITE01]
+
+[&IID_IGraphBuilder: 056a868a9 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.AddFilter 
+ .RemoveFilter 
+ .EnumFilters 
+ .FindFilterByName
+ .ConnectDirect
+ .Reconnect 
+ .Disconnect
+ .SetDefaultSyncSource 
+ .Connect
+ .Render 
+ .RenderFile
+ .AddSourceFilter 
+ .SetLogFile
+ .Abort 
+ .ShouldOperationContinue]
+
+[&IID_ICaptureGraphBuilder: 0bf87b6e0 08c27 011d0 0b3 0f0 00 0aa 00 037 061 0c5]
+
+[.SetFiltergraph 
+ .GetFiltergraph 
+ .SetOutputFileName 
+ .FindInterface 
+ .RenderStream
+ .ControlStream 
+ .AllocCapFile
+ .CopyCaptureFile]
+
+[&IID_IAMCopyCaptureFileProgress: 0670d1d20 0a068 011d0 0b3 0f0 00 0aa 00 037 061 0c5]
+
+[.Progress]
+
+[&IID_ICaptureGraphBuilder2: 093E5A4E0 02D50 011d2 0AB 0FA 00 0A0 0C9 0C6 0E3 08D]
+
+[.SetFiltergraph
+ .GetFiltergraph
+ .SetOutputFileName
+ .FindInterface 
+ .RenderStream 
+ .ControlStream 
+ .AllocCapFile 
+ .CopyCaptureFile 
+ .FindPin]
+
+[&IID_IFilterGraph2: 036b73882 0c2c8 011cf 08b 046 00 080 05f 06c 0ef 060]
+
+[.AddFilter 
+ .RemoveFilter 
+ .EnumFilters 
+ .FindFilterByName
+ .ConnectDirect
+ .Reconnect 
+ .Disconnect
+ .SetDefaultSyncSource 
+ .Connect
+ .Render 
+ .RenderFile
+ .AddSourceFilter 
+ .SetLogFile
+ .Abort 
+ .ShouldOperationContinue 
+ .AddSourceFilterForMoniker
+ .ReconnectEx 
+ .RenderEx]
+
+[AM_RENDEREX_RENDERTOEXISTINGRENDERERS 01]
+
+[&IID_IStreamBuilder: 056a868bf 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.Render
+ .Backout]
+
+[&IID_IAsyncReader: 056a868aa 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.RequestAllocator 
+ .Request 
+ .WaitForNext
+ .SyncReadAligned 
+ .SyncRead
+ .Length 
+ .BeginFlush 
+ .EndFlush]
+
+[&IID_IGraphVersion: 056a868ab 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.QueryVersion]
+
+[&IID_IResourceConsumer: 056a868ad 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.AcquireResource
+ .ReleaseResource]
+
+[&IID_IResourceManager: 056a868ac 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.Register 
+ .RegisterGroup
+ .RequestResource
+ .NotifyAcquire
+ .NotifyRelease
+ .CancelRequest
+ .SetFocus 
+ .ReleaseFocus]
+
+[&IID_IDistributorNotify: 056a868af 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.Stop 
+ .Pause
+ .Run 
+ .SetSyncSource
+ .NotifyGraphChange]
+
+[&IID_IAMStreamControl: 036b73881 0c2c8 011cf 08b 046 00 080 05f 06c 0ef 060]
+
+[.StartAt
+ .StopAt 
+ .GetInfo]
+
+[AM_STREAM_INFO_START_DEFINED 01
+ AM_STREAM_INFO_STOP_DEFINED 02
+ AM_STREAM_INFO_DISCARDING 04
+ AM_STREAM_INFO_STOP_SEND_EXTRA 010]
+
+[&IID_ISeekingPassThru: 036b73883 0c2c8 011cf 08b 046 00 080 05f 06c 0ef 060]
+
+[.Init]
+
+[&IID_IAMStreamConfig: 0C6E13340 030AC 011d0 0A1 08C 00 0A0 0C9 011 089 056]
+
+[.SetFormat 
+ .GetFormat 
+ .GetNumberOfCapabilities
+ .GetStreamCaps]
+
+[&IID_IConfigInterleaving: 0BEE3D220 0157B 011d0 0BD 023 00 0A0 0C9 011 0CE 086]
+
+[.put_Mode 
+ .get_Mode 
+ .put_Interleaving
+ .get_Interleaving]
+
+[INTERLEAVE_NONE 00
+ INTERLEAVE_CAPTURE 01
+ INTERLEAVE_FULL 02
+ INTERLEAVE_NONE_BUFFERED 03]
+
+[&IID_IConfigAviMux: 05ACD6AA0 0F482 011ce 08B 067 00 0AA 00 0A3 0F1 0A6]
+
+[.SetMasterStream 
+ .GetMasterStream 
+ .SetOutputCompatibilityIndex 
+ .GetOutputCompatibilityIndex]
+
+[&IID_IAMVideoCompression: 0C6E13343 030AC 011d0 0A1 08C 00 0A0 0C9 011 089 056]
+
+[.put_KeyFrameRate
+ .get_KeyFrameRate
+ .put_PFramesPerKeyFrame 
+ .get_PFramesPerKeyFrame 
+ .put_Quality 
+ .get_Quality 
+ .put_WindowSize 
+ .get_WindowSize 
+ .GetInfo
+ .OverrideKeyFrame
+ .OverrideFrameSize]
+
+[CompressionCaps_CanQuality 01
+ CompressionCaps_CanCrunch 02
+ CompressionCaps_CanKeyFrame 04
+ CompressionCaps_CanBFrame 08
+ CompressionCaps_CanWindow 010]
+
+[&IID_IAMVfwCaptureDialogs: 0D8D715A0 06E5E 011D0 0B3 0F0 00 0AA 00 037 061 0C5]
+
+[.HasDialog
+ .ShowDialog 
+ .SendDriverMessage]
+
+[VfwCaptureDialog_Source 01
+ VfwCaptureDialog_Format 02
+ VfwCaptureDialog_Display 04]
+
+[VfwCompressDialog_Config 01
+ VfwCompressDialog_About 02
+ VfwCompressDialog_QueryConfig 04
+ VfwCompressDialog_QueryAbout 08]
+
+[&IID_IAMVfwCompressDialogs: 0D8D715A3 06E5E 011D0 0B3 0F0 00 0AA 00 037 061 0C5]
+
+[.ShowDialog
+ .GetState
+ .SetState
+ .SendDriverMessage]
+
+[&IID_IAMDroppedFrames: 0C6E13344 030AC 011d0 0A1 08C 00 0A0 0C9 011 089 056]
+
+[.GetNumDropped
+ .GetNumNotDropped
+ .GetDroppedInfo 
+ .GetAverageFrameSize]
+
+[&IID_IAMAudioInputMixer: 054C39221 08380 011d0 0B3 0F0 00 0AA 00 037 061 0C5]
+
+[.put_Enable 
+ .get_Enable 
+ .put_Mono
+ .get_Mono
+ .put_MixLevel 
+ .get_MixLevel 
+ .put_Pan 
+ .get_Pan 
+ .put_Loudness 
+ .get_Loudness 
+ .put_Treble 
+ .get_Treble 
+ .get_TrebleRange 
+ .put_Bass
+ .get_Bass
+ .get_BassRange]
+
+[AMF_AUTOMATICGAIN 01.0]
+
+[&IID_IAMBufferNegotiation: 056ED71A0 0AF5F 011D0 0B3 0F0 00 0AA 00 037 061 0C5]
+
+[.SuggestAllocatorProperties
+ .GetAllocatorProperties]
+
+[&IID_IAMAnalogVideoDecoder: 0C6E13350 030AC 011d0 0A1 08C 00 0A0 0C9 011 089 056]
+
+[.get_AvailableTVFormats 
+ .put_TVFormat 
+ .get_TVFormat 
+ .get_HorizontalLocked 
+ .put_VCRHorizontalLocking
+ .get_VCRHorizontalLocking
+ .get_NumberOfLines
+ .put_OutputEnable 
+ .get_OutputEnable]
+
+[AnalogVideo_None 00
+ AnalogVideo_NTSC_M 01
+ AnalogVideo_NTSC_M_J 02
+ AnalogVideo_NTSC_433 04
+ AnalogVideo_PAL_B 010
+ AnalogVideo_PAL_D 020
+ AnalogVideo_PAL_G 040
+ AnalogVideo_PAL_H 080
+ AnalogVideo_PAL_I 0100
+ AnalogVideo_PAL_M 0200
+ AnalogVideo_PAL_N 0400
+ AnalogVideo_PAL_60 0800
+ AnalogVideo_SECAM_B 01000
+ AnalogVideo_SECAM_D 02000
+ AnalogVideo_SECAM_G 04000
+ AnalogVideo_SECAM_H 08000
+ AnalogVideo_SECAM_K 010000
+ AnalogVideo_SECAM_K1 020000
+ AnalogVideo_SECAM_L 040000
+ AnalogVideo_SECAM_L1 080000
+ AnalogVideo_PAL_N_COMBO 0100000
+ AnalogVideoMask_MCE_NTSC <(AnalogVideo_NTSC_M or AnalogVideo_NTSC_M_J or AnalogVideo_NTSC_433 or AnalogVideo_PAL_M or AnalogVideo_PAL_N or AnalogVideo_PAL_60 or AnalogVideo_PAL_N_COMBO)>
+ AnalogVideoMask_MCE_PAL <(AnalogVideo_PAL_B or AnalogVideo_PAL_D or AnalogVideo_PAL_G or AnalogVideo_PAL_H or AnalogVideo_PAL_I)>
+ AnalogVideoMask_MCE_SECAM <(AnalogVideo_SECAM_B or AnalogVideo_SECAM_D or AnalogVideo_SECAM_G or AnalogVideo_SECAM_H or AnalogVideo_SECAM_K or AnalogVideo_SECAM_K1 or AnalogVideo_SECAM_L or AnalogVideo_SECAM_L1)>]
+
+[TunerInputCable 00
+ TunerInputAntenna 01]
+
+[AnalogVideo_NTSC_Mask 07
+ AnalogVideo_PAL_Mask 0100FF0
+ AnalogVideo_SECAM_Mask 0FF000]
+
+[VideoCopyProtectionMacrovisionBasic 00
+ VideoCopyProtectionMacrovisionCBI 01]
+
+[PhysConn_Video_Tuner 1
+ PhysConn_Video_Composite 2
+ PhysConn_Video_SVideo 3
+ PhysConn_Video_RGB 4
+ PhysConn_Video_YRYBY 5
+ PhysConn_Video_SerialDigital 6
+ PhysConn_Video_ParallelDigital 7
+ PhysConn_Video_SCSI 8
+ PhysConn_Video_AUX 9
+ PhysConn_Video_1394 0
+ PhysConn_Video_USB11
+ PhysConn_Video_VideoDecoder 12
+ PhysConn_Video_VideoEncoder 13
+ PhysConn_Video_SCART 14
+ PhysConn_Video_Black 15
+ PhysConn_Audio_Tuner 4096
+ PhysConn_Audio_Line 4097
+ PhysConn_Audio_Mic 4098
+ PhysConn_Audio_AESDigital  4099
+ PhysConn_Audio_SPDIFDigital 4100
+ PhysConn_Audio_SCSI 4101
+ PhysConn_Audio_AUX 4102
+ PhysConn_Audio_1394 4103
+ PhysConn_Audio_USB 4104
+ PhysConn_Audio_AudioDecoder 4105]
+
+[&IID_IAMVideoProcAmp: 0C6E13360 030AC 011d0 0A1 08C 00 0A0 0C9 011 089 056]
+
+[.GetRange
+ .Set 
+ .Get]
+
+[VideoProcAmp_Brightness 0
+ VideoProcAmp_Contra st 1
+ VideoProcAmp_Hue 2
+ VideoProcAmp_Saturation 3
+ VideoProcAmp_Sharpness 4
+ VideoProcAmp_Gamma 5
+ VideoProcAmp_ColorEnable 6
+ VideoProcAmp_WhiteBalance 7
+ VideoProcAmp_BacklightCompensation 8
+ VideoProcAmp_Gain 9]
+
+[VideoProcAmp_Flags_Auto 1
+ VideoProcAmp_Flags_Manual 2]
+
+[&IID_IAMCameraControl: 0C6E13370 030AC 011d0 0A1 08C 00 0A0 0C9 011 089 056]
+
+[.GetRange 
+ .Set 
+ .Get]
+
+[CameraControl_Pan 1
+ CameraControl_Tilt 2
+ CameraControl_Roll 3
+ CameraControl_Zoom 4
+ CameraControl_Exposure 5
+ CameraControl_Iris 6
+ CameraControl_Focus 7]
+
+[CameraControl_Flags_Auto 1
+ CameraControl_Flags_Manual 2]
+
+[&IID_IAMVideoControl: 06a2e0670 028e4 011d0 0a1 08c 00 0a0 0c9 011 089 056]
+
+[.GetCaps 
+ .SetMode 
+ .GetMode 
+ .GetCurrentActualFrameRate 
+ .GetMaxAvailableFrameRate
+ .GetFrameRateList]
+
+[VideoControlFlag_FlipHorizontal 1
+ VideoControlFlag_FlipVertical 2
+ VideoControlFlag_ExternalTriggerEnable 4
+ VideoControlFlag_Trigger 8]
+
+[&IID_IAMCrossbar: 0C6E13380 030AC 011d0 0A1 08C 00 0A0 0C9 011 089 056]
+
+[.get_PinCounts 
+ .CanRoute 
+ .Route
+ .get_IsRoutedTo 
+ .get_CrossbarPinInfo]
+
+[&IID_IAMTuner: 0211A8761 03AC 011d1 08D 013 00 0AA 00 0BD 083 039]
+
+[.put_Channel 
+ .get_Channel 
+ .ChannelMinMax 
+ .put_CountryCode
+ .get_CountryCode
+ .put_TuningSpace
+ .get_TuningSpace
+ .Logon 
+ .Logout 
+ .SignalPresent 
+ .put_Mode
+ .get_Mode
+ .GetAvailableModes 
+ .RegisterNotificationCallBack 
+ .UnRegisterNotificationCallBack]
+
+[AMTUNER_SUBCHAN_NO_TUNE 2
+ AMTUNER_SUBCHAN_DEFAULT 1]
+
+[AMTUNER_HASNOSIGNALSTRENGTH 1
+ AMTUNER_NOSIGNAL 0
+ AMTUNER_SIGNALPRESENT 1]
+
+[AMTUNER_MODE_DEFAULT 0
+ AMTUNER_MODE_TV 1
+ AMTUNER_MODE_FM_RADIO 2
+ AMTUNER_MODE_AM_RADIO 4
+ AMTUNER_MODE_DSS 8]
+
+[AMTUNER_EVENT_CHANGED 1]
+
+[&IID_IAMTunerNotification: 0211A8760 03AC 011d1 08D 013 00 0AA 00 0BD 083 039]
+
+[.OnEvent]
+
+[&IID_IAMTVTuner: 0211A8766 03AC 011d1 08D 013 00 0AA 00 0BD 083 039]
+
+[.put_Channel 
+ .get_Channel 
+ .ChannelMinMax
+ .put_CountryCode 
+ .get_CountryCode 
+ .put_TuningSpace 
+ .get_TuningSpace 
+ .Logon
+ .Logout
+ .SignalPresent
+ .put_Mode 
+ .get_Mode 
+ .GetAvailableModes 
+ .RegisterNotificationCallBack
+ .UnRegisterNotificationCallBack 
+ .get_AvailableTVFormats
+ .get_TVFormat 
+ .AutoTune 
+ .StoreAutoTune
+ .get_NumInputConnections 
+ .put_InputType
+ .get_InputType
+ .put_ConnectInput
+ .get_ConnectInput
+ .get_VideoFrequency 
+ .get_AudioFrequency]
+
+[&IID_IBPCSatelliteTuner: 0211A8765 03AC 011d1 08D 013 00 0AA 00 0BD 083 039]
+
+[.put_Channel
+ .get_Channel
+ .ChannelMinMax
+ .put_CountryCode 
+ .get_CountryCode 
+ .put_TuningSpace 
+ .get_TuningSpace 
+ .Logon
+ .Logout 
+ .SignalPresent
+ .put_Mode
+ .get_Mode
+ .GetAvailableModes
+ .RegisterNotificationCallBack
+ .UnRegisterNotificationCallBack 
+ .get_DefaultSubChannelTypes 
+ .put_DefaultSubChannelTypes 
+ .IsTapingPermitted]
+
+[&IID_IAMTVAudio: 083EC1C30 023D1 011d1 099 0E6 00 0A0 0C9 056 02 066]
+
+[.GetHardwareSupportedTVAudioModes
+ .GetAvailableTVAudioModes 
+ .get_TVAudioMode 
+ .put_TVAudioMode 
+ .RegisterNotificationCallBack
+ .UnRegisterNotificationCallBack]
+
+[AMTVAUDIO_MODE_MONO 01
+ AMTVAUDIO_MODE_STEREO 02
+ AMTVAUDIO_MODE_LANG_A 010
+ AMTVAUDIO_MODE_LANG_B 020
+ AMTVAUDIO_MODE_LANG_C 040]
+
+[AMTVAUDIO_EVENT_CHANGED 01]
+
+[&IID_IAMTVAudioNotification: 083EC1C33 023D1 011d1 099 0E6 00 0A0 0C9 056 02 066]
+
+[.OnEvent]
+
+[&IID_IAMAnalogVideoEncoder: 0C6E133B0 030AC 011d0 0A1 08C 00 0A0 0C9 011 089 056]
+
+[.get_AvailableTVFormats 
+ .put_TVFormat 
+ .get_TVFormat 
+ .put_CopyProtection
+ .get_CopyProtection
+ .put_CCEnable 
+ .get_CCEnable]
+
+[&IID_IKsPropertySet: 031EFAC30 0515C 011d0 0A9 0AA 00 0AA 00 061 0BE 093]
+
+[.Set
+ .Get
+ .QuerySupported]
+
+[AMPROPERTY_PIN_CATEGORY 0
+ AMPROPERTY_PIN_MEDIUM 1]
+
+[KSPROPERTY_SUPPORT_GET 1
+ KSPROPERTY_SUPPORT_SET 2]
+
+[&IID_IMediaPropertyBag: 06025A880 0C0D5 011d0 0BD 04E 00 0A0 0C9 011 0CE 086]
+
+[.Read 
+ .Write 
+ .EnumProperty]
+
+[&IID_IPersistMediaPropertyBag: 05738E040 0B67F 011d0 0BD 04D 00 0A0 0C9 011 0CE 086]
+
+[.GetClassID 
+ .InitNew
+ .Load 
+ .Save]
+
+[&IID_IAMPhysicalPinInfo: 0F938C991 03029 011cf 08C 044 00 0AA 00 06B 068 014]
+
+[.GetPhysicalType]
+
+[&IID_IAMExtDevice: 0B5730A90 01A2C 011cf 08C 023 00 0AA 00 06B 068 014]
+
+[.GetCapability 
+ .get_ExternalDeviceID
+ .get_ExternalDeviceVersion 
+ .put_DevicePower 
+ .get_DevicePower 
+ .Calibrate 
+ .put_DevicePort
+ .get_DevicePort]
+
+[&IID_IAMExtTransport: 0A03CD5F0 03045 011cf 08C 044 00 0AA 00 06B 068 014]
+
+[.GetCapability 
+ .put_MediaState
+ .get_MediaState
+ .put_LocalControl
+ .get_LocalControl
+ .GetStatus 
+ .GetTransportBasicParameters
+ .SetTransportBasicParameters
+ .GetTransportVideoParameters
+ .SetTransportVideoParameters
+ .GetTransportAudioParameters
+ .SetTransportAudioParameters
+ .put_Mode
+ .get_Mode
+ .put_Rate
+ .get_Rate
+ .GetChase
+ .SetChase
+ .GetBump 
+ .SetBump 
+ .get_AntiClogControl 
+ .put_AntiClogControl 
+ .GetEditPropertySet 
+ .SetEditPropertySet 
+ .GetEditProperty 
+ .SetEditProperty 
+ .get_EditStart 
+ .put_EditStart]
+
+[&IID_IAMTimecodeReader: 09B496CE1 0811B 011cf 08C 077 00 0AA 00 06B 068 014]
+
+[.GetTCRMode 
+ .SetTCRMode 
+ .put_VITCLine
+ .get_VITCLine
+ .GetTimecode]
+
+[&IID_IAMTimecodeGenerator: 09B496CE0 0811B 011cf 08C 077 00 0AA 00 06B 068 014]
+
+[.GetTCGMode 
+ .SetTCGMode 
+ .put_VITCLine
+ .get_VITCLine
+ .SetTimecode
+ .GetTimecode]
+
+[&IID_IAMTimecodeDisplay: 09B496CE2 0811B 011cf 08C 077 00 0AA 00 06B 068 014]
+
+[.GetTCDisplayEnable 
+ .SetTCDisplayEnable 
+ .GetTCDisplay 
+ .SetTCDisplay]
+
+[&IID_IAMDevMemoryAllocator: 0c6545bf0 0e76b 011d0 0bd 052 00 0a0 0c9 011 0ce 086]
+
+[.GetInfo 
+ .CheckMemory
+ .Alloc
+ .Free 
+ .GetDevMemoryObject]
+
+[&IID_IAMDevMemoryControl: 0c6545bf1 0e76b 011d0 0bd 052 00 0a0 0c9 011 0ce 086]
+
+[.QueryWriteSync 
+ .WriteSync 
+ .GetDevId]
+
+[&IID_IAMStreamSelect: 0c1960960 017f5 011d1 0ab 0e1 00 0a0 0c9 05 0f3 075]
+
+[.Count
+ .Info 
+ .Enable]
+
+[AMSTREAMSELECTINFO_ENABLED 1
+ AMSTREAMSELECTINFO_EXCLUSIVE 2]
+
+[AMSTREAMSELECTENABLE_ENABLE 1
+ AMSTREAMSELECTENABLE_ENABLEALL 2]
+
+[&IID_IAMResourceControl: 08389d2d0 077d7 011d1 0ab 0e6 00 0a0 0c9 05 0f3 075]
+
+[.Reserve]
+
+[AMRESCTL_RESERVEFLAGS_RESERVE 0
+ AMRESCTL_RESERVEFLAGS_UNRESERVE 1]
+
+[&IID_IAMClockAdjust: 04d5466b0 0a49c 011d1 0ab 0e8 00 0a0 0c9 05 0f3 075]
+
+[.SetClockDelta]
+
+[&IID_IAMFilterMiscFlags: 02dd74950 0a890 011d1 0ab 0e8 00 0a0 0c9 05 0f3 075]
+
+[.GetMiscFlags]
+
+[AM_FILTER_MISC_FLAGS_IS_RENDERER 1
+ AM_FILTER_MISC_FLAGS_IS_SOURCE 2]
+
+[&IID_IDrawVideoImage: 048efb120 0ab49 011d2 0ae 0d2 00 0a0 0c9 095 0e8 0d5]
+
+[.DrawVideoImageBegin 
+ .DrawVideoImageEnd
+ .DrawVideoImageDraw]
+
+[&IID_IDecimateVideoImage: 02e5ea3e0 0e924 011d2 0b6 0da 00 0a0 0c9 095 0e8 0df]
+
+[.SetDecimationImageSize 
+ .ResetDecimationImageSize]
+
+[&IID_IAMVideoDecimationProperties: 060d32930 013da 011d3 09e 0c6 0c4 0fc 0ae 0f5 0c7 0be]
+
+[.QueryDecimationUsage 
+ .SetDecimationUsage]
+
+[DECIMATION_LEGACY 0
+ DECIMATION_USE_DECODER_ONLY 1
+ DECIMATION_USE_VIDEOPORT_ONLY 2
+ DECIMATION_USE_OVERLAY_ONLY 3
+ DECIMATION_DEFAULT 4]
+
+[&IID_IVideoFrameStep: 0e46a9787 02b71 0444d 0a4 0b5 01f 0ab 07b 070 08d 06a]
+
+[.Step 
+ .CanStep 
+ .CancelStep]
+
+[&IID_IAMLatency: 062EA93BA 0EC62 011d2 0B7 070 00 0C0 04F 0B6 0BD 03D]
+
+[.GetLatency]
+
+[AM_PUSHSOURCECAPS_INTERNAL_RM 01
+ AM_PUSHSOURCECAPS_NOT_LIVE 02
+ AM_PUSHSOURCECAPS_PRIVATE_CLOCK 04
+ AM_PUSHSOURCEREQS_USE_STREAM_CLOCK 010000
+ AM_PUSHSOURCEREQS_USE_CLOCK_CHAIN 020000]
+
+[&IID_IAMPushSource: 0F185FE76 0E64E 011d2 0B7 06E 00 0C0 04F 0B6 0BD 03D]
+
+[.GetLatency
+ .GetPushSourceFlags
+ .SetPushSourceFlags
+ .SetStreamOffset 
+ .GetStreamOffset 
+ .GetMaxStreamOffset
+ .SetMaxStreamOffset]
+
+[&IID_IAMDeviceRemoval: 0f90a6130 0b658 011d2 0ae 049 00 00 0f8 075 04b 099]
+
+[.DeviceInfo
+ .Reassociate 
+ .Disassociate]
+
+[&IID_IDVEnc: 0d18e17a0 0aacb 011d0 0af 0b0 00 0aa 00 0b6 07a 042]
+
+[.get_IFormatResolution 
+ .put_IFormatResolution]
+
+[DVENCODERRESOLUTION_720x480 2012
+ DVENCODERRESOLUTION_360x240 2013
+ DVENCODERRESOLUTION_180x120 2014
+ DVENCODERRESOLUTION_88x60 2015]
+
+[DVENCODERVIDEOFORMAT_NTSC 2000
+ DVENCODERVIDEOFORMAT_PAL 2001]
+
+[DVENCODERFORMAT_DVSD 2007
+ DVENCODERFORMAT_DVHD 2008
+ DVENCODERFORMAT_DVSL 2009]
+
+[&IID_IIPDVDec: 0b8e8bd60 0bfe 011d0 0af 091 00 0aa 00 0b6 07a 042]
+
+[.get_IPDisplay
+ .put_IPDisplay]
+
+[DVDECODERRESOLUTION_720x4801000
+ DVDECODERRESOLUTION_360x2401001
+ DVDECODERRESOLUTION_180x1201002
+ DVDECODERRESOLUTION_88x60 1003]
+
+[DVRESOLUTION_FULL 1000
+ DVRESOLUTION_HALF 1001
+ DVRESOLUTION_QUARTER 1002
+ DVRESOLUTION_DC 1003]
+
+[&IID_IDVRGB219: 058473A19 02BC8 04663 080 012 025 0F8 01B 0AB 0DD 0D1]
+
+[.SetRGB219]
+
+[&IID_IDVSplitter: 092a3a302 0da7c 04a1f 0ba 07e 018 02 0bb 05d 02d 02]
+
+[.DiscardAlternateVideoFrames]
+
+[&IID_IAMAudioRendererStats: 022320CB2 0D41A 011d2 0BF 07C 0D7 0CB 09D 0F0 0BF 093]
+
+[.GetStatParam]
+
+[AM_AUDREND_STAT_PARAM_BREAK_COUNT 1
+ AM_AUDREND_STAT_PARAM_SLAVE_MODE 2
+ AM_AUDREND_STAT_PARAM_SILENCE_DUR 3
+ AM_AUDREND_STAT_PARAM_LAST_BUFFER_DUR 4
+ AM_AUDREND_STAT_PARAM_DISCONTINUITIES 5
+ AM_AUDREND_STAT_PARAM_SLAVE_RATE 6
+ AM_AUDREND_STAT_PARAM_SLAVE_DROPWRITE_DUR 7
+ AM_AUDREND_STAT_PARAM_SLAVE_HIGHLOWERROR 8
+ AM_AUDREND_STAT_PARAM_SLAVE_LASTHIGHLOWERROR 9
+ AM_AUDREND_STAT_PARAM_SLAVE_ACCUMERROR 10
+ AM_AUDREND_STAT_PARAM_BUFFERFULLNESS 11
+ AM_AUDREND_STAT_PARAM_JITTER 12]
+
+[&IID_IAMGraphStreams: 0632105FA 072E 011d3 08A 0F9 00 0C0 04F 0B6 0BD 03D]
+
+[.FindUpstreamInterface 
+ .SyncUsingStreamOffset 
+ .SetMaxGraphLatency]
+
+[AM_INTF_SEARCH_INPUT_PIN 1
+ AM_INTF_SEARCH_OUTPUT_PIN 2
+ AM_INTF_SEARCH_FILTER 4]
+
+[&IID_IAMOverlayFX: 062fae250 07e65 04460 0bf 0c9 063 098 0b3 022 07 03c]
+
+[.QueryOverlayFXCaps 
+ .SetOverlayFX 
+ .GetOverlayFX]
+
+[AMOVERFX_NOFX 0
+ AMOVERFX_MIRRORLEFTRIGHT 2
+ AMOVERFX_MIRRORUPDOWN 4
+ AMOVERFX_DEINTERLACE 8]
+
+[&IID_IAMOpenProgress: 08E1C39A1 0DE53 011cf 0AA 063 00 080 0C7 044 052 08D]
+
+[.QueryProgress 
+ .AbortOperation]
+
+[&IID_IMpeg2Demultiplexer: 0436eee9c 0264f 04242 090 0e1 04e 033 0c 010 075 012]
+
+[.CreateOutputPin 
+ .SetOutputPinMediaType 
+ .DeleteOutputPin]
+
+[&IID_IEnumStreamIdMap: 0945C1566 06202 046fc 096 0C7 0D8 07F 028 09C 065 034]
+
+[.Next
+ .Skip
+ .Reset 
+ .Clone]
+
+[MPEG2_PROGRAM_STREAM_MAP 00
+ MPEG2_PROGRAM_ELEMENTARY_STREAM 01
+ MPEG2_PROGRAM_DIRECTORY_PES_PACKET 02
+ MPEG2_PROGRAM_PACK_HEADER 03
+ MPEG2_PROGRAM_PES_STREAM 04
+ MPEG2_PROGRAM_SYSTEM_HEADER 05
+ SUBSTREAM_FILTER_VAL_NONE 010000000]
+
+[&IID_IMPEG2StreamIdMap: 0D0E04C47 025B8 04369 092 05A 036 02A 01 0D9 054 044]
+
+[.MapStreamId 
+ .UnmapStreamId 
+ .EnumStreamIdMap]
+
+[&IID_IRegisterServiceProvider: 07B3A2F01 0751 048DD 0B5 056 00 047 085 017 01C 054]
+
+[.RegisterService]
+
+[&IID_IAMClockSlave: 09FD52741 0176D 04b36 08F 051 0CA 08F 093 032 023 0BE]
+
+[.SetErrorTolerance 
+ .GetErrorTolerance]
+
+[&IID_IAMGraphBuilderCallback: 04995f511 09ddb 04f12 0bd 03b 0f0 046 011 080 07b 079]
+
+[.SelectedFilter 
+ .CreatedFilter]
+
+; Note: Because this interface was not defined as a proper interface it is supported under C++ only.
+; Methods aren't stdcall. interface IAMFilterGraphCallback : public IUnknown
+; {
+; // S_OK means rendering complete, S_FALSE means retry now.
+; virtual HRESULT UnableToRender(IPin *pPin) = 0
+; }
+[&IID_IAMFilterGraphCallback: 056a868fd 0ad4 011ce 0b0 0a3 00 020 0af 0b 0a7 070]
+
+[&IID_ICodecAPI: 0901db4c7 031ce 041a2 085 0dc 08f 0a0 0bf 041 0b8 0da]
+
+[.IsSupported
+ .IsModifiable 
+ .GetParameterRange
+ .GetParameterValues 
+ .GetDefaultValue 
+ .GetValue
+ .SetValue
+ .RegisterForEvent 
+ .UnregisterForEvent 
+ .SetAllDefaults
+ .SetValueWithNotify 
+ .SetAllDefaultsWithNotify 
+ .GetAllSettings
+ .SetAllSettings
+ .SetAllSettingsWithNotify]
+
+[&IID_IGetCapabilitiesKey: 0a8809222 07bb 048ea 095 01c 033 015 081 00 062 05b]
+
+[.GetCapabilitiesKey]
+
+[&IID_IEncoderAPI: 070423839 06ACC 04b23 0B0 079 021 0DB 0F0 081 056 0A5]
+
+[.IsSupported 
+ .IsAvailable 
+ .GetParameterRange 
+ .GetParameterValues
+ .GetDefaultValue
+ .GetValue 
+ .SetValue]
+
+[&IID_IVideoEncoder: 02997C3B 08E1B 0460e 092 070 054 05E 0D 0E9 056 03E]
+
+[.IsSupported
+ .IsAvailable
+ .GetParameterRange
+ .GetParameterValues 
+ .GetDefaultValue 
+ .GetValue
+ .SetValue]
+
+[ConstantBitRate 0
+ VariableBitRateAverage 1
+ VariableBitRatePeak 2]
+
+[&IID_IAMDecoderCaps: 0c0dff467 0d499 04986 097 02b 0e1 0d9 09 0f 0a9 041]
+
+[.GetDecoderCaps]
+
+[AM_GETDECODERCAP_QUERY_VMR_SUPPORT 1
+ VMR_NOTSUPPORTED 0
+ VMR_SUPPORTED 1
+ AM_QUERY_DECODER_VMR_SUPPORT 1
+ AM_QUERY_DECODER_DXVA_1_SUPPORT 2
+ AM_QUERY_DECODER_DVD_SUPPORT 3
+ AM_QUERY_DECODER_ATSC_SD_SUPPORT 4
+ AM_QUERY_DECODER_ATSC_HD_SUPPORT 5
+ AM_GETDECODERCAP_QUERY_VMR9_SUPPORT 6
+ DECODER_CAP_NOTSUPPORTED 0
+ DECODER_CAP_SUPPORTED 1]
+
+[&IID_IAMCertifiedOutputProtection: 06feded3e 0ff1 04901 0a2 0f1 043 0f7 01 02c 085 015]
+
+[.KeyExchange
+ .SessionSequenceStart 
+ .ProtectionCommand 
+ .ProtectionStatus]
+
+[&IID_IDvdControl: 0A70EFE61 0E2A3 011d0 0A9 0BE 00 0AA 00 061 0BE 093]
+
+[.TitlePlay
+ .ChapterPlay 
+ .TimePlay 
+ .StopForResume 
+ .GoUp
+ .TimeSearch 
+ .ChapterSearch 
+ .PrevPGSearch
+ .TopPGSearch 
+ .NextPGSearch
+ .ForwardScan 
+ .BackwardScan
+ .MenuCall 
+ .Resume
+ .UpperButtonSelect 
+ .LowerButtonSelect 
+ .LeftButtonSelect 
+ .RightButtonSelect 
+ .ButtonActivate 
+ .ButtonSelectAndActivate 
+ .StillOff 
+ .PauseOn 
+ .PauseOff 
+ .MenuLanguageSelect
+ .AudioStreamChange 
+ .SubpictureStreamChange 
+ .AngleChange 
+ .ParentalLevelSelect
+ .ParentalCountrySelect
+ .KaraokeAudioPresentationModeChange
+ .VideoModePreferrence
+ .SetRoot 
+ .MouseActivate 
+ .MouseSelect 
+ .ChapterPlayAutoStop]
+
+[DVD_DOMAIN_FirstPlay 1
+ DVD_DOMAIN_VideoManagerMenu 2
+ DVD_DOMAIN_VideoTitleSetMenu 3
+ DVD_DOMAIN_Title 4
+ DVD_DOMAIN_Stop 5]
+
+[DVD_MENU_Title 2
+ DVD_MENU_Root 3
+ DVD_MENU_Subpicture 4
+ DVD_MENU_Audio 5
+ DVD_MENU_Angle 6
+ DVD_MENU_Chapter 7]
+
+[DVD_SIDE_A1
+ DVD_SIDE_B 2]
+
+[DISPLAY_CONTENT_DEFAULT 0
+ DISPLAY_16x9 1
+ DISPLAY_4x3_PANSCAN_PREFERRED 2
+ DISPLAY_4x3_LETTERBOX_PREFERRED 3]
+
+[DVD_FPS_25  1
+ DVD_FPS_30NonDrop 3]
+
+[DVD_TC_FLAG_25fps1
+ DVD_TC_FLAG_30fps 2
+ DVD_TC_FLAG_DropFrame 4
+ DVD_TC_FLAG_Interpolated 8]
+
+[UOP_FLAG_Play_Title_Or_AtTime 01
+ UOP_FLAG_Play_Chapter 02
+ UOP_FLAG_Play_Title 04
+ UOP_FLAG_Stop 08
+ UOP_FLAG_ReturnFromSubMenu 010
+ UOP_FLAG_Play_Chapter_Or_AtTime 020
+ UOP_FLAG_PlayPrev_Or_Replay_Chapter 040
+ UOP_FLAG_PlayNext_Chapter 080
+ UOP_FLAG_Play_Forwards 0100
+ UOP_FLAG_Play_Backwards 0200
+ UOP_FLAG_ShowMenu_Title 0400
+ UOP_FLAG_ShowMenu_Root 0800
+ UOP_FLAG_ShowMenu_SubPic 01000
+ UOP_FLAG_ShowMenu_Audio 02000
+ UOP_FLAG_ShowMenu_Angle 04000
+ UOP_FLAG_ShowMenu_Chapter 08000
+ UOP_FLAG_Resume 010000
+ UOP_FLAG_Select_Or_Activate_Button 020000
+ UOP_FLAG_Still_Off 040000
+ UOP_FLAG_Pause_On 080000
+ UOP_FLAG_Select_Audio_Stream 0100000
+ UOP_FLAG_Select_SubPic_Stream 0200000
+ UOP_FLAG_Select_Angle 0400000
+ UOP_FLAG_Select_Karaoke_Audio_Presentation_Mode 0800000
+ UOP_FLAG_Select_Video_Mode_Preference 01000000]
+
+[DVD_CMD_FLAG_None 00
+ DVD_CMD_FLAG_Flush 01
+ DVD_CMD_FLAG_SendEvents 02
+ DVD_CMD_FLAG_Block 04
+ DVD_CMD_FLAG_StartWhenRendered 08
+ DVD_CMD_FLAG_EndAfterRendered 010]
+
+[DVD_ResetOnStop 1
+ DVD_NotifyParentalLevelChange 2
+ DVD_HMSF_TimeCodeEvents 3
+ DVD_AudioDuringFFwdRew 4]
+
+[DVD_Relative_Upper 1
+ DVD_Relative_Lower 2
+ DVD_Relative_Left 3
+ DVD_Relative_Right 4]
+
+[DVD_PARENTAL_LEVEL_8 08000
+ DVD_PARENTAL_LEVEL_7 04000
+ DVD_PARENTAL_LEVEL_6 02000
+ DVD_PARENTAL_LEVEL_5 01000
+ DVD_PARENTAL_LEVEL_4 0800
+ DVD_PARENTAL_LEVEL_3 0400
+ DVD_PARENTAL_LEVEL_2 0200
+ DVD_PARENTAL_LEVEL_1 0100]
+
+[DVD_AUD_EXT_NotSpecified 0
+ DVD_AUD_EXT_Captions 1
+ DVD_AUD_EXT_VisuallyImpaired 2
+ DVD_AUD_EXT_DirectorComments1 3
+ DVD_AUD_EXT_DirectorComments2 4]
+
+[DVD_SP_EXT_NotSpecified 0
+ DVD_SP_EXT_Caption_Normal 1
+ DVD_SP_EXT_Caption_Big 2
+ DVD_SP_EXT_Caption_Children 3
+ DVD_SP_EXT_CC_Normal 5
+ DVD_SP_EXT_CC_Big 6
+ DVD_SP_EXT_CC_Children 7
+ DVD_SP_EXT_Forced 9
+ DVD_SP_EXT_DirectorComments_Normal 13
+ DVD_SP_EXT_DirectorComments_Big 14
+ DVD_SP_EXT_DirectorComments_Children 15]
+
+[DVD_AudioMode_None 0
+ DVD_AudioMode_Karaoke 1
+ DVD_AudioMode_Surround 2
+ DVD_AudioMode_Other 3]
+
+[DVD_AudioFormat_AC3 0
+ DVD_AudioFormat_MPEG1 1
+ DVD_AudioFormat_MPEG1_DRC 2
+ DVD_AudioFormat_MPEG2 3
+ DVD_AudioFormat_MPEG2_DRC 4
+ DVD_AudioFormat_LPCM 5
+ DVD_AudioFormat_DTS 6
+ DVD_AudioFormat_SDDS 7
+ DVD_AudioFormat_Other 8]
+
+[DVD_Mix_0to0 01
+ DVD_Mix_1to0 02
+ DVD_Mix_2to0 04
+ DVD_Mix_3to0 08
+ DVD_Mix_4to0 010
+ DVD_Mix_Lto0 020
+ DVD_Mix_Rto0 040
+ DVD_Mix_0to1 0100
+ DVD_Mix_1to1 0200
+ DVD_Mix_2to1 0400
+ DVD_Mix_3to1 0800
+ DVD_Mix_4to1 01000
+ DVD_Mix_Lto1 02000
+ DVD_Mix_Rto1 04000]
+
+[DVD_Karaoke_GuideVocal1 01
+ DVD_Karaoke_GuideVocal2 02
+ DVD_Karaoke_GuideMelody1 04
+ DVD_Karaoke_GuideMelody2 08
+ DVD_Karaoke_GuideMelodyA 010
+ DVD_Karaoke_GuideMelodyB 020
+ DVD_Karaoke_SoundEffectA 040
+ DVD_Karaoke_SoundEffectB 080]
+
+[DVD_Assignment_reserved0 0
+ DVD_Assignment_reserved1 1
+ DVD_Assignment_LR 2
+ DVD_Assignment_LRM 3
+ DVD_Assignment_LR1 4
+ DVD_Assignment_LRM1 5
+ DVD_Assignment_LR12 6
+ DVD_Assignment_LRM12 7]
+
+[DVD_VideoCompression_Other 0
+ DVD_VideoCompression_MPEG1 1
+ DVD_VideoCompression_MPEG2 2]
+
+[DVD_SPType_NotSpecified 0
+ DVD_SPType_Language 1
+ DVD_SPType_Other 2]
+
+[DVD_SPCoding_RunLength 0
+ DVD_SPCoding_Extended 1
+ DVD_SPCoding_Other 2]
+
+[DVD_AppMode_Not_Specified 0
+ DVD_AppMode_Karaoke 1
+ DVD_AppMode_Other 3]
+
+[&IID_IDvdInfo: 0A70EFE60 0E2A3 011d0 0A9 0BE 00 0AA 00 061 0BE 093]
+
+[.GetCurrentDomain 
+ .GetCurrentLocation
+ .GetTotalTitleTime 
+ .GetCurrentButton 
+ .GetCurrentAngle
+ .GetCurrentAudio
+ .GetCurrentSubpicture 
+ .GetCurrentUOPS 
+ .GetAllSPRMs 
+ .GetAllGPRMs 
+ .GetAudioLanguage 
+ .GetSubpictureLanguage
+ .GetTitleAttributes
+ .GetVMGAttributes 
+ .GetCurrentVideoAttributes 
+ .GetCurrentAudioAttributes 
+ .GetCurrentSubpictureAttributes
+ .GetCurrentVolumeInfo 
+ .GetDVDTextInfo 
+ .GetPlayerParentalLevel 
+ .GetNumberOfChapters 
+ .GetTitleParentalLevels 
+ .GetRoot]
+
+[&IID_IDvdCmd: 05a4a97e4 094ee 04a55 097 051 074 0b5 064 03a 0a2 07d]
+
+[.WaitForStart 
+ .WaitForEnd]
+
+[&IID_IDvdState: 086303d6d 01c4a 04087 0ab 042 0f7 011 016 070 048 0ef]
+
+[.GetDiscID 
+ .GetParentalLevel]
+
+[&IID_IDvdControl2: 033BC7430 0EEC0 011D2 082 01 00 0A0 0C9 0D7 048 042]
+
+[.PlayTitle 
+ .PlayChapterInTitle 
+ .PlayAtTimeInTitle
+ .Stop
+ .ReturnFromSubmenu
+ .PlayAtTime 
+ .PlayChapter
+ .PlayPrevChapter 
+ .ReplayChapter 
+ .PlayNextChapter 
+ .PlayForwards 
+ .PlayBackwards 
+ .ShowMenu
+ .Resume 
+ .SelectRelativeButton
+ .ActivateButton
+ .SelectButton 
+ .SelectAndActivateButton
+ .StillOff
+ .Pause
+ .SelectAudioStream
+ .SelectSubpictureStream 
+ .SetSubpictureState 
+ .SelectAngle
+ .SelectParentalLevel
+ .SelectParentalCountry 
+ .SelectKaraokeAudioPresentationMode
+ .SelectVideoModePreference
+ .SetDVDDirectory 
+ .ActivateAtPosition 
+ .SelectAtPosition 
+ .PlayChaptersAutoStop
+ .AcceptParentalLevelChange 
+ .SetOption 
+ .SetState
+ .PlayPeriodInTitleAutoStop 
+ .SetGPRM 
+ .SelectDefaultMenuLanguage 
+ .SelectDefaultAudioLanguage
+ .SelectDefaultSubpictureLanguage]
+
+[&IID_IDvdInfo2: 034151510 0EEC0 011D2 082 01 0A0 0C9 0D7 048 042]
+
+[.GetCurrentDomain 
+ .GetCurrentLocation 
+ .GetTotalTitleTime
+ .GetCurrentButton 
+ .GetCurrentAngle 
+ .GetCurrentAudio 
+ .GetCurrentSubpicture
+ .GetCurrentUOPS
+ .GetAllSPRMs
+ .GetAllGPRMs
+ .GetAudioLanguage 
+ .GetSubpictureLanguage 
+ .GetTitleAttributes 
+ .GetVMGAttributes 
+ .GetCurrentVideoAttributes 
+ .GetAudioAttributes 
+ .GetKaraokeAttributes
+ .GetSubpictureAttributes
+ .GetDVDVolumeInfo 
+ .GetDVDTextNumberOfLanguages 
+ .GetDVDTextLanguageInfo
+ .GetDVDTextStringAsNative 
+ .GetDVDTextStringAsUnicode 
+ .GetPlayerParentalLevel
+ .GetNumberOfChapters 
+ .GetTitleParentalLevels
+ .GetDVDDirectory 
+ .IsAudioStreamEnabled
+ .GetDiscID 
+ .GetState
+ .GetMenuLanguages 
+ .GetButtonAtPosition 
+ .GetCmdFromEvent 
+ .GetDefaultMenuLanguage
+ .GetDefaultAudioLanguage
+ .GetDefaultSubpictureLanguage 
+ .GetDecoderCaps
+ .GetButtonRect 
+ .IsSubpictureStreamEnabled]
+
+[DVD_Struct_Volume 01
+ DVD_Struct_Title 02
+ DVD_Struct_ParentalID 03
+ DVD_Struct_PartOfTitle 04
+ DVD_Struct_Cell 05
+ DVD_Stream_Audio 010
+ DVD_Stream_Subpicture 011
+ DVD_Stream_Angle 012
+ DVD_Channel_Audio 020
+ DVD_General_Name 030
+ DVD_General_Comments 031
+ DVD_Title_Series 038
+ DVD_Title_Movie 039
+ DVD_Title_Video 03a
+ DVD_Title_Album 03b
+ DVD_Title_Song 03c
+ DVD_Title_Other 03f
+ DVD_Title_Sub_Series 040
+ DVD_Title_Sub_Movie 041
+ DVD_Title_Sub_Video 042
+ DVD_Title_Sub_Album 043
+ DVD_Title_Sub_Song 044
+ DVD_Title_Sub_Other 047
+ DVD_Title_Orig_Series 048
+ DVD_Title_Orig_Movie 049
+ DVD_Title_Orig_Video 04a
+ DVD_Title_Orig_Album 04b
+ DVD_Title_Orig_Song 04c
+ DVD_Title_Orig_Other 04f
+ DVD_Other_Scene 050
+ DVD_Other_Cut 051
+ DVD_Other_Take 052]
+
+[DVD_CharSet_Unicode 0
+ DVD_CharSet_ISO646 1
+ DVD_CharSet_JIS_Roman_Kanji 2
+ DVD_CharSet_ISO8859_1 3
+ DVD_CharSet_ShiftJIS_Kanji_Roman_Katakana 4]
+
+[DVD_TITLE_MENU 00
+ DVD_STREAM_DATA_CURRENT 0800
+ DVD_STREAM_DATA_VMGM 0400
+ DVD_STREAM_DATA_VTSM 0401
+ DVD_DEFAULT_AUDIO_STREAM 0f
+
+ DVD_AUDIO_CAPS_AC3 01
+ DVD_AUDIO_CAPS_MPEG2 02
+ DVD_AUDIO_CAPS_LPCM 04
+ DVD_AUDIO_CAPS_DTS 08
+ DVD_AUDIO_CAPS_SDDS 010]
+
+[&IID_IDvdGraphBuilder: 0FCC152B6 0F372 011d0 08E 00 00 0C0 04F 0D7 0C0 08B]
+
+[.GetFiltergraph 
+ .GetDvdInterface
+ .RenderDvdVideoVolume]
+
+[AM_DVD_HWDEC_PREFER 01
+ AM_DVD_HWDEC_ONLY 02
+ AM_DVD_SWDEC_PREFER 04
+ AM_DVD_SWDEC_ONLY 08
+ AM_DVD_NOVPE 0100
+ AM_DVD_VMR9_ONLY 0800]
+
+[AM_DVD_STREAM_VIDEO 01
+ AM_DVD_STREAM_AUDIO 02
+ AM_DVD_STREAM_SUBPIC 04]
+
+[&IID_IDDrawExclModeVideo: 0153ACC21 0D83B 011d1 082 0BF 00 0A0 0C9 069 06C 08F]
+
+[.SetDDrawObject 
+ .GetDDrawObject 
+ .SetDDrawSurface 
+ .GetDDrawSurface 
+ .SetDrawParameters 
+ .GetNativeVideoProps
+ .SetCallbackInterface]
+
+[&IID_IDDrawExclModeVideoCallback: 0913c24a0 020ab 011d2 090 038 00 0a0 0c9 069 072 098]
+
+[.OnUpdateOverlay
+ .OnUpdateColorKey 
+ .OnUpdateSize]
+
+[AM_OVERLAY_NOTIFY_VISIBLE_CHANGE 01
+ AM_OVERLAY_NOTIFY_SOURCE_CHANGE 02
+ AM_OVERLAY_NOTIFY_DEST_CHANGE 04]
+
+[&IID_IPinConnection: 04a9a62d3 027d4 0403d 091 0e9 089 0f5 040 0e5 055 034]
+
+[.DynamicQueryAccept
+ .NotifyEndOfStream
+ .IsEndPin 
+ .DynamicDisconnect]
+
+[&IID_IPinFlowControl: 0c56e9858 0dbf3 04f6b 081 019 038 04a 0f2 06 0d 0eb]
+
+[.Block]
+
+[&IID_IGraphConfig: 03A1EB8E 032BF 04245 085 02 011 04D 08 0A9 0CB 088]
+
+[.Reconnect 
+ .Reconfigure
+ .AddFilterToCache 
+ .EnumCacheFilter 
+ .RemoveFilterFromCache 
+ .GetStartTime 
+ .PushThroughData 
+ .SetFilterFlags
+ .GetFilterFlags
+ .RemoveFilterEx]
+
+[AM_GRAPH_CONFIG_RECONNECT_DIRECTCONNECT 01
+ AM_GRAPH_CONFIG_RECONNECT_CACHE_REMOVED_FILTERS 02
+ AM_GRAPH_CONFIG_RECONNECT_USE_ONLY_CACHED_FILTERS 04]
+
+[REMFILTERF_LEAVECONNECTED 01]
+
+[AM_FILTER_FLAGS_REMOVABLE 1]
+
+[&IID_IGraphConfigCallback: 0ade0fd60 0d19d 011d2 0ab 0f6 00 0a0 0c9 05 0f3 075]
+
+[.Reconfigure]
+
+[&IID_IFilterChain: 0DCFBDCF6 0DC2 045f5 09A 0B2 07C 033 0E 0A0 09C 029]
+
+[.StartChain 
+ .PauseChain 
+ .StopChain 
+ .RemoveChain]
+
+[&IID_IVMRImagePresenter: 0CE704FE7 0E71E 041fb 0BA 0A2 0C4 040 03E 011 082 0F5]
+
+[.StartPresenting 
+ .StopPresenting
+ .PresentImage]
+
+[VMRSample_SyncP oint 01
+ VMRSample_Preroll 02
+ VMRSample_Discontinuity 04
+ VMRSample_TimeValid 08
+ VMRSample_SrcDstRectsValid 010]
+
+[&IID_IVMRSurfaceAllocator: 031ce832e 04484 0458b 08c 0ca 0f4 0d7 0e3 0db 0b 052]
+
+[.AllocateSurface
+ .FreeSurface
+ .PrepareSurface 
+ .AdviseNotify]
+
+[AMAP_PIXELFORMAT_VALID 01
+ AMAP_3D_TARGET 02
+ AMAP_ALLOW_SYSMEM 04
+ AMAP_FORCE_SYSMEM 08
+ AMAP_DIRECTED_FLIP 010
+ AMAP_DXVA_TARGET 020]
+
+[&IID_IVMRSurfaceAllocatorNotify: 0aada05a8 05a4e 04729 0af 0b 0ce 0a2 07a 0ed 051 0e2]
+
+[.AdviseSurfaceAllocator 
+ .SetDDrawDevice 
+ .ChangeDDrawDevice 
+ .RestoreDDrawSurfaces
+ .NotifyEvent 
+ .SetBorderColor]
+
+[&IID_IVMRWindowlessControl: 0eb1088c 04dcd 046f0 087 08f 039 0da 0e8 06a 051 0b7]
+
+[.GetNativeVideoSize
+ .GetMinIdealVideoSize 
+ .GetMaxIdealVideoSize 
+ .SetVideoPosition 
+ .GetVideoPosition 
+ .GetAspectRatioMode
+ .SetAspectRatioMode
+ .SetVideoClippingWindow 
+ .RepaintVideo 
+ .DisplayModeChanged
+ .GetCurrentImage 
+ .SetBorderColor
+ .GetBorderColor
+ .SetColorKey
+ .GetColorKey]
+
+[VMR_ARMODE_NONE 0
+ VMR_ARMODE_LETTER_BOX 1]
+
+[&IID_IVMRMixerControl: 01c1a17b0 0bed0 0415d 097 04b 0dc 066 096 013 015 099]
+
+[.SetAlpha 
+ .GetAlpha 
+ .SetZOrder 
+ .GetZOrder 
+ .SetOutputRect
+ .GetOutputRect
+ .SetBackgroundClr
+ .GetBackgroundClr
+ .SetMixingPrefs 
+ .GetMixingPrefs]
+
+[MixerPref_NoDecimation 01
+ MixerPref_DecimateOutput 02
+ MixerPref_ARAdjustXorY 04
+ MixerPref_DecimationReserved 08
+ MixerPref_DecimateMask 0f
+ MixerPref_BiLinearFiltering 010
+ MixerPref_PointFiltering 020
+ MixerPref_FilteringMask 0f0
+ MixerPref_RenderTargetRGB 0100
+ MixerPref_RenderTargetYUV 01000
+ MixerPref_RenderTargetYUV420 0200
+ MixerPref_RenderTargetYUV422 0400
+ MixerPref_RenderTargetYUV444 0800
+ MixerPref_RenderTargetReserved 0e000
+ MixerPref_RenderTargetMask 0ff00
+ MixerPref_DynamicSwitchToBOB 010000
+ MixerPref_DynamicDecimateBy2 020000
+ MixerPref_DynamicReserved 0c0000
+ MixerPref_DynamicMask 0f0000]
+
+[&IID_IVMRMonitorConfig: 09cf0b1b6 0fbaa 04b7f 088 0cf 0cf 01f 013 0a 0d 0ce]
+
+[.SetMonitor 
+ .GetMonitor 
+ .SetDefaultMonitor 
+ .GetDefaultMonitor 
+ .GetAvailableMonitors]
+
+[&IID_IVMRFilterConfig: 09e5530c5 07034 048b4 0bb 046 0b 08a 06e 0fc 08e 036]
+
+[.SetImageCompositor 
+ .SetNumberOfStreams 
+ .GetNumberOfStreams 
+ .SetRenderingPrefs 
+ .GetRenderingPrefs 
+ .SetRenderingMode
+ .GetRenderingMode]
+
+[RenderPrefs_RestrictToInitialMonitor 0
+ RenderPrefs_ForceOffscreen 01
+ RenderPrefs_ForceOverlays 02
+ RenderPrefs_AllowOverlays 0
+ RenderPrefs_AllowOffscreen 0
+ RenderPrefs_DoNotRenderColorKeyAndBorder 08
+ RenderPrefs_Reserved 010
+ RenderPrefs_PreferAGPMemWhenMixing 020
+ RenderPrefs_Mask 03f]
+
+[VMRMode_Windowed 01
+ VMRMode_Windowless 02
+ VMRMode_Renderless 04
+ VMRMode_Mask 07]
+
+[MAX_NUMBER_OF_STREAMS 16]
+
+[&IID_IVMRAspectRatioControl: 0ede80b5c 0bad6 04623 0b5 037 065 058 06c 09f 08d 0fd]
+
+[.GetAspectRatioMode 
+ .SetAspectRatioMode]
+
+[&IID_IVMRDeinterlaceControl: 0bb057577 0db8 04e6a 087 0a7 01a 08c 09a 050 05a 0f]
+
+[.GetNumberOfDeinterlaceModes
+ .GetDeinterlaceModeCaps 
+ .GetDeinterlaceMode 
+ .SetDeinterlaceMode 
+ .GetDeinterlacePrefs 
+ .SetDeinterlacePrefs 
+ .GetActualDeinterlaceMode]
+
+[DeinterlacePref_NextBest 01
+ DeinterlacePref_BOB 02
+ DeinterlacePref_Weave 04
+ DeinterlacePref_Mask 07]
+
+[DeinterlaceTech_Unknown 0
+ DeinterlaceTech_BOBLineReplicate 01
+ DeinterlaceTech_BOBVerticalStretch 02
+ DeinterlaceTech_MedianFiltering 04
+ DeinterlaceTech_EdgeFiltering 010
+ DeinterlaceTech_FieldAdaptive 020
+ DeinterlaceTech_PixelAdaptive 040
+ DeinterlaceTech_MotionVectorSteered 080]
+
+[&IID_IVMRMixerBitmap: 01E673275 0257 040aa 0AF 020 07C 060 08D 04A 04 028]
+
+[.SetAlphaBitmap
+ .UpdateAlphaBitmapParameters
+ .GetAlphaBitmapParameters]
+
+[VMRBITMAP_DISABLE 01
+ VMRBITMAP_HDC 02
+ VMRBITMAP_ENTIREDDS 04
+ VMRBITMAP_SRCCOLORKEY 08
+ VMRBITMAP_SRCRECT 010]
+
+[&IID_IVMRImageCompositor: 07a4fb5af 0479f 04074 0bb 040 0ce 067 022 0e4 03c 082]
+
+[.InitCompositionTarget 
+ .TermCompositionTarget 
+ .SetStreamMediaType 
+ .CompositeImage]
+
+[&IID_IVMRVideoStreamControl: 058d1f11 02a54 04bef 0bd 054 0df 070 066 026 0b7 027]
+
+[.SetColorKey 
+ .GetColorKey 
+ .SetStreamActiveState
+ .GetStreamActiveState]
+
+[&IID_IVMRSurface: 0a9849bbe 09ec8 04263 0b7 064 062 073 0f 0d 015 0d0]
+
+[.IsSurfaceLocked
+ .LockSurface 
+ .UnlockSurface 
+ .GetSurface]
+
+[&IID_IVMRImagePresenterConfig: 09f3a1c85 08555 049ba 093 05f 0be 05b 05b 029 0d1 078]
+
+[.SetRenderingPrefs 
+ .GetRenderingPrefs]
+
+[&IID_IVMRImagePresenterExclModeConfig: 0e6f7ce40 04673 044f1 08f 077 054 099 0d6 08c 0b4 0ea]
+
+[.SetRenderingPrefs
+ .GetRenderingPrefs
+ .SetXlcModeDDObjAndPrimarySurface 
+ .GetXlcModeDDObjAndPrimarySurface]
+
+[&IID_IVPManager: 0aac18c18 0e186 046d2 082 05d 0a1 0f8 0dc 08e 039 05a]
+
+[.SetVideoPortIndex 
+ .GetVideoPortIndex]
+
+; SOURCE FILE -> control.h
+
+[&LIBID_QuartzTypeLib: 056a868b0 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[&IID_IAMCollection: 056a868b9 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.GetTypeInfoCount
+ .GetTypeInfo 
+ .GetIDsOfNames 
+ .Invoke 
+ .get_Count
+ .Item 
+ .get__NewEnum]
+
+[&IID_IMediaControl: 056A868B1 0AD4 011CE 0B0 03A 0 020 0AF 0B 0A7 070]
+
+[.GetTypeInfoCount
+ .GetTypeInfo 
+ .GetIDsOfNames 
+ .Invoke 
+ .Run 
+ .Pause
+ .Stop 
+ .GetState
+ .RenderFile 
+ .AddSourceFilter
+ .get_FilterCollection 
+ .get_RegFilterCollection
+ .StopWhenReady]
+
+[&IID_IMediaEvent: 056a868b6 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.GetTypeInfoCount 
+ .GetTypeInfo
+ .GetIDsOfNames 
+ .Invoke 
+ .GetEventHandle
+ .GetEvent 
+ .WaitForCompletion
+ .CancelDefaultHandling
+ .RestoreDefaultHandling 
+ .FreeEventParams]
+
+[&IID_IMediaEventEx: 056A868C0 0AD4 011CE 0B0 03A 0 020 0AF 0B 0A7 070]
+
+[.GetTypeInfoCount
+ .GetTypeInfo 
+ .GetIDsOfNames 
+ .Invoke 
+ .GetEventHandle 
+ .GetEvent
+ .WaitForCompletion 
+ .CancelDefaultHandling 
+ .RestoreDefaultHandling
+ .FreeEventParams
+ .SetNotifyWindow
+ .SetNotifyFlags 
+ .GetNotifyFlags]
+
+[&IID_IMediaPosition: 056A868B2 0AD4 011CE 0b0 03A 00 020 0AF 0B 0A7 070]
+
+[.GetTypeInfoCount 
+ .GetTypeInfo
+ .GetIDsOfNames 
+ .Invoke 
+ .get_Duration 
+ .put_CurrentPosition 
+ .get_CurrentPosition 
+ .get_StopTime 
+ .put_StopTime 
+ .get_PrerollTime
+ .put_PrerollTime
+ .put_Rate
+ .get_Rate
+ .CanSeekForward
+ .CanSeekBackward]
+
+[&IID_IBasicAudio: 056a868b3 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.GetTypeInfoCount 
+ .GetTypeInfo
+ .GetIDsOfNames 
+ .Invoke 
+ .put_Volume
+ .get_Volume
+ .put_Balance
+ .get_Balance]
+
+[&IID_IVideoWindow: 056A868B4 0AD4 011CE 0B0 03A 0 020 0AF 0B 0A7 070]
+
+[.GetTypeInfoCount
+ .GetTypeInfo 
+ .GetIDsOfNames
+ .Invoke
+ .put_Caption 
+ .get_Caption 
+ .put_WindowStyle 
+ .get_WindowStyle 
+ .put_WindowStyleEx
+ .get_WindowStyleEx
+ .put_AutoShow 
+ .get_AutoShow 
+ .put_WindowState 
+ .get_WindowState 
+ .put_BackgroundPalette 
+ .get_BackgroundPalette 
+ .put_Visible 
+ .get_Visible 
+ .put_Left 
+ .get_Left 
+ .put_Width
+ .get_Width
+ .put_Top 
+ .get_Top 
+ .put_Height
+ .get_Height
+ .put_Owner
+ .get_Owner
+ .put_MessageDrain
+ .get_MessageDrain
+ .get_BorderColor 
+ .put_BorderColor 
+ .get_FullScreenMode 
+ .put_FullScreenMode 
+ .SetWindowForeground 
+ .NotifyOwnerMessage 
+ .SetWindowPosition
+ .GetWindowPosition
+ .GetMinIdealImageSize
+ .GetMaxIdealImageSize
+ .GetRestorePosition 
+ .HideCursor
+ .IsCursorHidden]
+
+[&IID_IBasicVideo: 056a868b5 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.GetTypeInfoCount 
+ .GetTypeInfo
+ .GetIDsOfNames 
+ .Invoke 
+ .get_AvgTimePerFrame 
+ .get_BitRate
+ .get_BitErrorRate 
+ .get_VideoWidth
+ .get_VideoHeight 
+ .put_SourceLeft
+ .get_SourceLeft
+ .put_SourceWidth 
+ .get_SourceWidth 
+ .put_SourceTop 
+ .get_SourceTop 
+ .put_SourceHeight 
+ .get_SourceHeight 
+ .put_DestinationLeft 
+ .get_DestinationLeft 
+ .put_DestinationWidth 
+ .get_DestinationWidth 
+ .put_DestinationTop
+ .get_DestinationTop
+ .put_DestinationHeight
+ .get_DestinationHeight
+ .SetSourcePosition
+ .GetSourcePosition
+ .SetDefaultSourcePosition
+ .SetDestinationPosition 
+ .GetDestinationPosition 
+ .SetDefaultDestinationPosition 
+ .GetVideoSize 
+ .GetVideoPaletteEntries 
+ .GetCurrentImage 
+ .IsUsingDefaultSource 
+ .IsUsingDefaultDestination]
+
+[&IID_IBasicVideo2: 0329bb360 0f6ea 011d1 090 038 00 0a0 0c9 069 072 098]
+
+[.GetTypeInfoCount
+ .GetTypeInfo 
+ .GetIDsOfNames
+ .Invoke
+ .get_AvgTimePerFrame 
+ .get_BitRate 
+ .get_BitErrorRate
+ .get_VideoWidth 
+ .get_VideoHeight 
+ .put_SourceLeft 
+ .get_SourceLeft 
+ .put_SourceWidth 
+ .get_SourceWidth 
+ .put_SourceTop
+ .get_SourceTop
+ .put_SourceHeight
+ .get_SourceHeight
+ .put_DestinationLeft 
+ .get_DestinationLeft 
+ .put_DestinationWidth
+ .get_DestinationWidth
+ .put_DestinationTop 
+ .get_DestinationTop 
+ .put_DestinationHeight 
+ .get_DestinationHeight 
+ .SetSourcePosition
+ .GetSourcePosition
+ .SetDefaultSourcePosition
+ .SetDestinationPosition 
+ .GetDestinationPosition 
+ .SetDefaultDestinationPosition 
+ .GetVideoSize 
+ .GetVideoPaletteEntries 
+ .GetCurrentImage 
+ .IsUsingDefaultSource
+ .IsUsingDefaultDestination 
+ .GetPreferredAspectRatio]
+
+[&IID_IDeferredCommand: 056a868b8 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.Cancel
+ .Confidence 
+ .Postpone 
+ .GetHResult]
+
+[&IID_IQueueCommand: 056a868b7 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.InvokeAtStreamTime 
+ .InvokeAtPresentationTime]
+
+[&IID_IFilterInfo: 056a868ba 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.GetTypeInfoCount 
+ .GetTypeInfo
+ .GetIDsOfNames 
+ .Invoke 
+ .FindPin
+ .get_Name 
+ .get_VendorInfo
+ .get_Filter
+ .get_Pins 
+ .get_IsFileSource 
+ .get_Filename 
+ .put_Filename]
+
+[&IID_IRegFilterInfo: 056a868bb 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.GetTypeInfoCount 
+ .GetTypeInfo
+ .GetIDsOfNames 
+ .Invoke 
+ .get_Name
+ .Filter]
+
+[&IID_IMediaTypeInfo: 056a868bc 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.GetTypeInfoCount 
+ .GetTypeInfo
+ .GetIDsOfNames 
+ .Invoke 
+ .get_Type
+ .get_Subtype]
+
+[&IID_IPinInfo: 056a868bd 0ad4 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[.GetTypeInfoCount 
+ .GetTypeInfo 
+ .GetIDsOfNames
+ .Invoke
+ .get_Pin
+ .get_ConnectedTo 
+ .get_ConnectionMediaType 
+ .get_FilterInfo
+ .get_Name 
+ .get_Direction
+ .get_PinID 
+ .get_MediaTypes
+ .Connect
+ .ConnectDirect
+ .ConnectWithType 
+ .Disconnect
+ .Render]
+
+[&IID_IAMStats: 0bc9bcf80 0dcd2 011d2 0ab 0f6 00 0a0 0c9 05 0f3 075]
+
+[.GetTypeInfoCount 
+ .GetTypeInfo 
+ .GetIDsOfNames
+ .Invoke
+ .Reset 
+ .get_Count 
+ .GetValueByIndex 
+ .GetValueByName
+ .GetIndex 
+ .AddValue]
+
+; SOURCE FILE -> uuids.h
+
+[&MEDIASUBTYPE_None: 0e436eb8e 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+; -- major types ---
+
+[&MEDIATYPE_Video: 073646976 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIATYPE_Audio: 073647561 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIATYPE_Text: 073747874 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIATYPE_Midi: 07364696D 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIATYPE_Stream: 0e436eb83 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&MEDIATYPE_Interleaved: 073766169 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIATYPE_File: 0656c6966 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIATYPE_ScriptCommand: 073636d64 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIATYPE_AUXLine21Data: 0670aea80 03a82 011d0 0b7 09b 00 0aa 00 037 067 0a7]
+
+[&MEDIATYPE_VBI: 0f72a76e1 0eb0a 011d0 0ac 0e4 00 00 0c0 0cc 016 0ba]
+
+[&MEDIATYPE_Timecode: 0482dee3 07817 011cf 08a 03 00 0aa 00 06e 0cb 065]
+
+[&MEDIATYPE_LMRT: 074726c6d 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIATYPE_URL_STREAM: 0736c7275 00 010 080 00 00 0aa 00 038 09b 071]
+
+; -- sub types ---
+
+[&MEDIASUBTYPE_CLPL: 04C504C43 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_YUYV: 056595559 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_IYUV: 056555949 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_YVU9: 039555659 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_Y411: 031313459 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_Y41P: 050313459 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_YUY2: 032595559 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_YVYU: 055595659 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_UYVY: 059565955 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_Y211: 031313259 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_CLJR: 0524a4c43 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_IF09: 039304649 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_CPLA: 0414c5043 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_MJPG: 047504A4D 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_TVMJ: 04A4D5654 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_WAKE: 0454B4157 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_CFCC: 043434643 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_IJPG: 047504A49 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_Plum: 06D756C50 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_DVCS: 053435644 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_DVSD: 044535644 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_MDVF: 04656444D 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_RGB1: 0e436eb78 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&MEDIASUBTYPE_RGB4: 0e436eb79 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&MEDIASUBTYPE_RGB8: 0e436eb7a 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&MEDIASUBTYPE_RGB565: 0e436eb7b 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&MEDIASUBTYPE_RGB555: 0e436eb7c 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&MEDIASUBTYPE_RGB24: 0e436eb7d 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&MEDIASUBTYPE_RGB32: 0e436eb7e 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+; RGB surfaces that contain per pixel alpha values.
+
+[&MEDIASUBTYPE_ARGB1555: 0297c55af 0e209 04cb3 0b7 057 0c7 06d 06b 09c 088 0a8]
+
+[&MEDIASUBTYPE_ARGB4444: 06e6415e6 05c24 0425f 093 0cd 080 010 02b 03d 01c 0ca]
+
+[&MEDIASUBTYPE_ARGB32: 0773c9ac0 03274 011d0 0b7 024 00 0aa 00 06c 01a 01]
+
+[&MEDIASUBTYPE_A2R10G10B10: 02f8bb76d 0b644 04550 0ac 0f3 0d3 0c 0aa 065 0d5 0c5]
+
+[&MEDIASUBTYPE_A2B10G10R10: 0576f7893 0bdf6 048c4 087 05f 0ae 07b 081 083 045 067]
+
+; See the DX-VA header and documentation for a description of this format.
+[&MEDIASUBTYPE_AYUV: 056555941 00 010 080 00 00 0aa 00 038 09b 071]
+
+; See the DX-VA header and documentation for a description of this format.
+[&MEDIASUBTYPE_AI44: 034344941 00 010 080 00 00 0aa 00 038 09b 071]
+
+; See the DX-VA header and documentation for a description of this format.
+[&MEDIASUBTYPE_IA44: 034344149 00 010 080 00 00 0aa 00 038 09b 071]
+
+; DirectX7 D3D Render Target media subtypes.
+
+[&MEDIASUBTYPE_RGB32_D3D_DX7_RT: 032335237 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_RGB16_D3D_DX7_RT: 036315237 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_ARGB32_D3D_DX7_RT: 038384137 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_ARGB4444_D3D_DX7_RT: 034344137 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_ARGB1555_D3D_DX7_RT: 035314137 00 010 080 00 00 0aa 00 038 09b 071]
+
+; DirectX9 D3D Render Target media subtypes.
+
+[&MEDIASUBTYPE_RGB32_D3D_DX9_RT: 032335239 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_RGB16_D3D_DX9_RT: 036315239 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_ARGB32_D3D_DX9_RT: 038384139 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_ARGB4444_D3D_DX9_RT: 034344139 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_ARGB1555_D3D_DX9_RT: 035314139 00 010 080 00 00 0aa 00 038 09b 071]
+
+; DX-VA uncompressed surface formats
+
+[&MEDIASUBTYPE_YV12: 032315659 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_NV12: 03231564E 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_IMC1: 031434D49 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_IMC2: 032434D49 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_IMC3: 033434D49 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_IMC4: 034434D49 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_S340: 030343353 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_S342: 032343353 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_Overlay: 0e436eb7f 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&MEDIASUBTYPE_MPEG1Packet: 0e436eb80 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&MEDIASUBTYPE_MPEG1Payload: 0e436eb81 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&MEDIASUBTYPE_MPEG1AudioPayload: 050 00 010 080 00 00 0AA 00 038 09B 071]
+
+[&MEDIATYPE_MPEG1SystemStream: 0e436eb82 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+; the next consecutive number is assigned to MEDIATYPE_Stream and appears higher up
+[&MEDIASUBTYPE_MPEG1System: 0e436eb84 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&MEDIASUBTYPE_MPEG1VideoCD: 0e436eb85 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&MEDIASUBTYPE_MPEG1Video: 0e436eb86 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&MEDIASUBTYPE_MPEG1Audio: 0e436eb87 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&MEDIASUBTYPE_Avi: 0e436eb88 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&MEDIASUBTYPE_Asf: 03db80f90 09412 011d1 0ad 0ed 00 00 0f8 075 04b 099]
+
+[&MEDIASUBTYPE_QTMovie: 0e436eb89 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&MEDIASUBTYPE_QTRpza: 0617a7072 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_QTSmc: 020636d73 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_QTRle: 020656c72 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_QTJpeg: 06765706a 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_PCMAudio_Obsolete: 0e436eb8a 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&MEDIASUBTYPE_PCM: 01 00 010 080 00 00 0AA 00 038 09B 071]
+
+[&MEDIASUBTYPE_WAVE: 0e436eb8b 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&MEDIASUBTYPE_AU: 0e436eb8c 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&MEDIASUBTYPE_AIFF: 0e436eb8d 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&MEDIASUBTYPE_dvsdLow: 064737664 00 010 080 00 00 0aa 00 038 09b 071]
+; Low double déclaration de DVSD !!! 
+[&MEDIASUBTYPE_DVSD: 044535644 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_dvhd: 064687664 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_dvsl: 06c737664 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_dv25: 035327664 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_dv50: 030357664 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_dvh1: 031687664 00 010 080 00 00 0aa 00 038 09b 071]
+
+[&MEDIASUBTYPE_Line21_BytePair: 06e8d4a22 0310c 011d0 0b7 09a 00 0aa 00 037 067 0a7]
+
+[&MEDIASUBTYPE_Line21_GOPPacket: 06e8d4a23 0310c 011d0 0b7 09a 00 0aa 00 037 067 0a7]
+
+[&MEDIASUBTYPE_Line21_VBIRawData: 06e8d4a24 0310c 011d0 0b7 09a 00 0aa 00 037 067 0a7]
+
+[&MEDIASUBTYPE_TELETEXT: 0f72a76e3 0eb0a 011d0 0ac 0e4 00 00 0c0 0cc 016 0ba]
+
+[&MEDIASUBTYPE_WSS: 02791D576 08E7A 0466F 09E 090 05D 03F 030 083 073 08B]
+
+[&MEDIASUBTYPE_VPS: 0a1b3f620 09792 04d8d 081 0a4 086 0af 025 077 020 090]
+
+; derived from WAVE_FORMAT_DRM
+[&MEDIASUBTYPE_DRM_Audio: 09 00 010 080 00 00 0aa 00 038 09b 071]
+
+; derived from WAVE_FORMAT_IEEE_FLOAT
+[&MEDIASUBTYPE_IEEE_FLOAT: 03 00 010 080 00 00 0aa 00 038 09b 071]
+
+; derived from WAVE_FORMAT_DOLBY_AC3_SPDIF
+[&MEDIASUBTYPE_DOLBY_AC3_SPDIF: 092 00 010 080 00 00 0aa 00 038 09b 071]
+
+; derived from WAVE_FORMAT_RAW_SPORT
+[&MEDIASUBTYPE_RAW_SPORT: 0240 00 010 080 00 00 0aa 00 038 09b 071]
+
+; derived from wave format tag 0241 call it SPDIF_TAG_241h for now
+[&MEDIASUBTYPE_SPDIF_TAG_241h: 0241 00 010 080 00 00 0aa 00 038 09b 071]
+
+; DirectShow DSS definitions
+
+[&MEDIASUBTYPE_DssVideo: 0a0af4f81 0e163 011d0 0ba 0d9 00 060 097 044 011 01a]
+
+[&MEDIASUBTYPE_DssAudio: 0a0af4f82 0e163 011d0 0ba 0d9 00 060 097 044 011 01a]
+
+[&MEDIASUBTYPE_VPVideo: 05a9b6a40 01a22 011d1 0ba 0d9 00 060 097 044 011 01a]
+
+[&MEDIASUBTYPE_VPVBI: 05a9b6a41 01a22 011d1 0ba 0d9 00 060 097 044 011 01a]
+
+[&CLSID_CaptureGraphBuilder: 0BF87B6E0 08C27 011d0 0B3 0F0 00 0AA 00 037 061 0C5]
+
+[&CLSID_CaptureGraphBuilder2: 0BF87B6E1 08C27 011d0 0B3 0F0 00 0AA 00 037 061 0C5]
+
+[&CLSID_ProtoFilterGraph: 0e436ebb0 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&CLSID_SystemClock: 0e436ebb1 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&CLSID_FilterMapper: 0e436ebb2 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&CLSID_FilterGraph: 0e436ebb3 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&CLSID_FilterGraphNoThread: 0e436ebb8 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&CLSID_MPEG1Doc: 0e4bbd160 04269 011ce 083 08d 00 0aa 00 055 059 05a]
+
+[&CLSID_FileSource: 0701722e0 08ae3 011ce 0a8 05c 00 0aa 00 02f 0ea 0b5]
+
+[&CLSID_MPEG1PacketPlayer: 026c25940 04ca9 011ce 0a8 028 00 0aa 00 02f 0ea 0b5]
+
+[&CLSID_MPEG1Splitter: 0336475d0 0942a 011ce 0a8 070 00 0aa 00 02f 0ea 0b5]
+
+[&CLSID_CMpegVideoCodec: 0feb50740 07bef 011ce 09b 0d9 00 00 0e2 02 059 09c]
+
+[&CLSID_CMpegAudioCodec: 04a2286e0 07bef 011ce 09b 0d9 00 00 0e2 02 059 09c]
+
+[&CLSID_TextRender: 0e30629d3 027e5 011ce 087 05d 00 060 08c 0b7 080 066]
+
+[&CLSID_InfTee: 0f8388a40 0d5bb 011d0 0be 05a 00 080 0c7 06 056 08e]
+
+[&CLSID_AviSplitter: 01b544c20 0fd0b 011ce 08c 063 00 0aa 00 044 0b5 01e]
+
+[&CLSID_AviReader: 01b544c21 0fd0b 011ce 08c 063 00 0aa 00 044 0b5 01e]
+
+[&CLSID_VfwCapture: 01b544c22 0fd0b 011ce 08c 063 00 0aa 00 044 0b5 01e]
+
+[&CLSID_CaptureProperties: 01B544c22 0FD0B 011ce 08C 063 00 0AA 00 044 0B5 01F]
+
+[&CLSID_FGControl: 0e436ebb4 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&CLSID_MOVReader: 044584800 0f8ee 011ce 0b2 0d4 00 0dd 01 010 01b 085]
+
+[&CLSID_QuickTimeParser: 0d51bd5a0 07548 011cf 0a5 020 00 080 0c7 07e 0f5 08a]
+
+[&CLSID_QTDec: 0fdfe9681 074a3 011d0 0af 0a7 00 0aa 00 0b6 07a 042]
+
+[&CLSID_AVIDoc: 0d3588ab0 0781 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[&CLSID_VideoRenderer: 070e102b0 05556 011ce 097 0c0 00 0aa 00 055 059 05a]
+
+[&CLSID_Colour: 01643e180 090f5 011ce 097 0d5 00 0aa 00 055 059 05a]
+
+[&CLSID_Dither: 01da08500 09edc 011cf 0bc 010 00 0aa 00 0ac 074 0f6]
+
+[&CLSID_ModexRenderer: 07167665 05011 011cf 0bf 033 00 0aa 00 055 059 05a]
+
+[&CLSID_AudioRender: 0e30629d1 027e5 011ce 087 05d 00 060 08c 0b7 080 066]
+
+[&CLSID_AudioProperties: 05589faf 0c356 011ce 0bf 01 00 0aa 00 055 059 05a]
+
+[&CLSID_DSoundRender: 079376820 07D0 011CF 0A2 04D 00 020 0AF 0D7 097 067]
+
+[&CLSID_AudioRecord: 0e30629d2 027e5 011ce 087 05d 00 060 08c 0b7 080 066]
+
+[&CLSID_AudioInputMixerProperties: 02ca8ca52 03c3f 011d2 0b7 03d 00 0c0 04f 0b6 0bd 03d]
+
+[&CLSID_AVIDec: 0cf49d4e0 01115 011ce 0b0 03a 00 020 0af 0b 0a7 070]
+
+[&CLSID_AVIDraw: 0a888df60 01e90 011cf 0ac 098 00 0aa 00 04c 0f 0a9]
+
+[&CLSID_ACMWrapper: 06a08cf80 0e18 011cf 0a2 04d 00 020 0af 0d7 097 067]
+
+[&CLSID_AsyncReader: 0e436ebb5 0524f 011ce 09f 053 000 020 0af 0b 0a7 070]
+
+[&CLSID_URLReader: 0e436ebb6 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&CLSID_PersistMonikerPID: 0e436ebb7 0524f 011ce 09f 053 00 020 0af 0b 0a7 070]
+
+[&CLSID_AVICo: 0d76e2820 01563 011cf 0ac 098 00 0aa 00 04c 0f 0a9]
+
+[&CLSID_FileWriter: 08596e5f0 0da5 011d0 0bd 021 00 0a0 0c9 011 0ce 086]
+
+[&CLSID_AviDest: 0e2510970 0f137 011ce 08b 067 00 0aa 00 0a3 0f1 0a6]
+
+[&CLSID_AviMuxProptyPage: 0c647b5c0 0157c 011d0 0bd 023 00 0a0 0c9 011 0ce 086]
+
+[&CLSID_AviMuxProptyPage1: 0a9ae910 085c0 011d0 0bd 042 00 0a0 0c9 011 0ce 086]
+
+[&CLSID_AVIMIDIRender: 07b65360 0c445 011ce 0af 0de 00 0aa 00 06c 014 0f4]
+
+[&CLSID_WMAsfReader: 0187463a0 05bb7 011d3 0ac 0be 00 080 0c7 05e 024 06e]
+
+[&CLSID_WMAsfWriter: 07c23220e 055bb 011d3 08b 016 00 0c0 04f 0b6 0bd 03d]
+
+[&CLSID_MPEG2Demultiplexer: 0afb6c280 02c41 011d3 08a 060 00 00 0f8 01e 0e 04a]
+
+[&CLSID_MMSPLITTER: 03ae86b20 07be8 011d1 0ab 0e6 00 0a0 0c9 05 0f3 075]
+
+[&CLSID_StreamBufferSink: 02db47ae5 0cf39 043c2 0b4 0d6 0c 0d8 0d9 09 046 0f4]
+
+[&CLSID_StreamBufferSource: 0c9f5fe02 0f851 04eb5 099 0ee 0ad 060 02a 0f1 0e6 019]
+
+[&CLSID_StreamBufferConfig: 0fa8a68b2 0c864 04ba2 0ad 053 0d3 087 06a 087 049 04b]
+
+[&CLSID_Mpeg2VideoStreamAnalyzer: 06cfad761 0735d 04aa5 08a 0fc 0af 091 0a7 0d6 01e 0ba]
+
+[&CLSID_StreamBufferRecordingAttributes: 0ccaa63ac 01057 04778 0ae 092 012 06 0ab 09a 0ce 0e6]
+
+[&CLSID_StreamBufferComposeRecording: 0d682c4ba 0a90a 042fe 0b9 0e1 03 010 098 049 0c4 023]
+
+[&CLSID_DVVideoCodec: 0b1b77c00 0c3e4 011cf 0af 079 00 0aa 00 0b6 07a 042]
+
+[&CLSID_DVVideoEnc: 013aa3650 0bb6f 011d0 0af 0b9 00 0aa 00 0b6 07a 042]
+
+[&CLSID_DVSplitter: 04eb31670 09fc6 011cf 0af 06e 00 0aa 00 0b6 07a 042]
+
+[&CLSID_DVMux: 0129d7e40 0c10d 011d0 0af 0b9 00 0aa 00 0b6 07a 042]
+
+[&CLSID_SeekingPassThru: 060af76c 068dd 011d0 08f 0c1 00 0c0 04f 0d9 018 09d]
+
+[&CLSID_Line21Decoder: 06e8d4a20 0310c 011d0 0b7 09a 00 0aa 00 037 067 0a7]
+
+[&CLSID_Line21Decoder2: 0e4206432 01a1 04bee 0b3 0e1 037 02 0c8 0ed 0c5 074]
+
+[&CLSID_OverlayMixer: 0cd8743a1 03736 011d0 09e 069 00 0c0 04f 0d7 0c1 05b]
+
+[&CLSID_VBISurfaces: 0814b9800 01c88 011d1 0ba 0d9 00 060 097 044 011 01a]
+
+[&CLSID_WSTDecoder: 070bc06e0 05666 011d3 0a1 084 00 010 05a 0ef 09f 033]
+
+[&CLSID_MjpegDec: 0301056d0 06dff 011d2 09e 0eb 00 060 08 03 09e 037]
+
+[&CLSID_MJPGEnc: 0b80ab0a0 07416 011d2 09e 0eb 00 060 08 03 09e 037]
+
+; pnp objects and categories
+
+[&CLSID_SystemDeviceEnum: 062BE5D10 060EB 011d0 0BD 03B 00 0A0 0C9 011 0CE 086]
+
+[&CLSID_CDeviceMoniker: 04315D437 05B8C 011d0 0BD 03B 00 0A0 0C9 011 0CE 086]
+
+[&CLSID_VideoInputDeviceCategory: 0860BB310 05D01 011d0 0BD 03B 00 0A0 0C9 011 0CE 086]
+
+[&CLSID_CVidCapClassManager: 0860BB310 05D01 011d0 0BD 03B 00 0A0 0C9 011 0CE 086]
+
+[&CLSID_LegacyAmFilterCategory: 083863F1 070DE 011d0 0BD 040 00 0A0 0C9 011 0CE 086]
+
+[&CLSID_CQzFilterClassManager: 083863F1 070DE 011d0 0BD 040 00 0A0 0C9 011 0CE 086]
+
+[&CLSID_VideoCompressorCategory: 033d9a760 090c8 011d0 0bd 043 00 0a0 0c9 011 0ce 086]
+
+[&CLSID_CIcmCoClassManager: 033d9a760 090c8 011d0 0bd 043 00 0a0 0c9 011 0ce 086]
+
+[&CLSID_AudioCompressorCategory: 033d9a761 090c8 011d0 0bd 043 00 0a0 0c9 011 0ce 086]
+
+[&CLSID_CAcmCoClassManager: 033d9a761 090c8 011d0 0bd 043 00 0a0 0c9 011 0ce 086]
+
+[&CLSID_AudioInputDeviceCategory: 033d9a762 090c8 011d0 0bd 043 00 0a0 0c9 011 0ce 086]
+
+[&CLSID_CWaveinClassManager: 033d9a762 090c8 011d0 0bd 043 00 0a0 0c9 011 0ce 086]
+
+[&CLSID_AudioRendererCategory: 0e0f158e1 0cb04 011d0 0bd 04e 00 0a0 0c9 011 0ce 086]
+
+[&CLSID_CWaveOutClassManager: 0e0f158e1 0cb04 011d0 0bd 04e 00 0a0 0c9 011 0ce 086]
+
+[&CLSID_MidiRendererCategory: 04EfE2452 0168A 011d1 0BC 076 00 0c0 04F 0B9 045 03B]
+
+[&CLSID_CMidiOutClassManager: 04EfE2452 0168A 011d1 0BC 076 00 0c0 04F 0B9 045 03B]
+
+[&CLSID_TransmitCategory: 0cc7bfb41 0f175 011d1 0a3 092 00 0e0 029 01f 039 059]
+
+[&CLSID_DeviceControlCategory: 0cc7bfb46 0f175 011d1 0a3 092 00 0e0 029 01f 039 059]
+
+[&CLSID_ActiveMovieCategories: 0da4e3da0 0d07d 011d0 0bd 050 00 0a0 0c9 011 0ce 086]
+
+[&CLSID_DVDHWDecodersCategory: 02721AE20 07E70 011D0 0A5 0D6 028 0DB 04 0C1 00 00]
+
+[&CLSID_MediaEncoderCategory: 07D22E920 05CA9 04787 08C 02B 0A6 077 09B 0D1 017 081]
+
+[&CLSID_MediaMultiplexerCategory: 0236C9559 0ADCE 04736 0BF 072 0BA 0B3 04E 039 021 096]
+
+[&CLSID_FilterMapper2: 0cda42200 0bd88 011d0 0bd 04e 00 0a0 0c9 011 0ce 086]
+
+[&CLSID_MemoryAllocator: 01e651cc0 0b199 011d0 082 012 00 0c0 04f 0c3 02c 045]
+
+[&CLSID_MediaPropertyBag: 0cdbd8d00 0c193 011d0 0bd 04e 00 0a0 0c9 011 0ce 086]
+
+[&CLSID_DvdGraphBuilder: 0FCC152B7 0F372 011d0 08E 00 00 0C0 04F 0D7 0C0 08B]
+
+[&CLSID_DVDNavigator: 09b8c4620 02c1a 011d0 084 093 00 0a0 024 038 0ad 048]
+
+[&CLSID_DVDState: 0f963c5cf 0a659 04a93 096 038 0ca 0f3 0cd 027 07d 013]
+
+[&CLSID_SmartTee: 0cc58e280 08aa1 011d1 0b3 0f1 00 0aa 00 037 061 0c5]
+
+; -- format types ---
+
+[&FORMAT_None: 0F6417D6 0c318 011d0 0a4 03f 00 0a0 0c9 022 031 096]
+
+[&FORMAT_VideoInfo: 05589f80 0c356 011ce 0bf 01 00 0aa 00 055 059 05a]
+
+[&FORMAT_VideoInfo2: 0f72a76A0 0eb0a 011d0 0ac 0e4 00 00 0c0 0cc 016 0ba]
+
+[&FORMAT_WaveFormatEx: 05589f81 0c356 011ce 0bf 01 00 0aa 00 055 059 05a]
+
+[&FORMAT_MPEGVideo: 05589f82 0c356 011ce 0bf 01 00 0aa 00 055 059 05a]
+
+[&FORMAT_MPEGStreams: 05589f83 0c356 011ce 0bf 01 00 0aa 00 055 059 05a]
+
+[&FORMAT_DvInfo: 05589f84 0c356 011ce 0bf 01 00 0aa 00 055 059 05a]
+
+; -- Video related GUIDs ---
+
+[&CLSID_DirectDrawProperties: 0944d4c00 0dd52 011ce 0bf 0e 00 0aa 00 055 059 05a]
+
+[&CLSID_PerformanceProperties: 059ce6880 0acf8 011cf 0b5 06e 00 080 0c7 0c4 0b6 08a]
+
+[&CLSID_QualityProperties: 0418afb70 0f8b8 011ce 0aa 0c6 00 020 0af 0b 099 0a3]
+
+[&IID_IBaseVideoMixer: 061ded640 0e912 011ce 0a0 099 00 0aa 00 047 09a 058]
+
+[&IID_IDirectDrawVideo: 036d39eb0 0dd75 011ce 0bf 0e 00 0aa 00 055 059 05a]
+
+[&IID_IQualProp: 01bd0ecb0 0f8e2 011ce 0aa 0c6 00 020 0af 0b 099 0a3]
+
+[&CLSID_VPObject: 0ce292861 0fc88 011d0 09e 069 00 0c0 04f 0d7 0c1 05b]
+
+[&IID_IVPObject: 0ce292862 0fc88 011d0 09e 069 00 0c0 04f 0d7 0c1 05b]
+
+[&IID_IVPControl: 025df12c1 03de0 011d1 09e 069 00 0c0 04f 0d7 0c1 05b]
+
+[&CLSID_VPVBIObject: 0814b9801 01c88 011d1 0ba 0d9 00 060 097 044 011 01a]
+
+[&IID_IVPVBIObject: 0814b9802 01c88 011d1 0ba 0d9 00 060 097 044 011 01a]
+
+[&IID_IVPConfig: 0bc29a660 030e3 011d0 09e 069 00 0c0 04f 0d7 0c1 05b]
+
+[&IID_IVPNotify: 0c76794a1 0d6c5 011d0 09e 069 00 0c0 04f 0d7 0c1 05b]
+
+[&IID_IVPNotify2: 0ebf47183 08764 011d1 09e 069 00 0c0 04f 0d7 0c1 05b]
+
+[&IID_IVPVBIConfig: 0ec529b00 01a1f 011d1 0ba 0d9 00 060 097 044 011 01a]
+
+[&IID_IVPVBINotify: 0ec529b01 01a1f 011d1 0ba 0d9 00 060 097 044 011 01a]
+
+[&IID_IMixerPinConfig: 0593cdde1 0759 011d1 09e 069 00 0c0 04f 0d7 0c1 05b]
+
+[&IID_IMixerPinConfig2: 0ebf47182 08764 011d1 09e 069 00 0c0 04f 0d7 0c1 05b]
+
+[&CLSID_DirectDraw: 0D7B70EE0 04340 011CF 0B0 063 00 020 0AF 0C2 0CD 035]
+
+[&CLSID_DirectDrawClipper: 0593817A0 07DB3 011CF 0A2,0DE 00 0AA 00 0b9 033 056]
+
+[&IID_IDirectDraw:06C14DB80 0A733 011CE 0A5 021 00 020 0AF 0B 0E5 060]
+
+[&IID_IDirectDraw2: 0B3A6F3E0 02B43 011CF 0A2 0DE 00 0AA 00 0B9 033 056]
+
+[&IID_IDirectDrawSurface:06C14DB81 0A733 011CE 0A5 021 00 020 0AF 0B 0E5 060]
+
+[&IID_IDirectDrawSurface2: 057805885 06eec 011cf 094 041 0a8 023 03 0c1 0e 027]
+
+[&IID_IDirectDrawSurface3: 0DA044E00 069B2 011D0 0A1 0D5 00 0AA 00 0B8 0DF 0BB]
+
+[&IID_IDirectDrawSurface4:0B2B8630 0AD35 011D0 08E 0A6 00 060 097 097 0EA 05B]
+
+[&IID_IDirectDrawSurface7:06675a80 03b9b 011d2 0b9 02f 00 060 097 097 0ea 05b]
+
+[&IID_IDirectDrawPalette:06C14DB84 0A733 011CE 0A5 021 00 020 0AF 0B 0E5 060]
+
+[&IID_IDirectDrawClipper:06C14DB85 0A733 011CE 0A5 021 00 020 0AF 0B 0E5 060]
+
+[&IID_IDirectDrawColorControl: 04B9F0EE00D7E 011D0 09B 06 00 0A0 0C9 03 0A3 0B8]
+
+[&IID_IDDVideoPortContainer: 06C142760 0A733 011CE 0A5 021 00 020 0AF 0B 0E5 060]
+
+[&IID_IDirectDrawKernel: 08D56C120 06A08 011D0 09B 06 00 0A0 0C9 03 0A3 0B8]
+
+[&IID_IDirectDrawSurfaceKernel: 060755DA0 06A40 011D0 09B 06 00 0A0 0C9 03 0A3 0B8]
+
+[&CLSID_ModexProperties: 0618aa30 06bc4 011cf 0bf 036 00 0aa 00 055 059 05a]
+
+[&IID_IFullScreenVideo: 0dd1d7110 07836 011cf 0bf 047 00 0aa 00 055 059 05a]
+
+[&IID_IFullScreenVideoEx: 053479470 0f1dd 011cf 0bc 042 00 0aa 00 0ac 074 0f6]
+
+[&CLSID_DVDecPropertiesPage: 0101193c0 0bfe 011d0 0af 091 00 0aa 00 0b6 07a 042]
+
+[&CLSID_DVEncPropertiesPage: 04150f050 0bb6f 011d0 0af 0b9 00 0aa 00 0b6 07a 042]
+
+[&CLSID_DVMuxPropertyPage: 04db880e0 0c10d 011d0 0af 0b9 00 0aa 00 0b6 07a 042]
+
+; -- Direct Sound Audio related GUID ---
+
+[&IID_IAMDirectSound: 0546f4260 0d53e 011cf 0b3 0f0 00 0aa 00 037 061 0c5]
+
+; -- MPEG audio decoder properties
+
+[&IID_IMpegAudioDecoder: 0b45dd570 03c77 011d1 0ab 0e1 000 0a0 0c9 05 0f3 075]
+
+; --- Line21 Decoder interface GUID ---
+
+[&IID_IAMLine21Decoder: 06e8d4a21 0310c 011d0 0b7 09a 00 0aa 00 037 067 0a7]
+
+; --- WST Decoder interface GUID ---
+
+[&IID_IAMWstDecoder: 0c056de21 075c2 011d3 0a1 084 00 010 05a 0ef 09f 033]
+
+; --- WST Decoder Property Page ---
+
+[&CLSID_WstDecoderPropertyPage: 04e27f80 091e4 011d3 0a1 084 00 010 05a 0ef 09f 033]
+
+; -- Analog video related GUIDs ---
+
+; -- format types ---
+
+[&FORMAT_AnalogVideo: 0482dde0 07817 011cf 08a 03 00 0aa 00 06e 0cb 065]
+
+; -- major type Analog Video
+
+[&MEDIATYPE_AnalogVideo: 0482dde1 07817 011cf 08a 03 00 0aa 00 06e 0cb 065]
+
+; -- Analog Video subtypes NTSC
+
+[&MEDIASUBTYPE_AnalogVideo_NTSC_M: 0482dde2 07817 011cf 08a 03 00 0aa 00 06e 0cb 065]
+
+; -- Analog Video subtypes PAL
+
+[&MEDIASUBTYPE_AnalogVideo_PAL_B: 0482dde5 07817 011cf 08a 03 00 0aa 00 06e 0cb 065]
+
+[&MEDIASUBTYPE_AnalogVideo_PAL_D: 0482dde6 07817 011cf 08a 03 00 0aa 00 06e 0cb 065]
+
+[&MEDIASUBTYPE_AnalogVideo_PAL_G: 0482dde7 07817 011cf 08a 03 00 0aa 00 06e 0cb 065]
+
+[&MEDIASUBTYPE_AnalogVideo_PAL_H: 0482dde8 07817 011cf 08a 03 00 0aa 00 06e 0cb 065]
+
+[&MEDIASUBTYPE_AnalogVideo_PAL_I: 0482dde9 07817 011cf 08a 03 00 0aa 00 06e 0cb 065]
+
+[&MEDIASUBTYPE_AnalogVideo_PAL_M: 0482ddea 07817 011cf 08a 03 00 0aa 00 06e 0cb 065]
+
+[&MEDIASUBTYPE_AnalogVideo_PAL_N: 0482ddeb 07817 011cf 08a 03 00 0aa 00 06e 0cb 065]
+
+[&MEDIASUBTYPE_AnalogVideo_PAL_N_COMBO: 0482ddec 07817 011cf 08a 03 00 0aa 00 06e 0cb 065]
+
+; -- Analog Video subtypes SECAM
+
+[&MEDIASUBTYPE_AnalogVideo_SECAM_B: 0482ddf0 07817 011cf 08a 03 00 0aa 00 06e 0cb 065]
+
+[&MEDIASUBTYPE_AnalogVideo_SECAM_D: 0482ddf1 07817 011cf 08a 03 00 0aa 00 06e 0cb 065]
+
+[&MEDIASUBTYPE_AnalogVideo_SECAM_G: 0482ddf2 07817 011cf 08a 03 00 0aa 00 06e 0cb 065]
+
+[&MEDIASUBTYPE_AnalogVideo_SECAM_H: 0482ddf3 07817 011cf 08a 03 00 0aa 00 06e 0cb 065]
+
+[&MEDIASUBTYPE_AnalogVideo_SECAM_K: 0482ddf4 07817 011cf 08a 03 00 0aa 00 06e 0cb 065]
+
+[&MEDIASUBTYPE_AnalogVideo_SECAM_K1: 0482ddf5 07817 011cf 08a 03 00 0aa 00 06e 0cb 065]
+
+[&MEDIASUBTYPE_AnalogVideo_SECAM_L: 0482ddf6 07817 011cf 08a 03 00 0aa 00 06e 0cb 065]
+
+; -- External audio related GUIDs ---
+
+; -- major types Analog Audio
+
+[&MEDIATYPE_AnalogAudio: 0482dee1 07817 011cf 08a 03 00 0aa 00 06e 0cb 065]
+
+;-- Well known time format GUIDs ---
+
+[&TIME_FORMAT_NONE: 00 00 00 00 00 00 00 00 00 00 00]
+
+[&TIME_FORMAT_FRAME: 07b785570 08c82 011cf 0bc 0c 00 0aa 00 0ac 074 0f6]
+
+[&TIME_FORMAT_BYTE: 07b785571 08c82 011cf 0bc 0c 00 0aa 00 0ac 074 0f6]
+
+[&TIME_FORMAT_SAMPLE: 07b785572 08c82 011cf 0bc 0c 00 0aa 00 0ac 074 0f6]
+
+[&TIME_FORMAT_FIELD: 07b785573 08c82 011cf 0bc 0c 00 0aa 00 0ac 074 0f6]
+
+[&TIME_FORMAT_MEDIA_TIME: 07b785574 08c82 011cf 0bc 0c 00 0aa 00 0ac 074 0f6]
+
+; for IKsPropertySet
+
+[&AMPROPSETID_Pin: 09b00f101 01567 011d1 0b3 0f1 00 0aa 00 037 061 0c5]
+
+[&PIN_CATEGORY_CAPTURE: 0fb6c4281 0353 011d1 090 05f 00 00 0c0 0cc 016 0ba]
+
+[&PIN_CATEGORY_PREVIEW: 0fb6c4282 0353 011d1 090 05f 00 00 0c0 0cc 016 0ba]
+
+[&PIN_CATEGORY_ANALOGVIDEOIN: 0fb6c4283 0353 011d1 090 05f 00 00 0c0 0cc 016 0ba]
+
+[&PIN_CATEGORY_VBI: 0fb6c4284 0353 011d1 090 05f 00 00 0c0 0cc 016 0ba]
+
+[&PIN_CATEGORY_VIDEOPORT: 0fb6c4285 0353 011d1 090 05f 00 00 0c0 0cc 016 0ba]
+
+[&PIN_CATEGORY_NABTS: 0fb6c4286 0353 011d1 090 05f 00 00 0c0 0cc 016 0ba]
+
+[&PIN_CATEGORY_EDS: 0fb6c4287 0353 011d1 090 05f 00 00 0c0 0cc 016 0ba]
+
+[&PIN_CATEGORY_TELETEXT: 0fb6c4288 0353 011d1 090 05f 00 00 0c0 0cc 016 0ba]
+
+[&PIN_CATEGORY_CC: 0fb6c4289 0353 011d1 090 05f 00 00 0c0 0cc 016 0ba]
+
+[&PIN_CATEGORY_STILL: 0fb6c428a 0353 011d1 090 05f 00 00 0c0 0cc 016 0ba]
+
+[&PIN_CATEGORY_TIMECODE: 0fb6c428b 0353 011d1 090 05f 00 00 0c0 0cc 016 0ba]
+
+[&PIN_CATEGORY_VIDEOPORT_VBI: 0fb6c428c 0353 011d1 090 05f 00 00 0c0 0cc 016 0ba]
+
+; the following special GUIDS are used by ICaptureGraphBuilder::FindInterface
+
+[&LOOK_UPSTREAM_ONLY: 0ac798be0 098e3 011d1 0b3 0f1 00 0aa 00 037 061 0c5]
+
+[&LOOK_DOWNSTREAM_ONLY: 0ac798be1 098e3 011d1 0b3 0f1 00 0aa 00 037 061 0c5]
+
+; -------------------------------------------------------------------------
+; KSProxy GUIDS
+; -------------------------------------------------------------------------
+
+[&CLSID_TVTunerFilterPropertyPage: 0266eee41 06c63 011cf 08a 03 00 0aa 00 06e 0cb 065]
+
+[&CLSID_CrossbarFilterPropertyPage: 071f96461 078f3 011d0 0a1 08c 00 0a0 0c9 011 089 056]
+
+[&CLSID_TVAudioFilterPropertyPage: 071f96463 078f3 011d0 0a1 08c 00 0a0 0c9 011 089 056]
+
+[&CLSID_VideoProcAmpPropertyPage: 071f96464 078f3 011d0 0a1 08c 00 0a0 0c9 011 089 056]
+
+[&CLSID_CameraControlPropertyPage: 071f96465 078f3 011d0 0a1 08c 00 0a0 0c9 011 089 056]
+
+[&CLSID_AnalogVideoDecoderPropertyPage: 071f96466 078f3 011d0 0a1 08c 00 0a0 0c9 011 089 056]
+
+[&CLSID_VideoStreamConfigPropertyPage: 071f96467 078f3 011d0 0a1 08c 00 0a0 0c9 011 089 056]
+
+[&CLSID_AudioRendererAdvancedProperties: 037e92a92 0d9aa 011d2 0bf 084 08e 0f2 0b1 055 05a 0ed]
+
+; -------------------------------------------------------------------------
+; VMR GUIDS
+; -------------------------------------------------------------------------
+
+[&CLSID_VideoMixingRenderer: 0B87BEB7B 08D29 0423f 0AE 04D 065 082 0C1 01 075 0AC]
+
+[&CLSID_VideoRendererDefault: 06BC1CFFA 08FC1 04261 0AC 022 0CF 0B4 0CC 038 0DB 050]
+
+[&CLSID_AllocPresenter: 099d54f63 01a69 041ae 0aa 04d 0c9 076 0eb 03f 07 013]
+
+[&CLSID_AllocPresenterDDXclMode: 04444ac9e 0242e 0471b 0a3 0c7 045 0dc 0d4 063 052 0bc]
+
+[&CLSID_VideoPortManager: 06f26a6cd 0967b 047fd 087 04a 07a 0ed 02c 09d 025 0a2]
+
+; -------------------------------------------------------------------------
+; VMR GUIDS for DX9
+; -------------------------------------------------------------------------
+
+[&CLSID_VideoMixingRenderer9: 051b4abf3 0748f 04e3b 0a2 076 0c8 028 033 0e 092 06a]
+
+; -------------------------------------------------------------------------
+; BDA Network Provider GUIDS
+; -------------------------------------------------------------------------
+
+[&CLSID_ATSCNetworkProvider: 0dad2fdd 05fd7 011d3 08f 050 00 0c0 04f 079 071 0e2]
+
+[&CLSID_ATSCNetworkPropertyPage: 0e3444d16 05ac4 04386 088 0df 013 0fd 023 0e 01d 0da]
+
+[&CLSID_DVBSNetworkProvider: 0fa4b375a 045b4 04d45 084 040 026 039 057 0b1 016 023]
+
+[&CLSID_DVBTNetworkProvider: 0216c62df 06d7f 04e9a 085 071 05 0f1 04e 0db 076 06a]
+
+[&CLSID_DVBCNetworkProvider: 0dc0c0fe7 0485 04266 0b9 03f 068 0fb 0f8 0e 0d8 034]
+
+; -------------------------------------------------------------------------
+; TVE Receiver filter guids
+; -------------------------------------------------------------------------
+
+[&CLSID_DShowTVEFilter: 05500280 0FAA5 04DF9 082 046 0BF 0C2 03A 0C5 0CE 0A8]
+
+[&CLSID_TVEFilterTuneProperties: 05500281 0FAA5 04DF9 082 046 0BF 0C2 03A 0C5 0CE 0A8]
+
+[&CLSID_TVEFilterCCProperties: 05500282 0FAA5 04DF9 082 046 0BF 0C2 03A 0C5 0CE 0A8]
+
+[&CLSID_TVEFilterStatsProperties: 05500283 0FAA5 04DF9 082 046 0BF 0C2 03A 0C5 0CE 0A8]
+
+; -------------------------------------------------------------------------
+; Defined ENCAPI parameter GUIDs
+; -------------------------------------------------------------------------
+
+[&CLSID_IVideoEncoderProxy: 0b43c4eec 08c32 04791 091 02 050 08a 0da 05e 0e8 0e7]
+
+[&CLSID_ICodecAPIProxy: 07ff0997a 01999 04286 0a7 03c 062 02b 088 014 0e7 0eb]
+
+[&CLSID_IVideoEncoderCodecAPIProxy: 0b05dabd9 056e5 04fdc 0af 0a4 08a 047 0e9 01f 01c 09c]
+
+[&ENCAPIPARAM_BITRATE: 049cc4c43 0ca83 04ad4 0a9 0af 0f3 069 06a 0f6 066 0df]
+
+[&ENCAPIPARAM_PEAK_BITRATE: 0703f16a9 03d48 044a1 0b0 077 01 08d 0ff 091 05d 019]
+
+[&ENCAPIPARAM_BITRATE_MODE: 0ee5fb25c 0c713 040d1 09d 058 0c0 0d7 024 01e 025 0f]
+
+; for kernel control
+
+[&CODECAPI_CHANGELISTS: 062b12acf 0f6b0 047d9 094 056 096 0f2 02c 04e 0b 09d]
+
+[&CODECAPI_VIDEO_ENCODER: 07112e8e1 03d03 047ef 08e 060 03 0f1 0cf 053 073 01]
+
+[&CODECAPI_AUDIO_ENCODER: 0b9d19a3e 0f897 0429c 0bc 046 081 038 0b7 027 02b 02d]
+
+[&CODECAPI_SETALLDEFAULTS: 06c5e6a7c 0acf8 04f55 0a9 099 01a 062 081 09 05 01b]
+
+[&CODECAPI_ALLSETTINGS: 06a577e92 083e1 04113 0ad 0c2 04f 0ce 0c3 02f 083 0a1]
+
+[&CODECAPI_SUPPORTSEVENTS: 0581af97 07693 04dbd 09d 0ca 03f 09e 0bd 065 085 0a1]
+
+[&CODECAPI_CURRENTCHANGELIST: 01cb14e83 07d72 04657 083 0fd 047 0a2 0c5 0b9 0d1 03d]

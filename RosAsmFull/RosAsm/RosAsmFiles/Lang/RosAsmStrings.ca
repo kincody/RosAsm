@@ -1,0 +1,177 @@
+$$$$1 error
+$$$$3 No s'ha trobat el fitxer
+$$$$4 No s'ha pogut obrir: El sistema no pot accedir al fitxer de destinació
+$$$$5 Error escrivint el fitxer
+$$$$6 No s'ha trobat el fitxer a obrir
+$$$$7 No s'ha trobat el fitxer
+$$$$8 No es pot llegir el fitxer
+$$$$9 Falta el valor de la Igualtat
+$$$$10 Un nom d'igualtat no pot anar seguit per una coma
+
+$$$$11 Falta el signe ">" al final de la Igualtat de Text
+$$$$12 Número incorrecte de paràmetres en evocar la Macro
+$$$$13 Construcció de # incorrecta
+$$$$14 Sempre ">", per a Macros de Paràmetres Múltiples. Mai "<"
+$$$$15 #x està limitat a 9
+$$$$16 Massa paràmetres trobats en obrir
+$$$$17 Un bucle infinit s'ha generat en obrir aquaquesta macro
+$$$$19 Més de 4000 bytes produïts en obrir aquaquesta Macro!!!
+$$$$19 Tipus de dades desconegut
+$$$$20 Marcador de grandària desconegut
+
+$$$$21 Grandària de memòria de 64 Bits (Q$...) esperado per a totes les instuccions 3D Now
+$$$$22 "H$" reservat per a propers desenvolupaments. Utilitzeu "R$" o "F$" 
+$$$$23 Sintaxi de Prefetch/w/0/1/2/NTA: > PrefetchXXX B$Address
+$$$$24 D$ requerit per a dades d'Etiquetes
+$$$$25 Estructura de text desconeguda. Possible error intern.
+$$$$26 Separador inesperat
+$$$$27 Número binari invàlid
+$$$$28 Número hexadecimal invàlid
+$$$$29 Número decimal invàlid
+$$$$30 Valor fora de límits
+
+$$$$31 Aquest símbol d'igualtat o macro ja s'està utilitzant
+$$$$32 Aquest símbol d'igualtat no s'està utilitzant
+$$$$33 Més de 2 etiquetes en aquaquesta expressió
+$$$$34 Caràcter incorrecte en el nom de l'etiqueta
+$$$$35 Definició d'etiqueta duplicada 
+$$$$36 Definició de símbol duplicada 
+$$$$37 Coma òrfena trobada
+$$$$38 Etiqueta Local no permesa a la definició de dades
+$$$$39 No es pot cridar una Etiqueta Local
+$$$$40 Mnemònic desconegut
+
+$$$$41 Valor byte fora de límits
+$$$$42 Valor word fora de límits
+$$$$43 Valor Dword fora de límits
+$$$$44 Len al començament només pot ser dWord o word
+$$$$45 Declaració incorrecta de número real
+$$$$46 El prefix de una instrucció no pot aquestar sol
+$$$$47 No està permès omitir Segment Doble
+$$$$48 Omisió de segment sense resoldre
+$$$$49 Paràmetre invàlid
+$$$$50 Número incorrecte de paràmetres en evocar la Macro
+
+$$$$51 Només un "&0" Etiqueta automàtica per Macro
+$$$$52 Cal un signe igual o una coma.
+$$$$53 Falta un espai al final de la declaració de la cadena
+$$$$54 Posició incorrecta de la instrucció Loop a la Macro
+$$$$55 S'han trobat massa operands
+$$$$56 Valores Octets Hexa esperats per a Bytes de Codis
+$$$$57 Prefix Lock no permès amb aquesta instrucció
+$$$$58 Lock: la Destinació ha de ser una direcció de memòria
+$$$$59 Falta operador
+$$$$60 Falta operador
+
+$$$$61 Les Expressions són permesas només per un paràmetre de direccionament de memòria
+$$$$62 Falta o sobra un parèntesi
+$$$$64 ParaMacro incorrecta
+$$$$64 Variables Macros van des de "&1" fins a "&100" (Decimal)
+$$$$65 Declaració 'imbricated' de Variable Macro
+$$$$66 Marcador de grandària requerit abans d'una expressió Real
+$$$$67 Marcador de tamaño requerit després d'una expressió Real
+$$$$68 Immediatos permesos només en expressions
+$$$$69 No es permeten Etiquetes Locals en dades: Estan reservades per a Codi
+$$$$70 expressió Real: només operadors +-*/ sense parèntesis aniuats
+
+$$$$71 Operador incorrecte en la expressió
+$$$$72 Per a declaraciones de dades grans, utilitzeu dades Virtuals (?) o VirtualAlloc
+$$$$73 Què voleu dir amb "repetir menys de 2 vegades???..."
+$$$$74 Bucle sense Declaració de dades prèvia
+$$$$75 Per a Taules Virtuals grans: VirtualAlloc o [Configuration]/[Bad Habits]
+$$$$76 Número d'expressió massa gran en el resultat o abans de la multiplicació
+$$$$77 No ha d'estar al principi d'un membre de la expressió
+$$$$78 Paràmetre SHR / SHL major que grandària Byte en la expressió
+$$$$79 Falta o sobra un delimitador de text
+$$$$80 Falta o sobra un claudàtor
+
+$$$$81 CR LF inesperat després del corchete
+$$$$82 Falta Separador abans del Delimitador de Text
+$$$$83 Falta Separador després del Delimitador de Text
+$$$$84 Falta o sobra una clau aniuada
+$$$$85 Els caràcters '{}' estan reservats per a declaracions aniuades
+$$$$86 Pseudo '@Etiqueta' local abans de qualsevol declaració d'etiqueta ordinària
+$$$$87 Només un Índex i una base són permeses en SIB
+$$$$88 ESP no pot utilitzar-se com un índex en SIB
+$$$$89 Paràmetre de direcció efectiva impossible
+$$$$90 Els valors possibles d'Escalar són 2, 4, 8 i de extensiones 3, 5, 9
+
+$$$$91 ESP no pot utilitzar-se como registre índex
+$$$$92 Només un índex és permès en la expressió
+$$$$93 Etiqueta duplicada o error desconegut
+$$$$94 No s'ha pogut resoldre aquest paràmetre
+$$$$95 La Pila d'Enter té una grandària màxima de 0FFFC i se alínia a 4 bytes
+$$$$96 Els Nivells d'Enter són entre 0 i 31
+$$$$97 Per tal de tenir Direcció d'etiqueta+immediat, utilitzeu LEA. Exemple: " > lea ebx D$Etiqueta+8" 
+$$$$98 Aquests dos tipus de paràmetres no estan permesos junts
+$$$$99 Grandàries d'operands no s'ajusten
+$$$$100 Errad d'Anàlisis en tipus d'operands per aquest mnemònic
+
+$$$$101 L'aliniament ha de ser una potència de 2 entre 4 i 0100
+$$$$102 Tamaño de operando incorrecte
+$$$$103 No es poden resoldre Registres per aquesta instrucció FP
+$$$$104 "lea reg, mem" només. Per a "lea eax imm", utilitzeu "mov eax imm"
+$$$$105 No hi ha forma Byte per a lea
+$$$$106 Tercer paràmetre imm requerit
+$$$$107 X$Paràmetre de memòria requerit
+$$$$108 Desbordament de número immediat
+$$$$109 Aquest nom simbòlic no coincideix amb cap etiqueta
+$$$$110 Què es això?
+
+$$$$111 RosAsm no ha pogut assemblar aquesta instrucció
+$$$$112 Només els signes + - són permesos aquí, o vejeu [Expressions] a la Ajuda
+$$$$113 Perdoneu, aquest mnemònic encara no s'ha implementat. Es necessita informació.
+$$$$114 Cal  >> o << de llarga distància (mai amb LOOP)
+[#1 #2 fuera de rango]
+$$$$116 Cal una Etiqueta Local Curta Amunt per a LOOP
+$$$$117 Cal una Etiqueta Local Curta Amunt per a LOOP
+$$$$118 Cal una Etiqueta Local Curta (Amunt o Abll) per a JCXZ / JECXZ
+$$$$119 Només es permet el desplaçament curt amb aquest mnemònic
+$$$$120 El símbol N no és permès aquí. Utilitzeu L
+
+$$$$121 No es pot barrejar 'LEN al començament' amb 'LEN lliure'
+$$$$122 Valor decimal esperat per a número de bucle a la declaració de dades.
+$$$$123 Dada Virtual incorrecta
+$$$$124 Perdoneu, no es poden aniuar bucles de dades
+$$$$125 Grandària Byte requerida
+$$$$126 Només acumul·lador amb aquesta instrucció
+$$$$127 Paràmetre de text excedeix de 4 bytes
+$$$$128 Un registre ha de ser d'ús general
+$$$$129 Paràmetre VERR/VERW / LTR  ha de ser registre o memòria de 16 bits
+
+$$$$130 El direccionament de memòria espera un registre d'ús general de 32 bits complets
+$$$$131 El mode per a crides Api és: call 'Module.Function'
+$$$$132 No s'ha trobat la crida Api al codi font
+$$$$133 Error intern: La DLL cridada per l'usuari no s'ha trobat en temps de compilació
+$$$$134 Error intern: L'API cridada per l'usuari no s'ha trobat en temps de compilació
+$$$$135 Etiqueta local no permesa aquí
+$$$$136 No s'ha trobat el punt d'entrada (hauria de ser "Main:")
+$$$$137 Condicions disponibles de FPU: B, E, BE, NA, U, NB, AE, NE, NZ, NBE, A, NU
+$$$$138 Un d'aquests registres ha de ser ST0
+$$$$139 Només els registres ST0, ST1, ...., ST7  amb aquest mnemònic
+
+$$$$140 Segon registre de FADDP ha de ser ST0
+$$$$141 Segon registre de FSUBP ha de ser ST0
+$$$$142 Caràcter inesperat dins l'expressió flotant
+$$$$143 Intern: Direcció desconeguda
+$$$$144 Intern: Errada d'alliberament de memòria
+$$$$145 No hi ha codi font en aquest PE. Desassemblar?
+$$$$146 Aquest no és un fitxer PE
+$$$$147 Nom d'igualtat Win desconegut
+$$$$148 El número base d'ID ha d'estar entre 1 i 65535
+$$$$149 El número base d'ID ha d'estar entre 1 i 65535
+$$$$150 Nom de mòdul incorrecte
+
+$$$$151 Impossible: La mateixa funció en 2 DLLs       
+$$$$152 Nom API incorrecte
+$$$$153 Ordinal API incorrecte
+$$$$154 Sense "A" final aquí
+$$$$155 Dada massa llarga (o bucle d'emmagatzament infinit) per a Macro "&x="
+$$$$156 Número massa alt per a Variable Macro
+$$$$157 Es requereix "A" (o "W") final
+$$$$158 PREPARSE és per a: Alternates, Equal
+$$$$159 Falta el nom de Classe
+$$$$160 No s'ha trobat la classe pare en desdoblar l'herència
+$$$$161 Recursos massa grans. Les imatges o sons grans s'haurien de posar en fitxers a banda
+
+

@@ -1,0 +1,33 @@
+[D3DADAPTER_IDENTIFIER_STRING:|Driver B MAX_DEVICE_IDENTIFIER_STRING|Description B MAX_DEVICE_IDENTIFIER_STRING|DeviceName B 32|DriverVersion Q|VendorID D|DeviceID D|SubSysID D|Revision D|DeviceIdentifier.Data1 D|DeviceIdentifier.Data2 W|DeviceIdentifier.Data3 W|DeviceIdentifier.Data4 B 8|WHQLLevel D
+[D3DBOX:|Left D|Top D|Right D|Bottom D|Front D|Back D
+[D3DCAPS9:|DeviceType D|AdapterOrdinal D|Caps D|Caps2 D|Caps3 D|PresentationIntervals D|CursorCaps D|DevCaps D|PrimitiveMiscCaps D|RasterCaps D|ZCmpCaps D|SrcBlendCaps D|DestBlendCaps D|AlphaCmpCaps D|ShadeCaps D|TextureCaps D|TextureFilterCaps D|CubeTextureFilterCaps D|VolumeTextureFilterCaps D|TextureAddressCaps D|VolumeTextureAddressCaps D|LineCaps D|MaxTextureWidth D|MaxTextureHeight D|MaxVolumeExtent D|MaxTextureRepeat D|MaxTextureAspectRatio D|MaxAnisotropy D|MaxVertexW F|GuardBandLeft F|GuardBandTop F|GuardBandRight F|GuardBandBottom F|ExtentsAdjust F|StencilCaps D|FVFCaps D|TextureOpCaps D|MaxTextureBlendStages D|MaxSimultaneousTextures D|VertexProcessingCaps D|MaxActiveLights D|MaxUserClipPlanes D|MaxVertexBlendMatrices D|MaxVertexBlendMatrixIndex D|MaxPointSize F|MaxPrimitiveCount D|MaxVertexIndex D|MaxStreams D|MaxStreamStride D|VertexShaderVersion D|MaxVertexShaderConst D|PixelShaderVersion D|PixelShader1xMaxValue F|DevCaps2 D|MaxNpatchTesselationLevel F|MinAntialiasedLineWidth F|MaxAntialiasedLineWidth F|MasterAdapterOrdinal D|AdapterOrdinalInGroup D|NumberOfAdaptersInGroup D|DeclTypes D|NumSimultaneousRTs D|StretchRectFilterCaps D|VS20Caps.Caps D|VS20Caps.DynamicFlowControlDepth D|VS20Caps.NumTemps D|VS20Caps.StaticFlowControlDepth D|PS20Caps.Caps D|PS20Caps.DynamicFlowControlDepth D|PS20Caps.NumTemps D|PS20Caps.StaticFlowControlDepth D|PS20Caps.NumInstructionSlots D|VertexTextureFilterCaps D|MaxVShaderInstructionsExecuted D|MaxPShaderInstructionsExecuted D|MaxVertexShader30InstructionSlots D|MaxPixelShader30InstructionSlots D|Reserved2 D|Reserved3 D
+[D3DCLIPSTATUS9:|ClipUnion D|ClipIntersection D
+[D3DCOLORVALUE:|r F|g F|b F|a F
+[D3DDEVICE_CREATION_PARAMETERS:|AdapterOrdinal D|DeviceType D|hFocusWindow D|BehaviorFlags D
+[D3DDEVINFO_D3DVERTEXSTATS:|NumRenderedTriangles D|NumExtraClippingTriangles D
+[D3DDEVINFO_VCACHE:|Pattern D|OptMethod D|CacheSize D|MagicNumber D
+[D3DDISPLAYMODE:|Width D|Height D|RefreshRate D|Format D
+[D3DGAMMARAMP:|red W 256|green W 256|blue W 256
+[D3DINDEXBUFFER_DESC:|Format D|Type D|Usage D|Pool D|Size D
+[D3DLIGHT9:|Type D|Diffuse.R F|Diffuse.G F|Diffuse.B F|Diffuse.A F|Specular.R F|Specular.G F|Specular.B F|Specular.A F|Ambient.R F|Ambient.G F|Ambient.B F|Ambient.A F|Position.X F|Position.Y F|Position.Z F|Direction.X F|Direction.Y F|Direction.Z F|Range F|Falloff F|Attenuation0 F|Attenuation1 F|Attenuation2 F|Theta F|Phi F
+[D3DLOCKED_BOX:|RowPitch D|SlicePitch D|pBits D
+[D3DLOCKED_RECT:|Pitch D|pBits D
+[D3DMATERIAL9:|Diffuse.R F|Diffuse.G F|Diffuse.B F|Diffuse.A F|Ambient.R F|Ambient.G F|Ambient.B F|Ambient.A F|Specular.R F|Specular.G F|Specular.B F|Specular.A F|Emissive.R F|Emissive.G F|Emissive.B F|Emissive.A F|Power F
+[D3DMATRIX:|m11 F|m12 F|m13 F|m14 F|m21 F|m22 F|m23 F|m24 F|m31 F|m32 F|m33 F|m34 F|m41 F|m42 F|m43 F|m44 F
+[D3DPRESENT_PARAMETERS:|BackBufferWidth D|BackBufferHeight D|BackBufferFormat D|BackBufferCount D|MultiSampleType D|MultiSampleQuality D|SwapEffect D|hDeviceWindow D|Windowed D|EnableAutoDepthStencil D|AutoDepthStencilFormat D|Flags D|FullScreen_RefreshRateInHz D|PresentationInterval D
+[D3DPSHADERCAPS2_0:|Caps D|DynamicFlowControlDepth D|NumTemps D|StaticFlowControlDepth D|NumInstructionSlots D
+[D3DRANGE:|Offset D|Size D
+[D3DRASTER_STATUS:|InVBlank D|ScanLine D
+[D3DRECT:|x1 D|y1 D|x2 D|y2 D
+[D3DRECTPATCH_INFO:|StartVertexOffsetWidth D|StartVertexOffsetHeight D|Width D|Height D|Stride D|Basis D|Degree D
+[D3DRESOURCESTATS:|bThrashing D|ApproxBytesDownloaded D|NumEvicts D|NumVidCreates D|LastPri D|NumUsed D|NumUsedInVidMem D|WorkingSet D|WorkingSetBytes D|TotalManaged D|TotalBytes D
+[D3DSURFACE_DESC:|Format D|Type D|Usage D|Pool D|MultiSampleType D|MultiSampleQuality D|Width D|Height D
+[D3DTRIPATCH_INFO:|StartVertexOffset D|NumVertices D|Basis D|Degree D
+[D3DVECTOR:|x F|y F|z F
+[D3DVERTEXBUFFER_DESC:|Format D|Type D|Usage D|Pool D|Size D|FVF D
+[D3DVERTEXELEMENT9:|Stream B|Offset B|Type B|Method B|Usage B|UsageIndex B
+[D3DVIEWPORT9:|X D|Y D|Width D|Height D|MinZ F|MaxZ F
+[D3DVOLUME_DESC:|Format D|Type D|Usage D|Pool D|Width D|Height D|Depth D
+[D3DVSHADERCAPS2_0:|Caps D|DynamicFlowControlDepth D|NumTemps D|StaticFlowControlDepth D
+[DDSURFACEDESC2:|Size D|Flags D|Height D|Width D|PitchOrLinearSize D|Depth D|MipMapCount D|Reserved1 D 11|PixelFormat.Size D|PixelFormat.Flags D|PixelFormat.FourCC D|PixelFormat.RGBBitCount D|PixelFormat.RBitMask D|PixelFormat.GBitMask D|PixelFormat.BBitMask D|PixelFormat.RGBAlphaBitMask D|DDSCaps.Caps1 D|DDSCaps.Caps2 D|DDSCaps.Reserved D 2|Reserved2 D
+[tagPALETTEENTRY:|peRed B|peGreen B|peBlue B|peFlags B

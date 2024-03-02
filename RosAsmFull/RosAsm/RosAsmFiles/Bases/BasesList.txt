@@ -1,0 +1,13 @@
+Base_10.exe Base app with menu and macros set
+Base_11.exe Base app with menu, macros set and equal preparser
+Base_03.dll Low level dll
+Base_04.dll Dll with macros set
+mdi_base.exe MDI application
+dlgapp_base.exe Dialog based application
+console_base.exe Console based application
+trayicon_base.exe Application with tray icon
+HalfOOA1.exe A minimum OOA framework with introduction
+HalfOOA2.exe OOA with one visual object, a button
+HalfOOA3.exe Direct OOA Framework with DoubleBuffering.
+HalfOOA4.exe OOA with MemoryDraws, and Transparent Bitmaps
+HalfOOA5.exe OOA with Animation

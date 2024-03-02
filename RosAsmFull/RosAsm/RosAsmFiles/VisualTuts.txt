@@ -1,0 +1,22 @@
+
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+            RosAsm  'Interactive Visual Tutorials'  Introduction for Beginners
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+If you have never been involved in programming before but you are familiar with operating a PC and have used a word processor and have used a text editor like 'Notepad' and thought it was limited in its scope you are right. But thats all thats needed to write program code.
+
+RosAsm's source editor is nothing at all like Notepad and while deceiving in its simple IDE design is where you need to begin. 
+            
+               Just run 'RosAsm'. 
+
+Its menu bar has a 'Help' menu item , click it and on it you will find 'Visual Tuts', clicking it brings up a Pop Up Menu and select the 'debug.exe' item.
+
+'RosAsm' will then load the program's source code which is actually a part of the executable '.exe'  file itself. 
+
+When the program's source code is loaded select  'Run'  from RosAsm's menu bar and then watch 'RosAsm' run the actual program's machine language code. 
+
+Begin by clicking its Help > Contents menu and read the short blurb on how to use the 'Interactive Visual Tutorials'. Then close the help dialog and   read on, when you are given a task to do simply close the program to return to RosAsm's source editor - and -  you're off to your programming future ..... 
+
+       Have fun and enjoy......
+
+                                                         ~~~~~~~~~~

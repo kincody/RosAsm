@@ -1,0 +1,177 @@
+$$$$1 erreur
+$$$$3 Fichier non trouvé
+$$$$4 Le Fichier est bloqué par une autre Application
+$$$$5 Erruer durant l'écriture du Fichier
+$$$$6 Fichier en ouverture non trouvé
+$$$$7 Fichier non trouvé
+$$$$8 Impossible de lire le Fichier
+$$$$9 Valeur d'Equate manquante
+$$$$10 Equate terminée par deux points
+
+$$$$11 ">" manquante en fin de la Tex Equate 
+$$$$12 Mauvais nombre de Paramètres pour cette Macro
+$$$$13 Mauvaise # construction
+$$$$14 Toujours ">", pour les Parameters Multiple des Macros. Jamais "<"
+$$$$15 La limite pour #x est 9
+$$$$16 Trop de Paramètres trouvés durant le dépliage
+$$$$17 Cette Macro génère une boucle infinie
+$$$$19 Ce dépliage dépasse 4000 Bytes de Source!!!
+$$$$19 Data type inconnu
+$$$$20 Marker de taille inconnu
+
+$$$$21 64 Bits (Q$...) attendu pour toutes les instructions 3D Now
+$$$$22 "H$" est maintenant réservé. Utiliser "R$" ou "F$"
+$$$$23 Prefetch/w/0/1/2/NTA syntaxe: > PrefetchXXX B$Address
+$$$$24 D$ requis pour les Labels de Data
+$$$$25 Structure de text inconnue. Peut-être une erreur interne
+$$$$26 Separateur inattendu
+$$$$27 Nombre binaire invalide
+$$$$28 Nombre Hexa invalide
+$$$$29 Nombre decimal invalide
+$$$$30 Valeur hors limite
+
+$$$$31 Cette equate ou macro est déjà déclarée
+$$$$32 Cette equate n'est pas en usage
+$$$$33 Plus de 2 labels dans cette expression
+$$$$34 Mauvais charactère dans le Nom de Label
+$$$$35 Duplication de label
+$$$$36 Duplication de symbole
+$$$$37 Deux points orphelin
+$$$$38 Les Local label ne sont pas autorisé en definition de Data
+$$$$39 Vous ne pouvez pas faire un CALL vers un Label Local
+$$$$40 Mnemonic inconnu
+
+$$$$41 Valeur de byte hors limite
+$$$$42 Valeur de word hors limite
+$$$$43 Valeur de Dword hors limite
+$$$$44 Mauvaise taille pour ce type de Len
+$$$$45 Mauvaise déclaration de reél' 0
+$$$$46 Un prefix d'instruction ne peut pas étre isolé
+$$$$47 Double Segment override interdit
+$$$$48 Segment override non résolu
+$$$$49 Parameter invalide
+$$$$50 Mauvais nombre de paramètres dans l'évocation de macro
+
+$$$$51 Seulement un "&0" automatic Label par Macro
+$$$$52 '=' ou ':' attendu
+$$$$53 Espace manquant après la déclaration de Chaîne
+$$$$54 Mauvais placement de l'instruction de Loop dans cette Macro
+$$$$55 Trop d'opérandes
+$$$$56 Valuer d'octets en Hexa attendue pour les Bytes de Code
+$$$$57 Pas de Prefix Lock pour cette instruction
+$$$$58 Lock: La Destination doit être un paramètre mémoire
+$$$$59 Operand manquant
+$$$$60 Operand manquant
+
+$$$$61 Les Expressions ne sont autorisées que pour un seul Paramètre Memoire
+$$$$62 Parentheses non apairées
+$$$$64 Mauvaise ParaMacro
+$$$$64 Les Variables de Macro vont de "&1" à "&100" (Decimal)
+$$$$65 Declaration imbriquée of Macros Variables
+$$$$66 Marqueur de taille '$' requis pour les Expressions en Reél
+$$$$67 Marqueur de taille '$' requis après les Expressions en Reél
+$$$$68 Immediats seulement dans les Expressions
+$$$$69 Pas de Labels Locaux en Data: Ils sont reservés au Code
+$$$$70 Expression en Reél: Seulement +-*/, Pas de Parentheses imbriquées
+
+$$$$71 Mauvais operateur dans l'Expression
+$$$$72 Data Declaration importante, utiliser Virtual (?) Data ou VirtualAlloc
+$$$$73 Répèter moins de deux fois?
+$$$$74 Loop sans Declaration de Data
+$$$$75 Virtual Tables importantes: VirtualAlloc ou [Configuration]/[Bad Habits]
+$$$$76 Expression number too big in result or before multiplication
+$$$$77 NOT doit être en tête d'un membre d'expression
+$$$$78 Le paramètre pour SHR / SHL dépasse la valeur de Byte
+$$$$79 Délimiteur de Texte no apairé
+$$$$80 '[]' non apairé
+
+$$$$81 CR LF attendu, après ']'
+$$$$82 Séparateur manquant avant le délimiteur de Texte
+$$$$83 Séparateur manquant après le délimiteur de Texte
+$$$$84 {Imbriqué} non apairé
+$$$$85 '{}' sont réservés pour les Declarations imbriquées"
+$$$$86 Pseudo local '@Label' sans vrai Label le précèdant
+$$$$87 Seulement un Index et une base autorisées dans les SIB
+$$$$88 ESP ne peut pas être un index de SIB
+$$$$89 Paramètre d'Adresse Effective impossible
+$$$$90 Les valeurs de Scale sont 2, 4, 8. Plus extensions à 3, 5, 9
+
+$$$$91 ESP ne peut pas être un Registre d'Index
+$$$$92 Un seul Index est autorisé dans les Expressions
+$$$$93 Double label ou erreur inconnue
+$$$$94 impossible de résoudre ce Paramètre
+$$$$95 Limit de Pile, pour ENTER: 0FFFC aligné 4 Bytes.
+$$$$96 Les niveaus Enter vont de 0 à 31
+$$$$97 Adresse Label+imm, utiliser LEA. Exemple: " > lea ebx D$Label+8" 
+$$$$98 Ces deux types de paramètres ne vont pas ensemble
+$$$$99 Tailles des Opérandes incompatibles
+$$$$100 Echec de l'analyse des Types d'Opérandes pour ce mnemonic
+
+$$$$101 L'Alignment doit être une puissance de deux, entre 4 et 0100h
+$$$$102 Mauvaise taile d'Opérande
+$$$$103 Impossible de deviner les Regitres FPU pour cette Instruction
+$$$$104 "lea reg, mem" seulement. Pour "lea eax imm", utiliser "mov eax imm"
+$$$$105 Pas de forme en Byte Pour LEA
+$$$$106 Troisième Paramètre 1mm requis
+$$$$107 Paramètre X$Memoire attendu
+$$$$108 Dépassement de valeur immediate
+$$$$109 Ce symbole ne correspond à aucun Label
+$$$$110 Qu'est ce que c'est?
+
+$$$$111 RosAsm est incapable d'assembler cette instruction
+$$$$112 Seulement + - ici, voir [Expressions] dans l'aide
+$$$$113 Mnemonic pas encore implémenté. Information manquante
+$$$$114 Déplacement long requis, >> ou << (jamais avec LOOP)
+#1 #2 hors limites
+$$$$116 Pour LOOP: '<'. Toujours label précédant court
+$$$$117 Pour LOOP: '<'. Toujours label précédant court
+$$$$118 '<' ou '>' requis pour JCXZ / JECXZ (toujours court
+$$$$119 Displacements courts pour ce mnemonic
+$$$$120 Pas de symbole 'N' ici. Utiliser 'L'
+
+$$$$121 Vous ne pouvez avoir les deux types de 'LEN' en même temps
+$$$$122 Valeur décimal attendue pour les nombres de data loops
+$$$$123 Mauvaise Data Virtuelles
+$$$$124 Les Data loops ne peuvent être imbriquées
+$$$$125 Taille de Byte requise
+$$$$126 EAX seulement avec cette instruction
+$$$$127 Parametre de Text dépassant 4 bytes
+$$$$128 Un Registre doit être à usage général
+$$$$129 Paramètres VERR/VERW / LTR: Registres 16 bits ou memoire
+
+$$$$130 Registres 32 Bits à usage général pour addresser la Mémoire
+$$$$131 call 'Module.Function' pour les appel d'API
+$$$$132 Aucun appel d'API trouvé dans ce Source
+$$$$133 Erreur interne: Appel d'une DLL non trouvée durant la Compilation
+$$$$134 Erreur interne: Appel d'une DLL non trouvée durant la Compilation
+$$$$135 Label Locaux interdits ici
+$$$$136 Point d'entrèe non Déclaré ("Main:")
+$$$$137 Conditions FPU disponibles: B, E, BE, NA, U, NB, AE, NE, NZ, NBE, A, NU
+$$$$138 Un de ces deux Registres doit être ST0
+$$$$139 Seulement ST0, ST1, ...., ST7 avec ce mnemonic
+
+$$$$140 Le second Reg pour FADDP doit être ST0
+$$$$141 Le second Reg pour FSUBP doit être ST0
+$$$$142 Caractère insolite dans l'expression FPU
+$$$$143 Interne: Adressee inconnue
+$$$$144 Interne: Echec de la restitution de mémoire
+$$$$145 Pas de Source dans ce PE: Desassemblage?
+$$$$146 Ce n'est pas un Fichier PE
+$$$$147 Nom d'Equate Win32 inconnu
+$$$$148 Le nombre pour la Base ID doit être entre 1 et 65535
+$$$$149 Le nombre pour la Base ID doit être entre 1 et 65535
+$$$$150 Mauvais nom de Module
+
+$$$$151 Impossible: Même Fonction dans 2 DLLs       
+$$$$152 Mauvais nom de Fonction API
+$$$$153 Mauvais Ordinal de Fonction API
+$$$$154 Pas de "A" à la fin, ici
+$$$$155 Donnes de Macro trop longue (ou boucle infinie) pour "&x="
+$$$$156 Nombre hors Limite pour la Variable de macro
+$$$$157 Terminaison en "A" ou "W" requise
+$$$$158 PREPARSE est pour: Alternates, Equal, ...
+$$$$159 Nom de Classe manquant
+$$$$160 CLASSe mère non trouvée lors du dépliage de l'Inheritance
+$$$$161 Resources trop grosses. Laisser les Images ou Sons importants en Fichier joint
+
+

@@ -1,0 +1,176 @@
+$$$$1 Erro.
+$$$$3 Arquivo não encontrado.
+$$$$4 Incapaz de abrir: O sistema está obstruindo o arquivo de destino.
+$$$$5 Erro ao tentar escrever no arquivo.
+$$$$6 O arquivo que será aberto não foi encontrado.
+$$$$7 Arquivo não encontrado.
+$$$$8 Incapaz de ler o arquivo.
+$$$$9 Falta o valor do “Equate”.
+$$$$10 O nome dado ao “Equate” não pode ser seguido por um caractere de dois pontos “:”.
+ 
+$$$$11 Falta o caractere ">" no final do “Equate” de texto.
+$$$$12 Quantidade incorreta de parâmetros na chamada da “macro”.
+$$$$13 Mau uso do sinal “#” para essa construção.
+$$$$14 Sempre use o sinal de ">" para macros de parâmetros múltiplos, e nunca "<".
+$$$$15 O limite de parâmetros #x é 9.
+$$$$16 Foram encontrados parâmetros em demasia quando a macro estava sendo desdobrada.
+$$$$17 Um Loop infinito foi gerado ao desdobrar esta macro.
+$$$$19 Mais de 4000 bytes foram extraídos de uma vez, ao desdobrar esta macro!!!
+$$$$19 Tipo de dados desconhecido.
+$$$$20 Marcador de tamanhos desconhecido.
+ 
+$$$$21 O tamanho da memória esperada para todas as instruções do 3D Now são 64 Bits (Q$....).
+$$$$22 O uso da definição do tipo "H$" está reservado para desenvolvimento futuro. Por favor ao invés dele, utilize "R$" ou "F$".
+$$$$23 A Sintaxe do Prefetch/w/0/1/2/NTA é: > PrefetchXXX B$Address
+$$$$24 O uso da definição de tipo D$ é necessária para dados de etiqueta (Label).
+$$$$25 Estrutura de texto desconhecida. Pode ser um erro interno.
+$$$$26 Separador inesperado.
+$$$$27 Número binário inválido.
+$$$$28 Número hexadecimal inválido.
+$$$$29 Número decimal inválido.
+$$$$30 O valor está fora da escala.
+ 
+$$$$31 Este “Equate” ou o símbolo da macro ainda está em uso.
+$$$$32 Este símbolo do “Equate” não está em uso.
+$$$$33 Existem mais de 02 etiquetas nesta expressão.
+$$$$34 Caractere incorreto no nome de etiqueta.
+$$$$35 A definição da etiqueta está duplicada.
+$$$$36 A definição do símbolo está duplicada.
+$$$$37 O sinal dos dois pontos se encontra isolado na própria linha de programação. Esse tipo de erro ocorreu porque você digitou o sinal de dois pontos em uma linha do código de fonte, sem nenhuma instrução.
+$$$$38 A utilização de etiqueta local não é permitida na definição dos dados.
+$$$$39 Você não pode chamar uma etiqueta local.
+$$$$40 Mnemônico desconhecido.
+ 
+$$$$41 O valor está fora da escala do byte.
+$$$$42 O valor está fora da escala da palavra.
+$$$$43 O valor está fora da escala de Dword.
+$$$$44 O uso da “Len” principal somente ser Dword (D$) ou Word (W$).
+$$$$45 Declaração incorreta do número real ' 0.
+$$$$46 Um prefixo da instrução não pode estar sozinho.
+$$$$47 Extrapolação de segmento duplo não permitida.
+$$$$48 Extrapolação de segmento não resolvida.
+$$$$49 Parâmetro inválido
+$$$$50 Número incorreto de parâmetros na chamada da “macro”.
+ 
+$$$$51 Somente é permitido o uso de uma etiqueta automática "&0” por “macro”.
+$$$$52 É necessário o uso do sinal de igual ou de dois pontos
+$$$$53 Falta um espaço ao final da declaração de dados de uma frase.
+$$$$54 Má-utilização da instrução de Loop na “Macro”.
+$$$$55 Foram encontrados operandos em excesso.
+$$$$56 Valores de octetos em hexadecimal esperados para Código em Bytes.
+$$$$57 Não é permitido o uso do prefixo “Lock” nessa instrução.
+$$$$58 Lock: O destino deve ser uma área de memória
+$$$$59 Operando faltante. Não foi possível localizá-lo.
+$$$$60 Operando faltante. Não foi possível localizá-lo.
+ 
+$$$$61 As expressões são permitidas somente para um parâmetro de endereçamento de memória.
+$$$$62 Parênteses desemparelhados.
+$$$$64 ParaMacro incorreta.
+$$$$64 As “macros” variáveis variam entre "&1" até "&100" (decimal).
+$$$$65 Declaração sobreposta da macro variável.
+$$$$66 É necessário utilizar o marcador de tamanho “$” é antes de expressão to tipo Real (Por exemplo: R$).
+$$$$67 É necessário utilizar o marcador de tamanho “$” é antes de expressão to tipo Real (Por exemplo: R$).
+$$$$68 Utilizar apenas valores imediatos (imm) nas expressões.
+$$$$69 Não utilizar etiquetas locais na secção de dados: Elas são reservadas apenas para a secção de código.
+$$$$70 Expressão Real: somente é permitido usar os operadores + */ . Não utilizar parênteses aninhados.
+ 
+$$$$71 Operador incorreto na expressão
+$$$$72 Para uma quantidade enorme declaração de dados, usar dados virtuais (Use o sinal de “?”) ou chame a função VirtualAlloc.
+$$$$73 O que você quer dizer com "repetir menos de 2 vezes ???…"
+$$$$74 Encontrado uma instrução de  Loop sem nenhuma declaração de dados anterior.
+$$$$75 Para uma quantidade enorme de Tabelas Virtuais: Use a função VirtualAlloc ou vá até o menu “Configuration” e, em seguida na tabulação “Maus Hábitos” e ative a caixa de seleção “Sem limite de Dados Virtuais”.
+$$$$76 Foi encontrado um número da expressão demasiadamente grande para essa operação. Tal erro ocorreu antes da operação de multiplicação ou no próprio resultado.
+$$$$77 A instrução NOT deve estar situada na posição inicial de um membro da expressão.
+$$$$78 Tamanho excedente de bytes nos parâmetros SHR/SHL usados na expressão.
+$$$$79 Delimitador desemparelhado do texto.
+$$$$80 Uso incorreto de expressão. Os colchetes [ ] estão desemparelhados.
+ 
+$$$$81 Após as chaves {} foram encontrados CR LF, que não são esperados para essa instrução.
+$$$$82 Separador faltante antes do delimitador do texto
+$$$$83 Separador faltante após o delimitador do texto
+$$$$84 Chaves {Aninhadas}desemparelhadas. O sinal das chaves são: {}
+$$$$85 O uso das chaves ' {} ' é reservado para declarações aninhadas.
+$$$$86 Uso de pseudo etiquetas locais (@Label) antes de qualquer declaração de etiquetas planas.
+$$$$87 Somente são permitidos um índice e uma base para o endereçamento SIB. (Scale Index base –Base de Indexação Escalar)
+$$$$88 O registrador ESP não pode ser usado como índice para endereçamentos do tipo SIB. (Scale Index base –Base de Indexação Escalar)
+$$$$89 Parâmetro impossível para esse endereçamento efetivo.
+$$$$90 Os valores possíveis da escala são 2, 4, 8 e extensões são 3, 5, 9.
+ 
+$$$$91 O registrador EPS não pode ser utilizado como indexador de registro.
+$$$$92 Somente um índice é permitido na expressão
+$$$$93 Duplicação da etiqueta ou erro desconhecido.
+$$$$94 Incapaz de resolver este parâmetro
+$$$$95 O tamanho da pilha com instrução “Enter” deve ser superior a 0FFFC (65532), e deve ser alinhado em 4 bytes.
+$$$$96 O nível da instrução “Enter” é de 0 até 31.
+$$$$97 Para recuperar o endereço de “Etiqueta+imm”, use o mnemônico LEA. Exemplo: " > lea ebx D$Label+8".
+$$$$98 Estes dois tipos de parâmetros não são permitidos juntos.
+$$$$99 Tamanho impróprio para os operadores.
+$$$$100 Falha ao analisar os tipos de operandos para este mnemônico.
+ 
+$$$$101 O alinhamento deve ser uma potência de dois e estar entre 4 e 0100 (256).
+$$$$102 Tamanho incorreto de operadores.
+$$$$103 Não consigo supor quais são os registros para esta instrução FP.
+$$$$104 Somente "lea reg, mem". Para "lea eax imm", use "mov eax imm"
+$$$$105 Não há nenhuma forma do byte para a instrução “lea”.
+$$$$106 Necessário o uso de um terceiro parâmetro imm.
+$$$$107 Necessário usar o parâmetro de memória X$.
+$$$$108 Fluxo excedente do número imediato.
+$$$$109 Este nome simbólico não se encaixa em nenhuma etiqueta.
+$$$$110 O que é isto ?
+ 
+$$$$111 RosAsm foi incapaz de montar esta instrução.
+$$$$112 Aqui somente é permitido o uso de sinais “-“. Ou acesse o arquivo de ajuda no item Expressões.
+$$$$113 Desculpe, este mnemônico ainda não foi implementado. Informação requisitada.
+$$$$114 Necessidade de deslocamento longo, > > ou < < (nunca dentro da instrução LOOP).
+#1 #2 fora da escala.
+$$$$116 Para a instrução LOOP é necessário que a etiqueta local seja curta (<) e direcionada em retrocesso, ou seja, somente use L0<, por exemplo e não L0>.
+$$$$117 Para a instrução LOOP é necessário que a etiqueta local seja curta (<) e direcionada em retrocesso, ou seja, somente use L0<, por exemplo e não L0>.
+$$$$118 A etiqueta local curta (acima “>” ou para baixo “<”) é necessária ao usar as instruções JCXZ/JECXZ
+$$$$119 Somente deslocamentos curtos são permitidos com este mnemônico.
+$$$$120 O símbolo de “N” não permitido aqui. Usar “L”.
+ 
+$$$$121 Você não pode misturar 'Head LEN ' e 'Free LEN' (LEN de cabeçalho e LEN livre)
+$$$$122 Um valor em decimal é esperado para o número de declaração de dados do Loop.
+$$$$123 Dados Virtuais Incorretos.
+$$$$124 Desculpe, dados de loop não podem ser aninhados.
+$$$$125 É necessário o tamanho do byte.
+$$$$126 Essa instrução somente utiliza acumuladores. (Por exemplo, ax, ah, etc etc)
+$$$$127 O parâmetro do texto está excedendo 4 bytes.
+$$$$128 Um registro deve ser utilizado com finalidade geral
+$$$$129 O parâmetro das instruções VERR/VERW/LTR deve ser um registro ou memória de 16 Bits.
+ 
+$$$$130 O endereçamento de memória espera registros de uso geral em 32 bits.
+$$$$131 O mode de chamar uma função Api é: call ' Module.Function '
+$$$$132 Não foi encontrado nenhuma chamada para funções Api no seu código.
+$$$$133 Erro interno:Você efetuou uma chamada para um DLL, o qual não foi encontrado quando do período de compilação.
+$$$$134 Erro interno:Você efetuou uma chamada para um DLL, o qual não foi encontrado quando do período de compilação.
+$$$$135 Não autorizado o uso de etiqueta local aqui.
+$$$$136 Ponto de entrada não encontrado (deve ser utilizada a função "Main:" , caso não esteja modificada)
+$$$$137 Condições disponíveis de registradores FPU: B, E, BE, NA, U, NB, AE, NE, NZ, NBE, A, NU.
+$$$$138 Um desses dois registros deve ser ST0.
+$$$$139 Somente usar os registros ST0, ST1...., ST7 com este mnemônico.
+ 
+$$$$140 O segundo registro da instrução FADDP deve ser ST0.
+$$$$141 O segundo registro da instrução FSUBP deve ser ST0.
+$$$$142 Caractere inesperado dentro da definição do tipo “Float” (F$).
+$$$$143 Interno: Endereçamento desconhecido.
+$$$$144 Interno: Falha da liberação da memória.
+$$$$145 Não foi encontrado nenhum código-fonte neste aplicativo PE. Quer desassemblá-lo (desmontá-lo) ?
+$$$$146 Este não é um Arquivo do tipo PE.
+$$$$147 O nome desse “Equate” do Windows é desconhecida.
+$$$$148 A identificação do número de base deve estar entre 1 e 65535.
+$$$$149 A identificação do número de base deve estar entre 1 e 65535.
+$$$$150 Nome errado do módulo
+ 
+$$$$151 Impossível: A mesma função é utilizada em 2 DLLs.
+$$$$152 Nome errado da Api.
+$$$$153 Ordinal errado da Api.
+$$$$154 Falta a terminação “A” nessa função.
+$$$$155 Dados demasiado longos (ou loop infinito do armazenamento) para a macro: "&x="
+$$$$156 Número demasiado elevado para uma macro variável (por exemplo: &10; &55 etc)
+$$$$157 É necessária a terminação em "A" (Para funções Ansi) ou "W" (para funções Unicode).
+$$$$158 O uso do PREPARSE é para: Alternate, Equal (Substituições, Igual)
+$$$$159 Está faltando o nome da classe.
+$$$$160 A classe-mãe (originária) não foi encontrada ao desdobrar os valores herdados.
+$$$$161 Recursos demasiado grandes. As imagens ou os sons grandes devem ser deixados nos Arquivos.
+

@@ -1,0 +1,177 @@
+$$$$1 Errore.
+$$$$3 Archivio non trovato.
+$$$$4 Incapace per aprirsi: Il sistema sta ostruendo l'archivio della destinazione.
+$$$$5 Errore quando provano a scrivere nell'archivio.
+$$$$6 L'archivio che sarà aperto non è stato trovato.
+$$$$7 Archivio non trovato. 
+$$$$8 Incapace per leggere l'archivio. 
+$$$$9 Difetta del valore del “Equate”. 
+$$$$10 Il nome dato al “Equate” non può essere seguito da un carattere dei due punti ":".
+ 
+$$$$11 Difetta di al carattere ">" alla fine del “Equate”      di testo.
+$$$$12 Quantità errata di parametri nella chiamata della “macro".
+$$$$13 Uso difettoso del segnale "#" per questa costruzione.
+$$$$14 Usa sempre il segnale di ">" per le macro dei parametri multipli e mai "<". 
+$$$$15 Il limite dei parametri della #x è 9. 
+$$$$16 I parametri nell'eccedenza erano stati trovati quando la macro stava spieganda. 
+$$$$17 Un Loop (ciclo) infinito è stato generato quando spiega questa macro. 
+$$$$18 Più di 4000 byte erano stati estratti di un momento quando spiega questa macro! 
+$$$$19 Tipo sconosciuto di dati. 
+$$$$20 Indicatore sconosciuto dei formati. 
+ 
+$$$$21 Il formato della memoria aspettata tutte le istruzioni di 3D Now è 64 bit (Q$....). 
+$$$$22 L'uso della definizione del tipo "H$" è riservato per sviluppo futuro. Prego, al contrario di esso, usa "R$" o "F$". 
+$$$$23 La sintassi del Prefetch/w/0/1/2/NTA è: > PrefetchXXX B$Address 
+$$$$24 L'uso della definizione del tipo di D$ è necessario per i dati dell'etichetta (Label). 
+$$$$25 Struttura sconosciuta di testo. Può essere un errore interno. 
+$$$$26 Separatore inatteso. 
+$$$$27 Numero binario non valido. 
+$$$$28 Numero esadecimale non valido. 
+$$$$29 Numero decimale non valido. 
+$$$$30 Il valore è fuori della scala. 
+ 
+$$$$31 Ciò “Equate” o il simbolo della macro ancora è in uso. 
+$$$$32 Questo simbolo del “Equate” non è in uso. 
+$$$$33 02 etichette in questa espressione esistono più di. 
+$$$$34 Carattere errato nel nome di etichetta. 
+$$$$35 La definizione dell'etichetta è duplicata. 
+$$$$36 La definizione del simbolo è duplicata. 
+$$$$37 Il segnale dei due punti se trova isolato nella linea adeguata di programmazione. Questo tipo di errore si è presentato perché esso avete scritto il segnale a macchina dei due punti in una linea del codice sorgente, senza nessun'istruzione. 
+$$$$38 L'uso locale dell'etichetta non è permesso nella definizione dei dati. 
+$$$$39 Non potete denominare un'etichetta locale. 
+$$$$40 Sconosciuto mnemonico. 
+ 
+$$$$41 Il valore è fuori della scala del byte. 
+$$$$42 Il valore è fuori della scala della parola. 
+$$$$43 Il valore è fuori della scala di Dword. 
+$$$$44 L'uso del “Len” principale soltanto essere Dword (D$) o Word (W$) (parola).
+$$$$45 Dichiarazione errata del numero reale. 
+$$$$46 Un prefisso dell'istruzione non può essere solo. 
+$$$$47 Extrapolação non permesso di doppio segmento. 
+$$$$48 Extrapolação del segmento non deciso. 
+$$$$49 Parametro non valido 
+$$$$50 Numero errato di parametri nella chiamata della “macro".
+ 
+$$$$51 “&0” per la “macro” è permesso soltanto all'uso di un'etichetta automatica". 
+$$$$52 L'uso del segnale del uguale è necessario o dei due punti 
+$$$$53 Difetta di uno spazio alla conclusione della dichiarazione dei dati di una frase. 
+$$$$54 Uso difettoso dell'istruzione del “Loop” (ciclo) nella “macro". 
+$$$$55 Erano stati operandos trovati superiori. 
+$$$$56 Valori degli ottetti in attesa nell'esadecimale per il codice nei byte. 
+$$$$57 Non è consentito a all'uso del prefisso "Lock” in questa istruzione. 
+$$$$58 Lock: La destinazione deve essere una zona di memoria 
+$$$$59 Mancanza di operando. Non era possibile individuarla. 
+$$$$60 Mancanza di operando. Non era possibile individuarlo. 
+ 
+$$$$61 Le espressioni sono permesse soltanto un parametro di richiamo di memoria. 
+$$$$62 Parentesi di Desemparelhados. 
+$$$$64 ParaMacro Errato. 
+$$$$64 Le “macro” variabili variano fra "&1" fino a “&100" (decimale). 
+$$$$65 Dichiarazione di sovrapposizione della macro variabile. 
+$$$$66 È necessario da usare l'indicatore "$" di formato è prima dell'espressione voi il tipo reale (per esempio: R$). 
+$$$$67 È necessario da usare l'indicatore "$" di formato è prima dell'espressione voi il tipo reale (per esempio: R$).
+$$$$68 Per usare soltanto i valori immediati (imm) nelle espressioni. 
+$$$$69 Per non usare le etichette del local nella sezione dei dati: Sono riservati soltanto alla sezione di codice. 
+$$$$70 Espressione reale: è permessa soltanto usare gli operatori + */. per non usare le parentesi annidato. 
+ 
+$$$$71 Operatore errato nell'espressione 
+$$$$72 Una dichiarazione enorme di quantità dei dati, usarlo dato virtuale (usa il segnale di "?") o richiede la funzione di VirtualAlloc. 
+$$$$73 Che cosa desiderate dire con "ripetere più meno di 2 volte???…" 
+$$$$74 Ha trovato um'istruzione del Loop (ciclo) senza nessuna dichiarazione precedente dei dati. 
+$$$$75 Per una quantità enorme di Tabelle virtuali: Usa la funzione di VirtualAlloc o va fino al menu "configurazione" e, dopo quella nel tabulazione "abitudini difettose" ed attiva la scatola dell'elezione "senza limite dei dati virtuali". 
+$$$$76 È stato trovato una quantità di espressioni, troppo grande per questo funzionamento.. Tale errore si è presentato prima del funzionamento risultato di moltiplicazione o in quella adeguata. 
+$$$$77 L'istruzione NOT deve essere situata nella posizione iniziale di un membro dell'espressione. 
+$$$$78 Eccedere formato dei byte nei parametri usati SHR/SHL nell'espressione. 
+$$$$79 Delimiter di Desemparelhado del testo. 
+$$$$80 Uso errato dell'espressione. I clasps [ ] sono desemparelhados. 
+ 
+$$$$81 Dopo che le chiavi {} siano trovato CR LF, quella non è aspettata questa istruzione. 
+$$$$82 Separatore mancante prima del delimiter del testo 
+$$$$83 Separatore mancante dopo il delimiter del testo 
+$$$$84 Chiavi { annidato } unpaired. Il segnale delle chiavi è: {} 
+$$$$85 L'uso delle chiavi '{} 'è riservato per le dichiarazioni annidato. 
+$$$$86 Uso delle etichette pseudi del local (@Label) prima di qualsiasi dichiarazione delle etichette normali. 
+$$$$87 Ad un indice e ad una base per il richiamo del SIB. sono consentiti a soltanto (Scale Index Base - base del indexation da regolare) 
+$$$$88 Il registratore ESP non può essere utilizzato poichè indice per i endereçamentos di tipo SIB. (Scale Index Base - base del indexation da regolare)
+$$$$89 Parametro impossibile per questo richiamo efficace. 
+$$$$90 I valori possibili della scala sono 2, 4, 8 e le estensioni sono 3, 5, 9. 
+ 
+$$$$91 Il registratore EPS non può essere utilizzato come indexador del registro. 
+$$$$92 Un indice è permesso soltanto nell'espressione 
+$$$$93 Duplicazione dell'errore di sconosciuto o dell'etichetta. 
+$$$$94 Incapace per decidere questo parametro 
+$$$$95 Il formato della pila con l'"entrata" di istruzione deve essere superiore il 0FFFC (65532) e deve essere allineato in 4 byte. 
+$$$$96 Il livello dell'"Enter" di istruzione è di 0 fino a 31. 
+$$$$97 Per recuperare l'indirizzo di “Etiqueta+imm", usa il mnemonico LEA. Esempio: " > lea ebx D$Label+8".
+$$$$98 Questi due tipi di parametri non sono permessi insieme. 
+$$$$99 Formato improprio per gli operatori. 
+$$$$100 Viene a mancare quando analizza i tipi di operandos per questo mnemonico. 
+ 
+$$$$101 L'allineamento deve essere un'alimentazione di due ed essere fra 4 e 0100 (256). 
+$$$$102 Formato errato degli operatori. 
+$$$$103 Non mi verifico per ammettere quale sono i registri per questa istruzione FP. 
+$$$$104 soltanto "lea reg, mem". Per "lea eax imm", usi "mov eax imm"
+$$$$105 Non ha forma del byte per istruzione di “lea". 
+$$$$106 Necessario l'uso di un terzo di parâmetro imm. 
+$$$$107 Necessario usare il parametro della memoria di X$. 
+$$$$108 Eccedere flusso del numero immediato. 
+$$$$109 Questo nome simbolico non è incassato in nessun'etichetta. 
+$$$$110 Che cosa è questo? 
+ 
+$$$$111 RosAsm era incapace montare questa istruzione. 
+$$$$112 Qui l'uso dei segnali soltanto è permesso "-". o ha accesso l'archivio del sussidio nelle espressioni dell'articolo. 
+$$$$113 Perdona, questo mnemonico ancora non è stato effettuato. Le informazioni chieste. 
+$$$$114 Necessità di spostamento lungo, >> o << (mai all'interno del LOOP di istruzione). 
+#1 #2 è fuori della scala.
+$$$$116 Per la istruzione LOOP è necessario che l'etichetta locale il uno o il altro short (<) e diretto nel retrocession, o uno, solo usi L0<, per esempio e non L0 >. 
+$$$$117 Per la istruzione LOOP è necessario che l'etichetta locale il uno o il altro short (<) e diretto nel retrocession, o uno, solo usi L0<, per esempio e non L0 >.
+$$$$118 L'etichetta locale corta (">" o per il suddetto livello basso "<") è necessaria quando usando le istruzioni JCXZ/JECXZ 
+$$$$119 Gli spostamenti corti sono permessi soltanto con questo mnemonico. 
+$$$$120 Il simbolo di “N" non permessa qui. Per usare "L".
+ 
+$$$$121 Non potete mescolare 'Head LEN' e 'Free LEN'(LEN dell'intestazione e LEN libero) 
+$$$$122 Un valore nel decimale è aspettato il numero di dichiarazione dei dati del ciclo. 
+$$$$123 Dati Virtuali Errati. 
+$$$$124 Perdona, dato del ciclo non può allineato. 
+$$$$125 Il formato del byte è necessario. 
+$$$$126 Questa istruzione utilizza soltanto gli accumulatori. (per esempio, ax, ah, ecc ecc) 
+$$$$127 Il parametro del testo sta eccedendo 4 byte. 
+$$$$128 Un registro deve essere utilizzato con l'uso generale 
+$$$$129 Il parametro delle istruzioni VERR/VERW/LTR deve essere un registro o una memoria di 16 bit. 
+ 
+$$$$130 La memoria che richiama le attese registra l'uso generale in 32 bit. 
+$$$$131 Il modo per denominare una funzione di api è: chiamata 'Module.Function ' 
+$$$$132 Nessuna richiesta per le funzioni di api non è stata trovata nel relativo codice. 
+$$$$133 L'errore interno:Você ha effettuato una richiesta per un DLL, che non è stato trovato quando del periodo della compilazione. 
+$$$$134 L'errore interno: Voi ha effettuato una richiesta per un DLL, che non è stato trovato quando del periodo della compilazione. 
+$$$$135 Non autorizzato l'uso locale dell'etichetta qui. 
+$$$$136 Punto di entrata trovato (non deve essere usata la funzione "Main:" , nel caso quello esso non è modificato) 
+$$$$137 Stati disponibili dei registratori FPU: B, E, BE, NA, U, NB, AE, NE, NZ, NBE, A, NU.
+$$$$138 Uno di questi due registri deve essere ST0. 
+$$$$139 Utilizzare soltanto i registri ST0, ST1...., ST7 con questo mnemonico. 
+ 
+$$$$140 Come il registro di istruzione FADDP deve essere ST0. 
+$$$$141 Come il registro di istruzione FSUBP deve essere ST0. 
+$$$$142 Carattere inatteso all'interno della definizione del tipo "Float" (F$). 
+$$$$143 Interno: Richiamo sconosciuto. 
+$$$$144 Interno: Imperfezione del rilascio della memoria. 
+$$$$145 Non è stato trovato codice-fonte in questo PE applicatory. Desiderate a desassemblar esso (per smontarlo)? 
+$$$$146 Ciò non è un archivio di tipo PE. 
+$$$$147 Il nome di questo “Equate” di Windows è sconosciuto. 
+$$$$148 L'identificazione del numero basso deve essere fra 1 e 65535. 
+$$$$149 L'identificazione del numero basso deve essere fra 1 e 65535. 
+$$$$150 Nome errato del modulo 
+ 
+$$$$151 Impossibile: La stessa funzione è usata in 2 DLLs. 
+$$$$152 Nome errato dell'api. 
+$$$$153 Il numero ordinale ha fatto un errore dell'api. 
+$$$$154 Difetta del termine "A" in questa funzione. 
+$$$$155 Troppi dati lunghi (o Loop infinito dell'immagazzinaggio) per la macro: "&x =" 
+$$$$156 Troppo numero aumentato per una macro variabile (per esempio: &10; &55 ecc) 
+$$$$157 Il termine in "A" (per le funzioni dell'ANSI) o il “W" è necessario (per le funzioni di Unicode). 
+$$$$158 L'uso del PREPARSE è arresti: Alternate, Equal (Sostituzioni, Uguale) 
+$$$$159 Sta difettando del nome dell' categoria. 
+$$$$160 La categoria -madre (originary) non è stata trovata quando spiega i valori ereditati. 
+$$$$161 Troppo risorse grandi. Le immagini o i suoni grandi devono essere lasciati negli archivi. 
+ 
+

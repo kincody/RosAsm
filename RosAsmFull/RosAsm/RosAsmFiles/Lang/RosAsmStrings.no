@@ -1,0 +1,236 @@
+$$$$1 Feil
+$$$$3 Finner ikke fil
+$$$$4 Kan ikke skrive til filen: OS'et har beskyttet filen mot skriving
+$$$$5 En feil oppstod ved skriving til filen
+$$$$6 Fant ikke filen, kan ikke åpne
+$$$$7 Filen ble ikke funnet
+$$$$8 Kan ikke lese fra denne filen
+$$$$9 Manglende definisjons verdi
+$$$$10 En RosAsm Equate definisjon kan ikke etterfølges av kolon. Kolon kun etter addresser
+
+$$$$11 Manglende ">" tegn ved slutten av Tekstkonstant definisjonen
+$$$$12 Ikke korrekt antall parametre til denne makro 
+
+$$$$13 Uriktig bruk av #
+$$$$14 Bruk alltid ">" for å indikere Flere Makro Parametre. Aldri "<"
+$$$$15 #x har en øvre grense ved 9
+$$$$16 Fant for mange parametre ved transformasjon av makroen.
+$$$$17 En uendelig loop ble oppdaget ved utfoldelse av denne makroen
+$$$$19 Mer enn 4000 Bytes generert på en gang, ved utfoldelse av denne makroen!!!
+$$$$19 Ukjent datatype
+$$$$20 Ukjent datastørrelse
+
+$$$$21 64 bit (Q$...) minne størrelse forventet ved bruk av alle 3D now instruksjoner
+$$$$22 "H$" er nå reservert for senere bruk. Benytt "R$" eller "F$" istedenfor
+$$$$23 Prefetch/w/0/1/2/NTA syntaks: > PrefetchXXX B$Adresse
+$$$$24 D$ må benyttes for data. Sjekk om du har forlagt en konstant i datadeklarasjonen
+$$$$25 Ukjent structur på tekst deklarasjon. Kan skyldes intern feil.
+$$$$26 Seperator er ikke forventet her
+$$$$27 Dette kan ikke brukes som binært tall
+$$$$28 Ukjent format på hexadesimalt tall
+$$$$29 Ikke et desimalt tall
+$$$$30 Verdien er utenfor definisjonsmengden.
+
+$$$$31 Konstant eller makronavn allerede i bruk.
+$$$$32 Denne konstanten er ikke benyttet.
+$$$$33 Mer enn 2 adressereferanser i dette uttrykket
+$$$$34 Kan ikke bruke denne karakteren i adressereferanser
+$$$$35 Fant en overflødig adressereferanse
+$$$$36 Overflødig symbol (Macro/Konstant)
+$$$$37 Enslig kolon funnet
+$$$$38 Lokale kode-adressereferanser ikke tillatt i datadeklarasjon
+$$$$39 Du kan ikke bruke CALL til en lokal label
+$$$$40 Ukjent mnemonic / instruksjon
+
+$$$$41 Verdien er utenfor definisjonmengden til en BYTE
+$$$$42 Verdien er utenfor definisjonmengden til et WORD
+$$$$43 Verdien er utenfor definisjonmengden til et DWORD
+$$$$44 Innledende bruk av LEN kan bare bestå av dWord eller word
+$$$$45 Uriktig deklarasjon av et reelt tall' 0
+$$$$46 En instruksjon prefiks kan ikke stå uten sin obligatoriske instruksjon
+$$$$47 Dobble overskrivninger a segment er ikke gyldig
+$$$$48 Segment overskrivingen er ugyldig.
+$$$$49 Ugyldig parameter
+$$$$50 Fant et uriktig antall parametre ved utfoldelsen av makroen
+
+$$$$51 Bare en "&0" auto generert adressereferanse per Makro
+$$$$52 Trenger et likhetstegn eller et kolon
+$$$$53 Manglende mellomrom ved enden av en streng deklarasjon
+$$$$54 Loop instrusjon ikke plassert korrekt i makro
+$$$$55 For mange operander funnet
+$$$$56 Hexadesimal tall forventet ved bruk av Kode bytes
+$$$$57 Kan ikke bruke Lock Prefiks med denne instruksjonen
+$$$$58 Lock: Destinatsjon må være Minne
+$$$$59 Manglende operand
+$$$$60 Manglende operand
+
+$$$$61 Uttrykk er tillatt bare ved bruk av én adressereferanse
+$$$$62 Åpen parantes
+$$$$64 Uskikkelig ParaMacro
+$$$$64 Makro variabler går fra "&1" til "&100" (desimal)
+$$$$65 Makrovariablene er deklarert hulter til bulter
+$$$$66 $tørrelse Markør er ønsket framfor deklarasjon av reelle tall
+$$$$67 $tørrelse Markør er ønsket etter reelle uttrykk
+$$$$68 Umiddelbare tall (imm) kun i uttrykk (sett i parantes)
+$$$$69 Ikke benytt lokale adressereferanser i data, de er reservert for code
+$$$$70 Reelle uttrykk: Kun +-*/ tegn her, ikke nestede paranteser
+
+$$$$71 Slem operatør i uttrykk :))
+$$$$72 Ved bruk av store datamengder, benytt dynamisk minne (:?) eller bruk VirtualAlloc
+$$$$73 Hva fanden mener De med "repiter mindre enn en to ganger ...???
+$$$$74 Loop uten pre-deklarering a data
+$$$$75 For store virtuelle tabeller: VirtualAlloc eller [Configuration]/[Bad Habits]
+$$$$76 Et nummer i uttrykket er større enn tillatt, enten i resultatet eller før multiplikasjon
+$$$$77 NOT må brukes på ledende posisjon når benyttet som medlem av uttrykk
+$$$$78 SHR / SHL parameteret er større en BYTE i uttrykket
+$$$$79 Enslig Tekstmarkør
+$$$$80 Enslig klaffeparantes
+
+$$$$81 Uvented CR LF etter klaffe
+$$$$82 Tekst markøren mangler ledende seperator
+$$$$83 Tekst markøren mangler seperator etter seg
+$$$$84 åpne {nestede} krølleklaffer
+$$$$85 '{}' er reservert for nestede deklarasjoner
+$$$$86 @Label (Pseudo lokal) kun ved bruk etter en vanlig (Plain) label
+$$$$87 Bare en indeks og en base tillatt i SIB
+$$$$88 ESP kan ikke brukes til indeksering i SIB
+$$$$89 Ulovlig effektiv adresse
+$$$$90 Ved skalering av adresser, mulige verdier er 2, 4, 8 og utvidninger til 3, 5, 9 er mulig ved addisjon
+
+$$$$91 ESP kan ikke brukes som indeks register
+$$$$92 Kun én index tillat i uttrykk
+$$$$93 Dobbelte adressereferanser, eller ukjent feil
+$$$$94 Forstår ikke parameteret
+$$$$95 Enter stack størrelse går opptil 0FFFC og må være 4 byte aligned
+$$$$96 Enter nivå går fra 0 til 31
+$$$$97 For å få tilgang på Adressereferansen+umiddelbar addresse, bruk LEA. f.eks: " > lea ebx D$Label+8" 
+$$$$98 disse to argument typene er ikke tillatt brukt samtidig
+$$$$99 operand størrelsene passer ikke sammen
+$$$$100 Kunne ikke analysere operand typene for denne instruksjonen
+
+$$$$101 Opplinjering (Alignment) må være delelig med 2, og mellom 4 og 0100 (256)
+$$$$102 Feil operand størrelse
+$$$$103 Kan ikke gjette registre for denne FP (Floating point) instruksjonen
+$$$$104 "lea reg, mem" kun. For "lea eax imm", bruk "mov eax imm"
+$$$$105 Det finnes ingen byte variant av lea
+$$$$106 Tredje imm parameter ønsket
+$$$$107 X$Minne parameter ønsket
+$$$$108 Overflyt av umiddelbar (imm) nummer
+$$$$109 Det symbolske navnet passer ikke med noen kjente adressereferanser
+$$$$110 Hva i all verden er dette? :))
+
+$$$$111 RosAsm er ikke istand til å bruke denne instruksjonen
+$$$$112 Kun +-  tegn er tillatt her, eller titt i hjelpen under [Expressions/uttrykk]
+$$$$113 Omforlatelse, denne instrusjonen er ikke implementert enda. Informasjon taes imot med takk.
+$$$$114 Her trengs et lang distanse hopp/jump, >> eller <<, kan brukes (Aldri ved LOOP)
+#1 #2 ute av rekkevidde
+
+$$$$116 Lokal Opp Kort adressereferanse er obligatorisk for LOOP
+$$$$117 Lokal Opp Kort adressereferanse er obligatorisk for LOOP
+$$$$118 Lokal Kort (opp eller ned) adressereferanse er obligatorisk for for JCXZ / JECXZ
+$$$$119 Kun kort forskyvning tillatt med denne instruksjonen
+$$$$120 N symbol ikke tillatt her. Benytt L
+
+$$$$121 Du kan ikke mikse 'Ledende LEN' med 'Frittstående LEN'
+$$$$122 desimal tall forventet for data deklarert loop nummer
+$$$$123 Ikke gyldig som virtuell data deklarasjon
+$$$$124 Dessverre, data loopen kan ikke nestes
+$$$$125 Byte størrelse obligatorisk her
+$$$$126 Kun akkumulator [e(ax/al)] kan benyttes med denne instrusjonen
+$$$$127 Tekst parameter overskrider 4 bytes
+$$$$128 krever et generelt register
+$$$$129 VERR/VERW / LTR parametre må være 16 bits registre eller minne
+
+$$$$130 Minne adressering forventer et fullstending 32 bit generellt register
+$$$$131 API call gjøres på formen: "Module.Function" f.eks 'gdi32.RectInRegion"
+$$$$132 Fant ingen Api kall i koden.
+$$$$133 Intern feil: programmerer gjorde et kall til en DLL ikke funnet under kompilering
+$$$$134 Intern feil: programmerer gjorde et kall til en DLL ikke funnet under kompilering
+$$$$135 Lokale Adresse(minne-)referanser ikke tillatt her
+$$$$136 Inngangs vektor (Entre-adresserreferanse) finnes ikke. (Bør være "Main:" hvis du ikke endret det)
+$$$$137 FPU tilgjengelige tilstander: B, E, BE, NA, U, NB, AE, NE, NZ, NBE, A, NU
+$$$$138 En av disse to registre må være ST0
+$$$$139 Kun ST0, ST1, ...., ST7  registre kan brukes ved denne instruksjonen
+
+$$$$140 FADDP andre Register må være ST0
+$$$$141 FSUBP andre Register må være ST0
+$$$$142 Uforutsett karakter inne i ett Flyttalls uttrykk
+$$$$143 Intern: Ukjent adresse
+$$$$144 Intern: Feil ved frigjøring av minne
+$$$$145 Ikke kildekode i denne exefilen, vil du prøve å disassemble?
+$$$$146 Dette er ikke en PE/exe fil.
+$$$$147 Ukjent Windows Equate (konstantnavn/definisjon)
+$$$$148 ID base nummer må være mellom 1 og 65535
+$$$$149 ID base nummer må være mellom 1 og 65535
+$$$$150 Feil module navn
+
+$$$$151 Umulig: Samme funksjon i to ulike DLLer.
+$$$$152 Galt API navn
+$$$$153 Uriktig API Ordinal (Indeks)
+$$$$154 Har ikke bruk for avsluttende "A" her
+$$$$155 For meget data (eller uendelig løkke) for Makro "&x="
+$$$$156 For høyt nummer for en Makro variabel
+$$$$157 Avsluttende "A" (eller "W) ønsket her
+$$$$158 PREPARSE er til for: Alternates, Equal
+$$$$159 Manglende klasse navn
+$$$$160 Arved klasse ikke funnet ved utfolding av arverelasjonen til klassen
+$$$$161 For store resurrser i PE. Store bilder eller lyder bør legges i seperate extrerne filer
+
+$$$$3000 Gi gass!
+$$$$3001 Step inni
+$$$$3002 Step forbi
+$$$$3003 Step
+$$$$3004 Returner til forrige
+$$$$3005 Returner
+$$$$3006 Terminer
+$$$$3007 Pause
+$$$$3008 Stopp ved breakpoint
+$$$$3009 Stepping på Instruksjons nivå
+$$$$3010 Kilde kode stepping
+$$$$3011 Vis segment/debug registre
+$$$$3012 Velg font ...
+$$$$3013 CPU informasjon
+$$$$3014 FPU status
+$$$$3015 Vis kode ved adresse ...
+$$$$3016 Om Debugger
+$$$$3017 Debugger Hjelp
+$$$$3040 Data Representasjon:
+$$$$3050 Fortsett
+$$$$3051 Avbryt
+$$$$3052 Instillinger
+$$$$3053 Informasjon
+$$$$3054 Hjelp
+$$$$3060 Vis i minne oversikten
+$$$$3061 Vis minne det pekes på
+$$$$3062 Vis deklarasjon
+$$$$3063 Avbryt ved skriveforsøk
+$$$$3064 Avbryt ved lese/skrive forsøk
+$$$$3065 Sorter etter navn
+$$$$3066 Sorter etter adresse
+$$$$3080 Vis utpakket makro
+$$$$3081 Vis alle kall
+$$$$3082 Skjul module kall
+$$$$3083 Skjul intra-module kall
+$$$$3084 Vis Lokale data
+$$$$3100 Hexadesimal
+$$$$3101 Positive Desimaltall
+$$$$3102 Ordinære Desimaltall
+$$$$3103 Binære tall
+$$$$3104 Flyttall
+$$$$3105 Packed Unsigned Byte
+$$$$3106 Packed Signed Byte
+$$$$3107 Packed Unsigned Word
+$$$$3108 Packed Signed Word
+$$$$3109 Packed Unsigned Dword
+$$$$3110 Packed Signed Dword
+$$$$3111 Packed Unsigned Qword
+$$$$3112 Packed Signed Qword
+$$$$3113 Packed Single Precision Float
+$$$$3114 Packed Double Precision Float
+$$$$3115 Hexadesimal / ANSI
+$$$$3116 Hexadesimal Dwords
+$$$$3117 Hexadesimal Words
+$$$$3118 Enkel presisjon Flyttall
+$$$$3119 Dobbel Presisjon Flyttall
+$$$$3120 Ascii tegnkoder
+$$$$3121 Hexadesimal / Kokt Ascii (RosAsm Development)

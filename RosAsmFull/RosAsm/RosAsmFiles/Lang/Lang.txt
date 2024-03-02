@@ -1,0 +1,9 @@
+en English
+fr Français
+br Brasilian
+de Deutsch
+zh Chinese
+sp Español
+ca Catalan
+es Espanol
+no Norvegian
