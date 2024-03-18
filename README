@@ -1,1 +1,26 @@
 The three zip files contians original files downloded from (from http://betov.free.fr/).
+
+
+Here is the original readme file I found inside the zipfile.
+
+
+    * Create a Directory and unzip inside: RosAsmFiles.zip. (RosAsm
+      itself, can be anywhere on your disk)
+    
+    * Run RosAsm. Run [Configuration] [Companion Files] to provide
+      the Path to this Directory. RosAsm can not do anything before
+      knowing where 'Equates.equ' is. Do the same with [Help Files] 
+      if you wish to have them available in the Menu, and for B_U_Asm
+      for having the integrated Help system.
+
+    * In [Configuration]/[Sources Editor], choose a Font that renders
+      properly (some of them may not work well -because the OS is poorely
+      designed for 16/8 Fixed Pitch Fonts-). If the required 16/8 Fonts
+      appear to small, review your Parameters in the OS [Configuration
+      Panel]/[Screen]/[Parameters]/[Advanced]/[Fonts Sizes]. If nothing
+      finally works, reload the OS default Fonts from your OS CD (they
+      may have been modified by SoftWares...).
+    
+    
+    
+      Betov.
